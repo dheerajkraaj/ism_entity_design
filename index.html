@@ -138,6 +138,57 @@
     .notification-date {
       color: #1351D8;
     }
+    .card {
+      background: white;
+      border-radius: 0;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      max-width: 700px;
+      margin: auto;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #192f60;
+      font-weight: bold;
+      /* margin-bottom: 20px; */
+      background: #F3F6FD;
+      padding: 1rem;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+    }
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #2c3e50;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+    .info {
+      margin-bottom: 10px;
+    }
+    .info span {
+      display: inline-block;
+      
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .info .value {
+      font-weight: normal;
+    }
+    .edit-link {
+      font-size: 14px;
+      color: #3f51b5;
+      text-decoration: none;
+    }
   </style>
 </head>
 
@@ -345,61 +396,82 @@
     <section class="page-container">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-4">
-            <div class="col-sm-12">
-              <a href="/application.html">
-                <div class="dashboard-card d-flex">
-                  <div class="dashboard-card_icon">
-                    <img src="./images/icon/dashboard_icon.png" alt="Application Icon" width="50">
-                  </div>
-                  <div>
-                    <div class="dashboard-card_title">Application</div>
-                    <div class="dashboard-card_subtitle">View application details and status</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-sm-12">
-              <a href="/disbursement.html">
-                <div class="dashboard-card d-flex">
-                  <div class="dashboard-card_icon">
-                    <img src="./images/icon/disbursement_icon.png" alt="Disbursement Icon" width="50">
-                  </div>
-                  <div>
-                    <div class="dashboard-card_title">Disbursement</div>
-                    <div class="dashboard-card_subtitle">View disbursement details and status</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-sm-12">
-              <a href="network.html">
-                <div class="dashboard-card d-flex">
-                  <div class="dashboard-card_icon">
-                    <img src="./images/icon/network_icon.png" alt="Network Icon" width="50">
-                  </div>
-                  <div>
-                    <div class="dashboard-card_title">Network</div>
-                    <div class="dashboard-card_subtitle">View network details and status</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-sm-12">
-              <a href="investment.html">
-                <div class="dashboard-card d-flex">
-                  <div class="dashboard-card_icon">
-                    <img src="./images/icon/investment_icon.png" alt="Investment Icon" width="50">
-                  </div>
-                  <div>
-                    <div class="dashboard-card_title">Investment</div>
-                    <div class="dashboard-card_subtitle">View investment details and status</div>
-                  </div>
-                </div>
-              </a>
-            </div>
+          <div class="col-sm-6"> 
+           
+            <div >
+              <div class="header">
+                <div>A. Organization Information</div>
+                <a class="edit-link" href="#">Edit</a>
+              </div>
+      <div class="card">
+        <div class="profile">
+          <div class="avatar">PM</div>
+          <div>
+            <div style="font-size: 20px; font-weight: bold;">Meity Prajjval</div>
+            <div>Organization</div>
           </div>
-          <div class="col-sm-8">
+        </div>
+        <br>
+        <div class="d-flex justify-content-between">
+          <div>
+            <div class="info"><span>Spokesperson</span>: <span class="value">Prajjval Mittal</span></div>
+            <div class="info"><span>Office Address</span>: <span class="value">New Delhi</span></div>
+            <div class="info"><span>Country</span>: <span class="value">India</span></div>
+            <div class="info"><span>State</span>: <span class="value">Delhi</span></div>
+            <div class="info"><span>District/City</span>: <span class="value">CENTRAL</span></div>
+          </div>
+          <div>
+            <div class="info"><span>Pincode</span>: <span class="value">110019</span></div>
+        <div class="info"><span>Email ID</span>: <span class="value">rajatraisde@gmail.com</span></div>
+        <div class="info"><span>Mobile Number</span>: <span class="value">+91 896920000</span></div>
+        <div class="info"><span>Designation</span>: <span class="value">CEO</span></div>
+          </div>
+        </div>
+      </div>
+             
+
+              
+            </div> 
+          </div>
+          <div class="col-sm-6"> 
+            <div class="header">
+              <div>B. Application Information</div>
+            </div>
+            <div class="card">
+              
+              <div class="row">
+                <div class="col-sm-12 col-md-4">
+                  <div class="application-card d-flex align-items-center" style="background-color: #F0B251;border-radius: 8px;">
+                    <div class="application-card_count" style="background: #CF8107;"> 22</div>
+                    <div>
+                      <div class="application-card_title" style="color:#784D0A;">Total</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                  <div class="application-card d-flex align-items-center" style="background-color: #85D2DF;border-radius: 8px;">
+                    <div class="application-card_count" style="background: #2BA1B5;"> 22</div>
+                    <div>
+                      <div class="application-card_title" style="color:#0B5C6A;">Approved</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                  <div class="application-card d-flex align-items-center" style="background-color: #50E0C2;border-radius: 8px;">
+                    <div class="application-card_count" style="background: #059677;"> 22</div>
+                    <div>
+                      <div class="application-card_title" style="color:#07604D;">Not Approved</div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+ 
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 mb-4">
             <div class="bg-primary-aqua">
               <div class="row align-items-center">
                 <div class="col-sm-12 col-md-4">
@@ -573,9 +645,77 @@
                 </div>
               </div>
             </div>
-
+          </div>
+          <div class="col-sm-6 card">
+             <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th width="25%">Application ID</th>
+        <th>Scheme Name</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SF2405015</td>
+        <td>Semiconductor fabs</td>
+        <td><span class="status-approved">Approved</span></td>
+      </tr>
+      <tr>
+        <td>DF2405008</td>
+        <td>Display fabs</td>
+        <td><span class="status-approved">Approved</span></td>
+      </tr>
+      <tr>
+        <td>CS2407013</td>
+        <td>Compound</td>
+        <td><span class="status-review">Evaluation (Under Review)</span></td>
+      </tr>
+      <tr>
+        <td>PK2408012</td>
+        <td>Semiconductor ATMP OSAT facilities</td>
+        <td><span class="status-approved">Approved</span></td>
+      </tr>
+      <tr>
+        <td>SF2405015</td>
+        <td>Semiconductor fabs</td>
+        <td><span class="status-approved">Approved</span></td>
+      </tr>
+      <tr>
+        <td>DF2405008</td>
+        <td>Display fabs</td>
+        <td><span class="status-approved">Approved</span></td>
+      </tr>
+      <tr>
+        <td>CS2407013</td>
+        <td>Compound</td>
+        <td><span class="status-review">Evaluation (Under Review)</span></td>
+      </tr>
+      <tr>
+        <td>PK2408012</td>
+        <td>Semiconductor ATMP OSAT facilities</td>
+        <td><span class="status-approved">Approved</span></td>
+      </tr>
+      <tr>
+        <td>CS2407013</td>
+        <td>Compound</td>
+        <td><span class="status-review">Evaluation (Under Review)</span></td>
+      </tr>
+      <tr>
+        <td>PK2408012</td>
+        <td>Semiconductor ATMP OSAT facilities</td>
+        <td><span class="status-approved">Approved</span></td>
+      </tr>
+      <tr>
+        <td>CS2407013</td>
+        <td>Compound</td>
+        <td><span class="status-review">Evaluation (Under Review)</span></td>
+      </tr>
+    </tbody>
+  </table>
           </div>
         </div>
+        
       </div>
     </section>
   </div>

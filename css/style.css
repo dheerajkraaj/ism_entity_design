@@ -228,6 +228,7 @@ button {
 .menu.show {
   display: block;
 }
+
 #pageTitle {
   color: #192F60;
   font-family: Poppins;
@@ -315,4 +316,61 @@ color: #fff;
   .dic {
     display: none;
   }
+}
+
+
+.application-card_icon {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+.application-card_title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #192f60;
+  letter-spacing: 0.4px;
+}
+
+.application-card_count {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.56px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+
+
+
+
+
+/* Status Button */
+.status {
+  padding: 0.5rem 1rem;
+  border-radius: 85px;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.pending {
+  background-color: #F0F4CD;
+  color: #8D9735;
+  border: 1px solid #8D9735;
+}
+
+.not-approved {
+  border: 1px solid #BD0D10;
+  background: #FCDCDD;
+  color: #BD0D10;
+}
+
+.under-review {
+  border: 1px solid #6C7EB8;
+  background: #E1E8FF;
+  color: #6C7EB8;
 }
