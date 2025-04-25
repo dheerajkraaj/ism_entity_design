@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <script type="text/javascript" src="/js/sidebar.js" defer></script>
+  <style>
+    .page-container {
+      background-image: url(./images/desktop_home_banner.webp);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+      padding: 2rem;
+    }
+
+    .dashboard-card {
+      align-items: center;
+      background-color: #F3F6FD;
+      border-radius: 0.5rem;
+      height: 100%;
+      margin-bottom: 1.25rem;
+      padding: 1rem;
+    }
+
+    .dashboard-card_icon {
+      font-size: 3rem;
+      margin-right: 1rem;
+    }
+
+    .dashboard-card_title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #192f60;
+      letter-spacing: 0.56px;
+    }
+
+    .dashboard-card_subtitle {
+      font-size: 0.75rem;
+      color: #1C1C1C;
+      font-weight: 500;
+      letter-spacing: 0.32px;
+    }
+
+    .main-header {
+      background: #B7C3DF;
+      color: #192F60;
+      height: 3rem;
+    }
+
+    .main-header .dropdown-toggle::after {
+      display: none;
+    }
+
+    .profile-icon {
+      background: #192f60;
+    }
+
+    .bg-primary-aqua {
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.60);
+      padding: 2rem;
+    }
+
+    .notification-container {
+      max-height: 315px;
+      overflow: auto;
+      padding-right: 0.5rem;
+    }
+
+    .scheme-tabs {
+      padding: 1rem;
+      border: none;
+      display: inline-flex;
+      background: #fff;
+      border-radius: 0.5rem;
+    }
+
+    .nav-link {
+      color: #1C1C1C !important;
+    }
+
+    .nav-tabs .nav-link.active {
+      color: #fff !important;
+      background-color: #1c1c1c;
+      border-color: none !important;
+    }
+
+    .main-heading {
+      color: #FFF;
+
+      font-family: Poppins;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 500;
+      margin: 0;
+      letter-spacing: 0.56px;
+    }
+
+    .sub-heading {
+      color: #FFF;
+      font-family: Poppins;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .notification-tabs {
+      background-color: #fff;
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .notification-text {
+      font-size: 14px;
+      font-weight: 500;
+      /* font-family: poppins; */
+      letter-spacing: 0.32px;
+    }
+
+    .notification-icon img {
+      height: 2.5rem;
+    }
+
+    .notification-date {
+      color: #1351D8;
+    }
+  </style>
+</head>
+
+<body>
+  <!--=============== HEADER ===============-->
+  <main class="ism-v3-header__topBar">
+    <div class="container">
+      <div class="row">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex">
+            <div class="date-time">23 October, 2024 | </div>
+            <div class="date-time"> &nbsp;04 : 12 : 09 PM</div>
+          </div>
+          <div class="special-feature">
+            <ul class="navbar-nav navList d-flex flex-row">
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Skip to main content | </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Screen Reader Access | </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> A A A+ A- A | </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> English</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="ism-header__main_box d-flex py-3">
+          <div class="text-start"><a aria-label="Miety logo" class="" href="https://www.meity.gov.in/"
+              target="_blank"><img alt="Miety logo" class="img-fluid"
+                src="https://uatism.semiconindia.org/Assets/images/header/meity_header_logo.png"> </a>
+          </div>
+          <div class="text-center"><a aria-label="Miety logo" class="" href="https://uatism.semiconindia.org/"><img
+                alt="Digital india logo" class="img-fluid"
+                src="https://uatism.semiconindia.org/Assets/images/header/ism_header_logo.png"></a>
+          </div>
+          <div class="text-end"><a aria-label="Miety logo" class="" href="https://dic.gov.in/" target="_blank"><img
+                alt="Digital india logo" class="img-fluid"
+                src="https://uatism.semiconindia.org/Assets/images/header/digi_india_header_logo.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg main-header">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-semibold" href="#">Dashboard</a>
+
+      <!-- Toggler for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <!-- User Profile Dropdown -->
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item active"><a href="">Dashboard</a></li>
+        </ol>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button"
+              data-bs-toggle="dropdown">
+              <img src="./images/icon/profile_icon.png" alt="Profile" class="rounded-circle profile-icon p-1"
+                width="35">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="#">ISM Admin</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">View Profile</a></li>
+              <li><a class="dropdown-item text-danger" href="/login.html">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="page-wrapper">
+    <nav id="sidebar">
+      <ul>
+        <li>
+          <!-- <span class="logo"></span> -->
+          <button onclick=toggleSidebar() id="toggle-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z" />
+            </svg>
+          </button>
+        </li>
+        <li class="active">
+          <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z" />
+            </svg>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="application.html">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M520-640v-160q0-17 11.5-28.5T560-840h240q17 0 28.5 11.5T840-800v160q0 17-11.5 28.5T800-600H560q-17 0-28.5-11.5T520-640ZM120-480v-320q0-17 11.5-28.5T160-840h240q17 0 28.5 11.5T440-800v320q0 17-11.5 28.5T400-440H160q-17 0-28.5-11.5T120-480Zm400 320v-320q0-17 11.5-28.5T560-520h240q17 0 28.5 11.5T840-480v320q0 17-11.5 28.5T800-120H560q-17 0-28.5-11.5T520-160Zm-400 0v-160q0-17 11.5-28.5T160-360h240q17 0 28.5 11.5T440-320v160q0 17-11.5 28.5T400-120H160q-17 0-28.5-11.5T120-160Zm80-360h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z" />
+            </svg>
+            <span>Application</span>
+          </a>
+        </li>
+        <!-- <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z"/></svg>
+          <span>Create</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#">Folder</a></li>
+            <li><a href="#">Document</a></li>
+            <li><a href="#">Project</a></li>
+          </div>
+        </ul>
+      </li> -->
+        <!-- <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m221-313 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-228q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm0-320 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-548q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm339 353q-17 0-28.5-11.5T520-320q0-17 11.5-28.5T560-360h280q17 0 28.5 11.5T880-320q0 17-11.5 28.5T840-280H560Zm0-320q-17 0-28.5-11.5T520-640q0-17 11.5-28.5T560-680h280q17 0 28.5 11.5T880-640q0 17-11.5 28.5T840-600H560Z"/></svg>
+          <span>Todo-Lists</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Private</a></li>
+            <li><a href="#">Coding</a></li>
+            <li><a href="#">Gardening</a></li>
+            <li><a href="#">School</a></li>
+          </div>
+        </ul>
+      </li> -->
+        <li>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+            </svg>
+            <span>Disbursement</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+            </svg>
+            <span>Investment</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+            </svg>
+            <span>Network</span>
+          </a>
+        </li>
+        <!-- <li>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+          <span>Settings</span>
+        </a>
+      </li> -->
+        <li>
+          <button onclick=toggleSubMenu(this) class="dropdown-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="m221-313 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-228q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm0-320 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-548q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm339 353q-17 0-28.5-11.5T520-320q0-17 11.5-28.5T560-360h280q17 0 28.5 11.5T880-320q0 17-11.5 28.5T840-280H560Zm0-320q-17 0-28.5-11.5T520-640q0-17 11.5-28.5T560-680h280q17 0 28.5 11.5T880-640q0 17-11.5 28.5T840-600H560Z" />
+            </svg>
+            <span>Settings</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z" />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="#">Email Template</a></li>
+              <li><a href="#">SMS Template</a></li>
+              <li><a href="#">Embassy</a></li>
+              <li><a href="#">Schemes</a></li>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <section class="page-container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="col-sm-12">
+              <a href="/application.html">
+                <div class="dashboard-card d-flex">
+                  <div class="dashboard-card_icon">
+                    <img src="./images/icon/dashboard_icon.png" alt="Application Icon" width="50">
+                  </div>
+                  <div>
+                    <div class="dashboard-card_title">Application</div>
+                    <div class="dashboard-card_subtitle">View application details and status</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12">
+              <a href="/disbursement.html">
+                <div class="dashboard-card d-flex">
+                  <div class="dashboard-card_icon">
+                    <img src="./images/icon/disbursement_icon.png" alt="Disbursement Icon" width="50">
+                  </div>
+                  <div>
+                    <div class="dashboard-card_title">Disbursement</div>
+                    <div class="dashboard-card_subtitle">View disbursement details and status</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12">
+              <a href="network.html">
+                <div class="dashboard-card d-flex">
+                  <div class="dashboard-card_icon">
+                    <img src="./images/icon/network_icon.png" alt="Network Icon" width="50">
+                  </div>
+                  <div>
+                    <div class="dashboard-card_title">Network</div>
+                    <div class="dashboard-card_subtitle">View network details and status</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12">
+              <a href="investment.html">
+                <div class="dashboard-card d-flex">
+                  <div class="dashboard-card_icon">
+                    <img src="./images/icon/investment_icon.png" alt="Investment Icon" width="50">
+                  </div>
+                  <div>
+                    <div class="dashboard-card_title">Investment</div>
+                    <div class="dashboard-card_subtitle">View investment details and status</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="bg-primary-aqua">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-4">
+                  <p class="main-heading">Latest</p>
+                  <p class="sub-heading">Notifications</p>
+                </div>
+                <div class="col-sm-12 col-md-8">
+                  <div class="text-end">
+                    <ul class="nav nav-tabs scheme-tabs" id="myTab2" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button aria-controls="photos" aria-selected="true" class="nav-link active"
+                          data-bs-target="#photos" data-bs-toggle="tab" id="photos-tab" role="tab" type="button">
+                          <span class="px-3">Current</span>
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button aria-controls="videos" aria-selected="false" class="nav-link" data-bs-target="#videos"
+                          data-bs-toggle="tab" id="videos-tab" role="tab" type="button" tabindex="-1">
+                          <span class="px-3">Archives</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="tab-content" id="myTabSemicon2">
+                  <div aria-labelledby="photos-tab" class="tab-pane fade active show" id="photos" role="tabpanel">
+                    <div class="notification-container">
+                      <div class="col-12">
+                        <div class="notification-tabs d-flex align-content-center justify-content-between br-8">
+                          <div class="notification-text align-content-center">
+                            Guidelines for Modified Scheme for setting up of Semiconductor Fabs in India
+                            <span class="notification-date">29 May, 2023</span>
+                          </div>
+                          <div class="notification-icon ml-auto">
+                            <a target="_blank"
+                              href="https://d2p5j06zete1i7.cloudfront.net/Cms/2023/May/31/1685527229_Guidelines_for_Modified_Scheme_for_setting_up_of_Semiconductor_Fabs_in_India.pdf">
+                              <span>
+                                <img src="./images/icon/read_more_icon.png" alt="">
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="notification-tabs d-flex align-content-center justify-content-between br-8">
+                          <div class="scheme-notification-icon d-none">
+                            <img src="../Assets/images/notification_icon.png" alt="" class="img-fluid">
+                          </div>
+                          <div class="notification-text align-content-center">
+                            Modified Scheme for setting up of Semiconductor Fabs in India
+                            <span class="notification-date">4 October, 2022</span>
+                          </div>
+                          <div class="notification-icon ml-auto">
+                            <a target="_blank"
+                              href="https://d2p5j06zete1i7.cloudfront.net/Cms/2022/Oct/07/1665119978_Notification_Modified_Scheme_for_Semiconductor_Fabs.pdf">
+                              <span>
+                                <img src="./images/icon/read_more_icon.png" alt="">
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="notification-tabs d-flex align-content-center justify-content-between br-8">
+                          <div class="scheme-notification-icon d-none">
+                            <img src="../Assets/images/notification_icon.png" alt="" class="img-fluid">
+                          </div>
+                          <div class="notification-text align-content-center">
+                            Modified Scheme for setting up of Semiconductor Fabs in India
+                            <span class="notification-date">4 October, 2022</span>
+                          </div>
+                          <div class="notification-icon ml-auto">
+                            <a target="_blank"
+                              href="https://d2p5j06zete1i7.cloudfront.net/Cms/2022/Oct/07/1665119978_Notification_Modified_Scheme_for_Semiconductor_Fabs.pdf">
+                              <span>
+                                <img src="./images/icon/read_more_icon.png" alt="">
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="notification-tabs d-flex align-content-center justify-content-between br-8">
+                          <div class="scheme-notification-icon d-none">
+                            <img src="../Assets/images/notification_icon.png" alt="" class="img-fluid">
+                          </div>
+                          <div class="notification-text align-content-center">
+                            Modified Scheme for setting up of Semiconductor Fabs in India
+                            <span class="notification-date">4 October, 2022</span>
+                          </div>
+                          <div class="notification-icon ml-auto">
+                            <a target="_blank"
+                              href="https://d2p5j06zete1i7.cloudfront.net/Cms/2022/Oct/07/1665119978_Notification_Modified_Scheme_for_Semiconductor_Fabs.pdf">
+                              <span>
+                                <img src="./images/icon/read_more_icon.png" alt="">
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="notification-tabs d-flex align-content-center justify-content-between br-8">
+                          <div class="scheme-notification-icon d-none">
+                            <img src="../Assets/images/notification_icon.png" alt="" class="img-fluid">
+                          </div>
+                          <div class="notification-text align-content-center">
+                            Modified Scheme for setting up of Semiconductor Fabs in India
+                            <span class="notification-date">4 October, 2022</span>
+                          </div>
+                          <div class="notification-icon ml-auto">
+                            <a target="_blank"
+                              href="https://d2p5j06zete1i7.cloudfront.net/Cms/2022/Oct/07/1665119978_Notification_Modified_Scheme_for_Semiconductor_Fabs.pdf">
+                              <span>
+                                <img src="./images/icon/read_more_icon.png" alt="">
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="notification-tabs d-flex align-content-center justify-content-between br-8">
+                          <div class="scheme-notification-icon d-none">
+                            <img src="../Assets/images/notification_icon.png" alt="" class="img-fluid">
+                          </div>
+                          <div class="notification-text align-content-center">
+                            Modified Scheme for setting up of Semiconductor Fabs in India
+                            <span class="notification-date">4 October, 2022</span>
+                          </div>
+                          <div class="notification-icon ml-auto">
+                            <a target="_blank"
+                              href="https://d2p5j06zete1i7.cloudfront.net/Cms/2022/Oct/07/1665119978_Notification_Modified_Scheme_for_Semiconductor_Fabs.pdf">
+                              <span>
+                                <img src="./images/icon/read_more_icon.png" alt="">
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div aria-labelledby="videos-tab" class="tab-pane fade" id="videos" role="tabpanel">
+                    <div class="ism-elem10_wrap m-0">
+                      <div class="row ism-elem10_wrap m-0">
+                        <div class="col-12">
+                          <div class="notification-tabs d-flex align-content-center justify-content-between br-8">
+                            <div class="notification-text align-content-center">
+                              Guidelines for Scheme for setting up of Semiconductor Fabs in India
+                              <span class="notification-date">30 December, 2021</span>
+                            </div>
+                            <div class="notification-icon ml-auto">
+                              <a target="_blank"
+                                href="https://d2p5j06zete1i7.cloudfront.net/Cms/2022/May/05/1651756298_guidelines_semiconductor_fab.pdf">
+                                <span>
+                                  <img src="./images/icon/read_more_icon.png" alt="">
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="notification-tabs d-flex align-content-center justify-content-between br-8">
+                            <div class="notification-text align-content-center">
+                              Scheme for setting up of Semiconductor Fabs in India
+                              <span class="notification-date">21 December, 2021</span>
+                            </div>
+                            <div class="notification-icon ml-auto">
+                              <a target="_blank"
+                                href="https://d2p5j06zete1i7.cloudfront.net/Cms/2022/May/05/1651758241_notification_semiconductor_fabs.pdf">
+                                <span>
+                                  <img src="./images/icon/read_more_icon.png" alt="">
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

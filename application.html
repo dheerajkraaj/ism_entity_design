@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+  <script type="text/javascript" src="/js/sidebar.js" defer></script>
+  <style>
+.page-container {
+    background: #F3F6FD;
+  padding: 1rem 0rem;
+}
+.application-card {
+  align-items: center;
+  background-color: #F3F6FD;
+  border-radius: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.application-card_icon {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+.application-card_title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #192f60;
+    letter-spacing: 0.4px;
+}
+.application-card_count{
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.56px;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+table.dataTable thead {
+            background-color: #0e2a47;
+            color: white;
+        }
+        .status {
+          padding: 0.5rem 1rem;
+    border-radius: 85px;
+    font-weight: 500;
+    font-size: 0.75rem;
+        }
+        .pending { background-color: #F0F4CD;; color: #8D9735; border: 1px solid #8D9735;}
+        .not-approved { border: 1px solid #BD0D10;
+
+background: #FCDCDD; color: #BD0D10; }
+        .under-review { border: 1px solid #6C7EB8;
+
+background: #E1E8FF; color: #6C7EB8;; }
+        .details-btn{
+          outline: none;
+    border-radius: 4px;
+    background: #192F60;
+    padding: 0.30rem 0.75rem;
+    color: #fff;
+    font-size: 14px;
+    border: none;}
+    table.dataTable tbody th, table.dataTable tbody td {
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #1c1c1c;
+    letter-spacing: 0.28px;
+}
+table.dataTable.display tbody tr.odd {
+    background-color: #fff;
+}
+table.dataTable.display tbody tr.even {
+    background-color: #F3F6FD;
+}
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color: transparent;
+}
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color: transparent;
+}
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color: transparent;
+}
+table.dataTable thead th, table.dataTable thead td {
+    padding: 10px 18px;
+    border-bottom: 1px solid #111;
+    font-size: 14px;
+    font-weight: 500;
+}
+table.dataTable.no-footer {
+    border-bottom: none;
+}
+.dataTables_wrapper .dataTables_length, .dataTables_filter{
+color: rgba(25, 47, 96, 0.70) !important;
+font-size: 14px;
+}
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #aaa;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    background-color:#fff;
+    margin-left: 3px;
+    border: 2px solid rgba(25, 47, 96, 0.10);
+}
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid #aaa;
+ 
+    padding: 5px;
+    background-color:#fff;
+    margin-left: 3px;
+    border: 2px solid rgba(25, 47, 96, 0.10);
+}
+.dataTables_wrapper .dataTables_info, .dataTables_paginate{
+  color: rgba(25, 47, 96, 0.70) !important;
+font-size: 14px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+  background-color: #192f60;
+  color: #fff;
+}
+.menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -5rem;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #192f60;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 0.5rem;
+    width: max-content;
+    /* border-bottom: 1px solid #192f60; */
+}
+.menu li:first-child {
+    border-bottom: 1px solid #192f60;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu.show {
+    display: block;
+}
+.action-item-box{
+  display: flex;
+  gap: 0.75rem;
+  margin: 0;
+}
+.action-item img{
+  height: 32px;
+    width: 32px;
+}
+
+.modal.right .modal-dialog {
+            position: fixed;
+            right: 0;
+            margin: 0;
+            height: 100%;
+            max-width: 400px; /* Adjust width as needed */
+        }
+
+        .modal.right .modal-content {
+            height: 100%;
+            border-radius: 0;
+        }
+        .custom-multi-select {
+          width: 100%;
+    padding: 5px;
+    border: 1px solid #192f60;
+    border-radius: 0px;
+    max-height: 350px;
+    overflow-y: auto;
+
+        }
+        .custom-multi-select input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 5px;
+            box-sizing: border-box;
+        }
+        .custom-multi-select ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .custom-multi-select li {
+            padding: 5px;
+            cursor: pointer;
+        }
+        .custom-multi-select li:hover {
+            background-color: #f0f0f0;
+        }
+        .selected-items {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+</style>
+</head>
+<body>
+    <!--=============== HEADER ===============-->
+    <main class="ism-v3-header__topBar">
+      <div class="container">
+        <div class="row">
+          <div class="d-flex justify-content-between">
+            <div class="d-flex">
+              <div class="date-time">23 October, 2024 | </div>
+              <div class="date-time"> &nbsp;04 : 12 : 09 PM</div>
+            </div>
+            <div class="special-feature">
+              <ul class="navbar-nav navList d-flex flex-row">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Skip to main content | </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Screen Reader Access | </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> A A A+ A- A | </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> English</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="ism-header__main_box d-flex py-3">
+            <div class="text-start"><a aria-label="Miety logo" class="meity"
+                href="https://www.meity.gov.in/" target="_blank"><img alt="Miety logo" class="img-fluid"
+                  src="https://uatism.semiconindia.org/Assets/images/header/meity_header_logo.png"> </a>
+            </div>
+            <div class="text-center"><a aria-label="Miety logo" class="ism"
+                href="https://uatism.semiconindia.org/"><img alt="Digital india logo" class="img-fluid"
+                  src="https://uatism.semiconindia.org/Assets/images/header/ism_header_logo.png"></a>
+            </div>
+            <div class="text-end"><a aria-label="Miety logo" class="dic"
+                href="https://dic.gov.in/" target="_blank"><img alt="Digital india logo" class="img-fluid"
+                  src="https://uatism.semiconindia.org/Assets/images/header/digi_india_header_logo.png"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg main-header">
+      <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand fw-semibold" href="#">Application</a>
+  
+          <!-- Toggler for mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <!-- User Profile Dropdown -->
+              <ol class="breadcrumb m-0">
+                <li class="breadcrumb-item "><a href="">Home</a></li>
+                <li class="breadcrumb-item active"><a href="">Applications</a></li>
+            </ol>
+              <ul class="navbar-nav">
+                
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                          <img src="./images/icon/profile_icon.png" alt="Profile" class="rounded-circle profile-icon p-1" width="35">
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                          <li><a class="dropdown-item" href="#">ISM Admin</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">View Profile</a></li>
+                          <li><a class="dropdown-item text-danger" href="/login.html">Logout</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+ <div class="page-wrapper">
+  <nav id="sidebar">
+    <ul>
+      <li>
+        <!-- <span class="logo"></span> -->
+        <button onclick=toggleSidebar() id="toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"/></svg>
+        </button>
+      </li>
+      <li>
+        <a href="index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z"/></svg>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="application.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M520-640v-160q0-17 11.5-28.5T560-840h240q17 0 28.5 11.5T840-800v160q0 17-11.5 28.5T800-600H560q-17 0-28.5-11.5T520-640ZM120-480v-320q0-17 11.5-28.5T160-840h240q17 0 28.5 11.5T440-800v320q0 17-11.5 28.5T400-440H160q-17 0-28.5-11.5T120-480Zm400 320v-320q0-17 11.5-28.5T560-520h240q17 0 28.5 11.5T840-480v320q0 17-11.5 28.5T800-120H560q-17 0-28.5-11.5T520-160Zm-400 0v-160q0-17 11.5-28.5T160-360h240q17 0 28.5 11.5T440-320v160q0 17-11.5 28.5T400-120H160q-17 0-28.5-11.5T120-160Zm80-360h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+          <span>Application</span>
+        </a>
+      </li>
+      <!-- <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h207q16 0 30.5 6t25.5 17l57 57h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Zm400-160v40q0 17 11.5 28.5T600-320q17 0 28.5-11.5T640-360v-40h40q17 0 28.5-11.5T720-440q0-17-11.5-28.5T680-480h-40v-40q0-17-11.5-28.5T600-560q-17 0-28.5 11.5T560-520v40h-40q-17 0-28.5 11.5T480-440q0 17 11.5 28.5T520-400h40Z"/></svg>
+          <span>Create</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#">Folder</a></li>
+            <li><a href="#">Document</a></li>
+            <li><a href="#">Project</a></li>
+          </div>
+        </ul>
+      </li> -->
+      <!-- <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m221-313 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-228q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm0-320 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-548q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm339 353q-17 0-28.5-11.5T520-320q0-17 11.5-28.5T560-360h280q17 0 28.5 11.5T880-320q0 17-11.5 28.5T840-280H560Zm0-320q-17 0-28.5-11.5T520-640q0-17 11.5-28.5T560-680h280q17 0 28.5 11.5T880-640q0 17-11.5 28.5T840-600H560Z"/></svg>
+          <span>Todo-Lists</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Private</a></li>
+            <li><a href="#">Coding</a></li>
+            <li><a href="#">Gardening</a></li>
+            <li><a href="#">School</a></li>
+          </div>
+        </ul>
+      </li> -->
+      <li>
+        <a href="disbursement.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z"/></svg>
+          <span>Disbursement</span>
+        </a>
+      </li>
+      <li>
+        <a href="investment.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+          <span>Investment</span>
+        </a>
+      </li>
+      <li>
+        <a href="network.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+          <span>Network</span>
+        </a>
+      </li>
+    <!-- <li class="active">
+        <a href="settings.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+          <span>Settings</span>
+        </a>
+      </li> -->
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m221-313 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-228q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm0-320 142-142q12-12 28-11.5t28 12.5q11 12 11 28t-11 28L250-548q-12 12-28 12t-28-12l-86-86q-11-11-11-28t11-28q11-11 28-11t28 11l57 57Zm339 353q-17 0-28.5-11.5T520-320q0-17 11.5-28.5T560-360h280q17 0 28.5 11.5T880-320q0 17-11.5 28.5T840-280H560Zm0-320q-17 0-28.5-11.5T520-640q0-17 11.5-28.5T560-680h280q17 0 28.5 11.5T880-640q0 17-11.5 28.5T840-600H560Z"/></svg>
+          <span>Settings</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#">Email Template</a></li>
+            <li><a href="#">SMS Template</a></li>
+            <li><a href="#">Embassy</a></li>
+            <li><a href="#">Schemes</a></li>
+          </div>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <section class="page-container">
+        <div class="container-fluid">
+          <div class="row d-flex">
+            <div class="col-sm-12 col-md-3">
+                <div class="application-card d-flex" style="background-color: #F0B251;">
+                    <div class="application-card_count" style="background: #CF8107;"> 22</div> 
+                    <div>
+                        <div class="application-card_title" style="color:#784D0A;">Semiconductor Fab</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="application-card d-flex" style="background-color: #85D2DF;">
+                    <div class="application-card_count" style="background: #2BA1B5;"> 22</div> 
+                    <div>
+                        <div class="application-card_title" style="color:#0B5C6A;">Display Fab</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="application-card d-flex" style="background-color: #50E0C2;">
+                    <div class="application-card_count" style="background: #059677;"> 22</div> 
+                    <div>
+                        <div class="application-card_title" style="color:#07604D;">Compound Fab</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="application-card d-flex" style="background-color: #FF9EAF">
+                    <div class="application-card_count" style="background: #DA536A;"> 22</div> 
+                    <div>
+                        <div class="application-card_title" style="color:#860E23;">Semiconductor ATMP </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row my-3">            
+            <div class="col">
+              All Application
+            </div>
+            <div class="col text-end">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#filterModal" style="border-radius: 92px;padding: 0.25rem 1rem;border: 2px solid #192F60;background: #FFF;color: #192F60;"><i class="fa-solid fa-sliders me-2"></i>Filter</button>
+            </div>
+          </div>
+          <div class="row">
+            <table id="example" class="display py-3 rounded-br" style="width:100%">
+              <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Application No.</th>
+                    <th>Name</th>
+                    <th>Scheme</th>
+                    <th>Application Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>ATM20220002</td>
+                    <td>Tata Electronics</td>
+                    <td>Semiconductor ATMP OSAT facilities</td>
+                    <td>07 Oct 2022</td>
+                    <td><span class="status under-review">Evaluation (Under Review)</span></td>
+                    <td>
+                      <ul class="action-item-box">
+                        <li class=""><button class="action-item"><img src="./images/icon/generate-report_icon.png" alt="Menu"></button></li>
+                        <li class=""><button class="action-item"><img src="./images/icon/preview_report_icon.png" alt="Menu"></button></li>
+                        <li class="">
+                          <div class="menu-container">
+                          <button class="action-item" id="menuButton">
+                            <img src="./images/icon/add-member_icon.png" alt="Menu">
+                          </button>
+                            <div id="menu" class="menu">
+                                <ul>
+                                    <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#showMembersListModal"><i class="fa-solid fa-user-plus me-2"></i>Add Team Member</a></li>
+                                    <li><a href="#" type="button" data-bs-toggle="modal" data-bs-target="#showMembersListModal"><i class="fa-solid fa-user-plus me-2"></i>Add PMC Member</a></li>
+                                </ul>
+                            </div>
+                          </div></li>
+                        <li class=""><a href="/application-details.html"><button class="details-btn">Details</button></a></li>
+                      </ul>                       
+                    </td> 
+                  </tr>
+              </tbody>
+          </table>
+          </div>
+        </div>
+  </section>
+ </div>
+ <!-- Application Filter Modal -->
+ <div class="modal fade right" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content p-2">
+          <div class="modal-header">
+              <h5 class="modal-title" id="filterModalLabel">Filters</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="mb-3">
+                      <label class="form-label">Application Date</label>
+                      <div class="d-flex gap-2">
+                          <input type="date" class="form-control" placeholder="From">
+                          <input type="date" class="form-control" placeholder="To">
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label class="form-label">Scheme</label>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="scheme1">
+                          <label class="form-check-label" for="scheme1">Semiconductor Fabs</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="scheme2">
+                          <label class="form-check-label" for="scheme2">Display Fabs</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="scheme3">
+                          <label class="form-check-label" for="scheme3">Compound/ATMP/OSAT</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="scheme4">
+                          <label class="form-check-label" for="scheme4">Design Linked Incentive</label>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label class="form-label">Status</label>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="status1">
+                          <label class="form-check-label" for="status1">Payment Pending</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="status2">
+                          <label class="form-check-label" for="status2">Payment Received</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="status3">
+                          <label class="form-check-label" for="status3">Preliminary Screening</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="status4">
+                          <label class="form-check-label" for="status4">Acknowledged</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="status5">
+                          <label class="form-check-label" for="status5">Evaluation</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="status6">
+                          <label class="form-check-label" for="status6">Approved</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="status7">
+                          <label class="form-check-label" for="status7">Not Approved</label>
+                      </div>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="status8">
+                          <label class="form-check-label" for="status8">Withdrawn</label>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label class="form-label">Account Type</label>
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="accountType">
+                          <label class="form-check-label" for="accountType">Testing Only</label>
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Clear Filters</button>
+              <button type="button" class="btn btn-primary">Apply Filters</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Show Members List Modal -->
+<div class="modal fade" id="showMembersListModal" tabindex="-1" aria-labelledby="showMembersListModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content p-3">
+          <div class="modal-header">
+              <h5 class="modal-title" id="showMembersListModalLabel">Team Members</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="list-group">
+                  <div class="list-group-item d-flex justify-content-between align-items-center">
+                      Sudhanshu Gupta
+                      <button class="btn btn-sm btn-outline-danger"><i class="fa-regular fa-trash-can"></i></button>
+                  </div>
+                  <div class="list-group-item d-flex justify-content-between align-items-center">
+                      Rajat Rai
+                      <button class="btn btn-sm btn-outline-danger"><i class="fa-regular fa-trash-can"></i></button>
+                  </div>
+                  <div class="list-group-item d-flex justify-content-between align-items-center">
+                      Rajat Rai
+                      <button class="btn btn-sm btn-outline-danger"><i class="fa-regular fa-trash-can"></i></button>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addMemberModal">Add Team Member</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Select Team Member Modal -->
+<div class="modal fade" id="addMemberModal" tabindex="-1" aria-labelledby="addMemberModal" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content p-3">
+          <div class="modal-header">
+              <h5 class="modal-title" id="addMemberModal">Select Team Member</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="custom-multi-select">
+                <input type="text" id="search-box" placeholder="Search...">
+                <ul id="dropdown-options">
+                  <li data-value="Ajay Agrawal">Ajay Agrawal</li>
+                  <li data-value="Akshay Singh">Akshay Singh</li>
+                  <li data-value="Prajjval Mittal">Prajjval Mittal</li>
+                  <li data-value="Pankaj Singh">Pankaj Singh</li>
+                  <li data-value="Rajat Rai">Rajat Rai</li>
+                  <li data-value="Rohit Gupta">Rohit Gupta</li>
+                  <li data-value="Ritika Wadhwa">Ritika Wadhwa</li>
+                  <li data-value="Sobhit Soni">Sobhit Soni</li>
+                  <li data-value="Sparsh Bhatia">Sparsh Bhatia</li>
+                  <li data-value="Sudhanshu Gupta">Sudhanshu Gupta</li>
+                  <li data-value="Sonali Jain">Sonali Jain</li>
+
+                </ul>
+            </div>
+        
+            <div class="selected-items">
+                <strong>Selected:</strong> <p id="selected-values"></p>
+            </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Add Team Member Modal -->
+<div class="modal fade" id="addPmcMemberModal" tabindex="-1" aria-labelledby="addPmcMemberModal" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content p-3">
+          <div class="modal-header">
+              <h5 class="modal-title" id="addPmcMemberModal">Add Team Member</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <select class="form-select">
+                  <option selected>Select Team Member</option>
+                  <option value="1">Piyush Priy</option>
+                  <option value="2">Sachin Kumar</option>
+                  <option value="3">Pankaj Pandey</option>
+                  <option value="4">Shobhit Sharma</option>
+                  <option value="5">Rajat Rai</option>
+                  <option value="6">Sudhanshu Gupta</option>
+                  <option value="7">Prajjal Mittal</option>
+                  <option value="8">Sparsh Bhatia</option>
+              </select>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Save</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+ <script>
+  $(document).ready(function() {
+      $('#example').DataTable({
+          "paging": true,
+          "ordering": true,
+          "info": true
+      });
+      let selectedValues = [];
+
+            // Search functionality
+            $("#search-box").on("keyup", function () {
+                let value = $(this).val().toLowerCase();
+                $("#dropdown-options li").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+
+            // Select/Deselect items
+            $("#dropdown-options li").on("click", function () {
+                let value = $(this).attr("data-value");
+                if (selectedValues.includes(value)) {
+                    selectedValues = selectedValues.filter(item => item !== value);
+                    $(this).css("background-color", "");
+                } else {
+                    selectedValues.push(value);
+                    $(this).css("background-color", "#B7C3DF");
+                }
+                $("#selected-values").text(selectedValues.join(" , "));
+            });
+  });
+
+  document.getElementById("menuButton").addEventListener("click", function () {
+    document.getElementById("menu").classList.toggle("show");
+  });
+  document.addEventListener("click", function (event) {
+      const menu = document.getElementById("menu");
+      const button = document.getElementById("menuButton");
+
+      if (!menu.contains(event.target) && !button.contains(event.target)) {
+          menu.classList.remove("show");
+      }
+  });
+
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
