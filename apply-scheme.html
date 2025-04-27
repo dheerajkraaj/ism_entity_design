@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" src="/js/sidebar.js" defer></script>
+  <style>
+    .page-container {
+      background: #F3F6FD;
+      padding: 1rem;
+    }
+
+    .application-card {
+      align-items: center;
+      background-color: #F3F6FD;
+      border-radius: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .application-card_icon {
+      font-size: 3rem;
+      margin-right: 1rem;
+    }
+
+    .application-card_title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #192f60;
+      letter-spacing: 0.4px;
+    }
+
+    .application-card_count {
+      color: #FFF;
+      text-align: center;
+      font-family: Poppins;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.56px;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      margin-right: 1rem;
+    }
+
+    table.dataTable thead {
+      background-color: #0e2a47;
+      color: white;
+    }
+
+    .status {
+      padding: 0.5rem 1rem;
+      border-radius: 85px;
+      font-weight: 500;
+      font-size: 0.75rem;
+    }
+
+    .pending {
+      background-color: #F0F4CD;
+      ;
+      color: #8D9735;
+      border: 1px solid #8D9735;
+    }
+
+    .not-approved {
+      border: 1px solid #BD0D10;
+
+      background: #FCDCDD;
+      color: #BD0D10;
+    }
+
+    .under-review {
+      border: 1px solid #6C7EB8;
+
+      background: #E1E8FF;
+      color: #6C7EB8;
+      ;
+    }
+
+    .details-btn {
+      outline: none;
+      border-radius: 4px;
+      background: #192F60;
+      padding: 0.25rem 0.75rem;
+      color: #fff;
+      font-size: 14px;
+      border: none;
+    }
+
+    table.dataTable tbody th,
+    table.dataTable tbody td {
+      padding: 8px 10px;
+      font-size: 14px;
+      color: #1c1c1c;
+      letter-spacing: 0.28px;
+    }
+
+    table.dataTable.display tbody tr.odd {
+      background-color: #fff;
+    }
+
+    table.dataTable.display tbody tr.even {
+      background-color: #F3F6FD;
+    }
+
+    table.dataTable.display tbody tr.odd>.sorting_1,
+    table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+      background-color: transparent;
+    }
+
+    table.dataTable.display tbody tr.even>.sorting_1,
+    table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+      background-color: transparent;
+    }
+
+    table.dataTable.display tbody tr.odd>.sorting_1,
+    table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+      background-color: transparent;
+    }
+
+    table.dataTable thead th,
+    table.dataTable thead td {
+      padding: 10px 18px;
+      border-bottom: 1px solid #111;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    table.dataTable.no-footer {
+      border-bottom: none;
+    }
+
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_filter {
+      color: rgba(25, 47, 96, 0.70) !important;
+      font-size: 14px;
+    }
+
+    .dataTables_wrapper .dataTables_filter input {
+      border: 1px solid #aaa;
+      border-radius: 25px;
+      padding: 5px;
+      background-color: #fff;
+      margin-left: 3px;
+      border: 2px solid rgba(25, 47, 96, 0.10);
+    }
+
+    .dataTables_wrapper .dataTables_length select {
+      border: 1px solid #aaa;
+
+      padding: 0.5rem 1rem;
+      background-color: #fff;
+      margin-left: 3px;
+      border: 2px solid rgba(25, 47, 96, 0.10);
+    }
+
+    .dataTables_wrapper .dataTables_info,
+    .dataTables_paginate {
+      color: rgba(25, 47, 96, 0.70) !important;
+      font-size: 14px;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+      background-color: #192f60;
+      color: #fff;
+    }
+
+    .application-tabs li a {
+      padding: 0.5rem;
+    }
+
+    .application-tabs-icon {
+      height: 30px;
+    }
+
+    .application-tabs-counter {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+
+    .application-tabs-title {
+      font-size: 0.75rem;
+      letter-spacing: 0.28px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .application-steps-items {
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+    }
+
+    .application-tabs .nav-tabs .nav-link {
+      border-radius: 0px;
+      border: 1px solid #192f60;
+      margin-right: 5px;
+    }
+
+    .application-tabs>.nav-tabs .nav-link.active {
+      border: 1px solid #192F60;
+      background: #192F60;
+      color: #fff;
+    }
+
+    .application-tabs>.nav-tabs .nav-link {
+      border: 1px solid #192F60;
+      background: #fff;
+      color: #192F60;
+    }
+
+    .application-tabs>.nav-tabs .nav-link.disabled {
+      border: 1px solid rgba(25, 47, 96, 0.30);
+      background: #F3F6FD;
+      opacity: .9;
+      filter: alpha(opacity=50);
+      cursor: not-allowed;
+      color: rgba(120, 57, 184, 0.50) !important;
+    }
+
+    .w-12 {
+      max-width: 10rem;
+      min-width: 9rem;
+    }
+
+    .application-child-tabs {
+      border: 1px solid #BAC1D0;
+      background: #FFF;
+      /* border-radius: 8px; */
+    }
+
+    .application-child-tabs .nav-tabs .nav-link {
+      border: 1px solid rgba(25, 47, 96, 0.30);
+      color: rgba(25, 47, 96, 0.70);
+      background: #F3F6FD;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.28px;
+      margin-right: 0;
+      text-align: center;
+    }
+
+    .application-child-tabs .nav-tabs .nav-link.active {
+
+      border-top: 1px solid rgba(25, 47, 96, 0.30);
+      border-right: 1px solid rgba(25, 47, 96, 0.30);
+      border-left: 1px solid rgba(25, 47, 96, 0.30);
+      color: #192f60;
+      background: #FFF;
+      border-bottom: 1px solid #fff;
+
+    }
+
+    .section-title {
+      background-color: #192f60;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 10px 10px 0 0;
+      font-size: 14px;
+    font-weight: 500;
+    }
+    .info-table td {
+      padding: 8px;
+      font-size: 14px;
+    }
+    .info-table td:first-child {
+      font-weight: 600;
+      width: 200px;
+    }
+    .info-box {
+      border: 1px solid #dcdcdc;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .default-badge {
+      border-radius: 58px;
+    border: 1px solid #6C7EB8;
+    background: #F3F6FD;
+    color: #5A6B8F;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    padding: 0.15rem 0.75rem;
+    }
+    tbody, td, tfoot, th, thead, tr{
+      font-size: 14px;
+    }
+
+
+.document-head{
+  background: #192F60;
+}
+   .document-head h4{
+    color: #FFF;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+padding: 1rem;
+letter-spacing: 0.28px;
+   }
+   .document-head table{
+    font-size: 14px;
+    border: none;
+   }
+   .document-head table tr td{
+    border: none;
+   }
+
+  </style>
+</head>
+
+<body>
+  <!--=============== HEADER ===============-->
+  <main class="ism-v3-header__topBar">
+    <div class="container">
+      <div class="row">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex">
+            <div class="date-time">23 October, 2024 | </div>
+            <div class="date-time"> &nbsp;04 : 12 : 09 PM</div>
+          </div>
+          <div class="special-feature">
+            <ul class="navbar-nav navList d-flex flex-row">
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Skip to main content | </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Screen Reader Access | </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> A A A+ A- A | </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> English</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="ism-header__main_box d-flex py-3">
+          <div class="text-start"><a aria-label="Miety logo" class="meity" href="https://www.meity.gov.in/"
+              target="_blank"><img alt="Miety logo" class="img-fluid"
+                src="https://uatism.semiconindia.org/Assets/images/header/meity_header_logo.png"> </a>
+          </div>
+          <div class="text-center"><a aria-label="Miety logo" class="ism" href="https://uatism.semiconindia.org/"><img
+                alt="Digital india logo" class="img-fluid"
+                src="https://uatism.semiconindia.org/Assets/images/header/ism_header_logo.png"></a>
+          </div>
+          <div class="text-end"><a aria-label="Miety logo" class="dic" href="https://dic.gov.in/" target="_blank"><img
+                alt="Digital india logo" class="img-fluid"
+                src="https://uatism.semiconindia.org/Assets/images/header/digi_india_header_logo.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg main-header">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-semibold" href="#">Application Details</a>
+
+      <!-- Toggler for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <!-- User Profile Dropdown -->
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item "><a href="/index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="/application.html">Applications</a></li>
+          <li class="breadcrumb-item active"><a href="/application-details.html">Application Details</a></li>
+        </ol>
+        <ul class="navbar-nav">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button"
+              data-bs-toggle="dropdown">
+              <img src="./images/icon/profile_icon.png" alt="Profile" class="rounded-circle profile-icon p-1"
+                width="35">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="#">ISM Admin</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">View Profile</a></li>
+              <li><a class="dropdown-item text-danger" href="/login.html">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="page-wrapper">
+    <nav id="sidebar">
+      <ul>
+        <li>
+          <!-- <span class="logo"></span> -->
+          <button onclick=toggleSidebar() id="toggle-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z" />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z" />
+            </svg>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="application.html">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M520-640v-160q0-17 11.5-28.5T560-840h240q17 0 28.5 11.5T840-800v160q0 17-11.5 28.5T800-600H560q-17 0-28.5-11.5T520-640ZM120-480v-320q0-17 11.5-28.5T160-840h240q17 0 28.5 11.5T440-800v320q0 17-11.5 28.5T400-440H160q-17 0-28.5-11.5T120-480Zm400 320v-320q0-17 11.5-28.5T560-520h240q17 0 28.5 11.5T840-480v320q0 17-11.5 28.5T800-120H560q-17 0-28.5-11.5T520-160Zm-400 0v-160q0-17 11.5-28.5T160-360h240q17 0 28.5 11.5T440-320v160q0 17-11.5 28.5T400-120H160q-17 0-28.5-11.5T120-160Zm80-360h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z" />
+            </svg>
+            <span>Application</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+            </svg>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+              <path
+                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+            </svg>
+            <span>User Accounts</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section class="page-container ">
+      <div class="container-fluid">
+        <div class="row my-3">
+          <div class="col">
+            <h2 id="pageTitle">Application No. - <span>1234567890</span></h2>
+            <p id="description">Company Name - Scheme Name</p>
+          </div>
+          <div class="col text-end">
+            <button type="button" class="themeCrm-btn-light"><i
+                class="fa-regular fa-message me-2"></i>Communication</button>
+            <button type="button" class="themeCrm-btn-darkBlue"><i
+                class="fa-solid fa-ellipsis-vertical me-2"></i>Action</button>
+          </div>
+        </div>
+        <div class="application-tabs mt-4">
+          <!-- Main Tabs -->
+          <ul class="nav nav-tabs d-flex w-100" id="mainTabs">
+            <li class="nav-item flex-fill">
+              <a class="nav-link active" data-bs-toggle="tab" href="#application">
+                <div class="application-steps-container">
+                  <div class="application-steps-items">
+                    <div class="d-flex align-items-center application-tabs-header">
+                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                      <span class="application-tabs-counter">1</span>
+                    </div>
+                    <div>
+                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                    </div>
+                  </div>
+                  <p class="application-tabs-title">Application</p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item flex-fill">
+              <a class="nav-link" data-bs-toggle="tab" href="#preliminary">
+                <div class="application-steps-container">
+                  <div class="application-steps-items">
+                    <div class="d-flex align-items-center application-tabs-header">
+                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                      <span class="application-tabs-counter">2</span>
+                    </div>
+                    <div>
+                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                    </div>
+                  </div>
+                  <p class="application-tabs-title">Preliminary Screening</p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item flex-fill">
+              <a class="nav-link" data-bs-toggle="tab" href="#acknowledgement">
+                <div class="application-steps-container">
+                  <div class="application-steps-items">
+                    <div class="d-flex align-items-center application-tabs-header">
+                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                      <span class="application-tabs-counter">3</span>
+                    </div>
+                    <div>
+                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                    </div>
+                  </div>
+                  <p class="application-tabs-title">Acknowledgement</p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item flex-fill">
+              <a class="nav-link" data-bs-toggle="tab" href="#evaluation">
+                <div class="application-steps-container">
+                  <div class="application-steps-items">
+                    <div class="d-flex align-items-center application-tabs-header">
+                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                      <span class="application-tabs-counter">4</span>
+                    </div>
+                    <div>
+                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                    </div>
+                  </div>
+                  <p class="application-tabs-title">Evaluation</p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item flex-fill">
+              <a class="nav-link" data-bs-toggle="tab" href="#decision">
+                <div class="application-steps-container">
+                  <div class="application-steps-items">
+                    <div class="d-flex align-items-center application-tabs-header">
+                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                      <span class="application-tabs-counter">5</span>
+                    </div>
+                    <div>
+                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                    </div>
+                  </div>
+                  <p class="application-tabs-title">Decision</p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item flex-fill">
+              <a class="nav-link" data-bs-toggle="tab" href="#agreement">
+                <div class="application-steps-container">
+                  <div class="application-steps-items">
+                    <div class="d-flex align-items-center application-tabs-header">
+                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                      <span class="application-tabs-counter">6</span>
+                    </div>
+                    <div>
+                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                    </div>
+                  </div>
+                  <p class="application-tabs-title">Agreement</p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item flex-fill">
+              <a class="nav-link" data-bs-toggle="tab" href="#disbursement">
+                <div class="application-steps-container">
+                  <div class="application-steps-items">
+                    <div class="d-flex align-items-center application-tabs-header">
+                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                      <span class="application-tabs-counter">7</span>
+                    </div>
+                    <div>
+                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                    </div>
+                  </div>
+                  <p class="application-tabs-title">Disbursement</p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item flex-fill">
+              <a class="nav-link" data-bs-toggle="tab" href="#reports">
+                <div class="application-steps-container">
+                  <div class="application-steps-items">
+                    <div class="d-flex align-items-center application-tabs-header">
+                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                      <span class="application-tabs-counter">8</span>
+                    </div>
+                    <div>
+                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                    </div>
+                  </div>
+                  <p class="application-tabs-title">Reports</p>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item flex-fill">
+              <a class="nav-link disabled" data-bs-toggle="tab" href="#project">
+                <div class="application-steps-container">
+                  <div class="application-steps-items">
+                    <div class="d-flex align-items-center application-tabs-header">
+                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                      <span class="application-tabs-counter">9</span>
+                    </div>
+                    <div>
+                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                    </div>
+                  </div>
+                  <p class="application-tabs-title">Project Closure</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <div class="application-child-tabs tab-content mt-3">
+            <!-- Application Tab -->
+            <div class="tab-pane fade show active" id="application">
+              <ul class="nav nav-tabs d-flex w-100" id="subTabs">
+                <li class="nav-item flex-fill">
+                  <a class="nav-link active" aria-current="page" data-bs-toggle="tab" href="#profile">Profile</a>
+                </li>
+                <li class="nav-item flex-fill">
+                  <a class="nav-link" data-bs-toggle="tab" href="#applicantCompanyDetails">Applicant Company Details</a>
+                </li>
+                <li class="nav-item flex-fill">
+                  <a class="nav-link" data-bs-toggle="tab" href="#projectCompanyDetails">Project Company Details</a>
+                </li>
+                <li class="nav-item flex-fill">
+                  <a class="nav-link" data-bs-toggle="tab" href="#dpr">Project/ Detailed Project Report (DPR)</a>
+                </li>
+                <li class="nav-item flex-fill">
+                  <a class="nav-link" data-bs-toggle="tab" href="#transaction">Transaction</a>
+                </li>
+                <li class="nav-item flex-fill">
+                  <a class="nav-link" data-bs-toggle="tab" href="#documents">Documents</a>
+                </li>
+                <li class="nav-item flex-fill">
+                  <a class="nav-link" data-bs-toggle="tab" href="#activity">Activity</a>
+                </li>
+
+              </ul>
+
+              <div class="tab-content mt-3">
+                <div class="tab-pane fade show active" id="profile">
+                  <div class="row px-4 py-2">
+                    <!-- A. Organization Info -->
+                    <div class="col-md-5">
+                      <div class="info-box">
+                        <div class="section-title">A. Organization Information</div>
+                        <table class="table info-table mb-0">
+                          <tbody>
+                            <tr><td>Country</td><td>: India</td></tr>
+                            <tr><td>Headquarters</td><td>: -</td></tr>
+                            <tr><td>Global CEO</td><td>: -</td></tr>
+                            <tr><td>Geographical Region</td><td>: -</td></tr>
+                            <tr><td>India Presence</td><td>: Yes</td></tr>
+                            <tr><td>India Head</td><td>: -</td></tr>
+                            <tr><td>Number of Employees</td><td>: -</td></tr>
+                            <tr><td>Address</td><td>: -</td></tr>
+                            <tr><td>State</td><td>: -</td></tr>
+                            <tr><td>City</td><td>: -</td></tr>
+                            <tr><td>Postal Code</td><td>: -</td></tr>
+                            <tr><td>Website</td><td>: -</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                
+                    <!-- Right Column -->
+                    <div class="col-md-7">
+                      <!-- B. Financial Details -->
+                      <div class="info-box">
+                        <div class="section-title">B. Financial Details</div>
+                        <table class="table mb-0">
+                          <thead class="table-light">
+                            <tr>
+                              <th>Year</th>
+                              <th>Revenue (In Amount)</th>
+                              <th>Net Income (In Amount)</th>
+                              <th>Market Capitalization (In Amount)</th>
+                              <th>Documents</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Year</td>
+                              <td>Revenue (In Amount)</td>
+                              <td>Net Income (In Amount)</td>
+                              <td>Market Capitalization (In Amount)</td>
+                              <td>Documents</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                
+                      <!-- C. Contact Details -->
+                      <div class="info-box">
+                        <div class="section-title d-flex justify-content-between align-items-center">
+                          <span>C. Contact Details</span>
+                          <a href="#" class="text-white text-decoration-none">+ Add Contact</a>
+                        </div>
+                        <table class="table mb-0">
+                          <thead class="table-light">
+                            <tr>
+                              <th>Name</th>
+                              <th>Mobile</th>
+                              <th>Email</th>
+                              <th>Designation</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Krishna <span class="default-badge">Default</span></td>
+                              <td><a href="tel:+918839135975">+918839135975</a></td>
+                              <td><a href="mailto:prajjval.btpl@semiconindia.org">prajjval.btpl@semiconindia.org</a></td>
+                              <td>CTO</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                
+                      <!-- D. Key Stakeholder -->
+                      <div class="info-box">
+                        <div class="section-title">D. Key Stakeholder</div>
+                        <table class="table mb-0">
+                          <thead class="table-light">
+                            <tr>
+                              <th>Name</th>
+                              <th>Mobile</th>
+                              <th>Email</th>
+                              <th>Country</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>sudhanshu holder name</td>
+                              <td><a href="tel:+918839135975">+918839135975</a></td>
+                              <td><a href="mailto:rajatrrrai.gupta@bellurbis.com">rajatrrrai.gupta@bellurbis.com</a></td>
+                              <td>India</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                
+
+                </div>
+                <div class="tab-pane fade" id="applicantCompanyDetails">
+                    <h5 class="section-title">1. Applicant Company</h5>
+                
+                    <div class="accordion" id="accordionExample">  
+                        <!-- 1.1 -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="heading11">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="true" aria-controls="collapse12">
+                              1.1. Date & Country of Incorporation
+                            </button>
+                          </h2>
+                          <div id="collapse11" class="accordion-collapse collapse show" aria-labelledby="heading11" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <ul class="list-unstyled ms-3">
+                                <li>Date of Incorporation: 10 February 2025</li>
+                                <li>Country of Incorporation: India</li>
+                                <li>Incorporation Inclusive: Test123456789</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>                
+                      <!-- 1.2 -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading12">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="true" aria-controls="collapse12">
+                            1.2. Registered Address, Corporate Address, Phone, Email, Website
+                          </button>
+                        </h2>
+                        <div id="collapse12" class="accordion-collapse collapse show" aria-labelledby="heading12" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <ul class="list-unstyled ms-3">
+                              <li>Registered Office Address: Address</li>
+                              <li>Phone: +919582841477</li>
+                              <li>Email: suchanshe.b@google.com</li>
+                              <li>Corporate Office Address: Address</li>
+                              <li>Country: India</li>
+                              <li>Website: <a href="https://www.google.com">https://www.google.com</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- 1.3 -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading13">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
+                            1.3. Major Shareholding Pattern
+                          </button>
+                        </h2>
+                        <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <table class="table table-bordered w-75">
+                              <thead>
+                                <tr>
+                                  <th>Shareholder Name</th>
+                                  <th>Shares</th>
+                                  <th>% Holding</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Prajwal</td>
+                                  <td>100</td>
+                                  <td>0.1%</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- 1.4 -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading14">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14">
+                            1.4. Profile and Contact Details of Major Shareholders
+                          </button>
+                        </h2>
+                        <div id="collapse14" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <table class="table table-bordered w-75">
+                              <thead>
+                                <tr>
+                                  <th>Name</th>
+                                  <th>Country</th>
+                                  <th>Contact Number</th>
+                                  <th>Email</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Prajwal</td>
+                                  <td>India</td>
+                                  <td>+919582341153</td>
+                                  <td>prajwal.td1@google.com</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- Repeat same pattern for 1.5 to 1.13 -->
+                      <!-- Example for 1.5 below -->
+                  
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading15">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15">
+                            1.5. Profile and Contact Details of Board of Directors
+                          </button>
+                        </h2>
+                        <div id="collapse15" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <table class="table table-bordered w-75">
+                              <thead>
+                                <tr>
+                                  <th>Name</th>
+                                  <th>Country</th>
+                                  <th>Contact Number</th>
+                                  <th>Email</th>
+                                  <th>Designation</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Suchanshe</td>
+                                  <td>India</td>
+                                  <td>+919582841144</td>
+                                  <td>suchanshe.b@google.com</td>
+                                  <td>CEO</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading16">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16">
+                            1.6. Joint Venture (JV)/Agreement/Other Business Agreements
+                          </button>
+                        </h2>
+                        <div id="collapse16" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <ul class="list-unstyled ms-3">
+                              <li>Title: JV/Other Agreements</li>
+                              <li>Date: 11 February 2025</li>
+                              <li>Size: 13 kb</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 1.7 Audited Financial Statements -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading17">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17">
+                            1.7. Audited Financial Statements
+                          </button>
+                        </h2>
+                        <div id="collapse17" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <ul class="list-unstyled ms-3">
+                              <li>Last 1 Year: 11 February 2025 (13 kb)</li>
+                              <li>Last 2 Year: 11 February 2025 (13 kb)</li>
+                              <li>Last 3 Year: 11 February 2025 (13 kb)</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 1.8 Credit History -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading18">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18">
+                            1.8. Credit History
+                          </button>
+                        </h2>
+                        <div id="collapse18" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <p>No</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 1.9 Letter of Authorization & 1.10 Business Profile -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading19">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19">
+                            1.9. Letter of Authorization & 1.10. Business Profile
+                          </button>
+                        </h2>
+                        <div id="collapse19" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <ul class="list-unstyled ms-3">
+                              <li>Letter of Authorization by Board/MD – 11 February 2025 (13 kb)</li>
+                              <li>Business Profile – 11 February 2025 (13 kb)</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 1.11 Operational Experience -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading111">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse111">
+                            1.11. Operational Experience
+                          </button>
+                        </h2>
+                        <div id="collapse111" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <p>No</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 1.12 Existing Manufacturing Facilities -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading112">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse112">
+                            1.12. Details of Current Manufacturing Facilities in India and Abroad
+                          </button>
+                        </h2>
+                        <div id="collapse112" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <table class="table table-bordered w-75">
+                              <thead>
+                                <tr>
+                                  <th>Location</th>
+                                  <th>Products</th>
+                                  <th>No. of Employees</th>
+                                  <th>Total Area</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>New Delhi</td>
+                                  <td>Chips</td>
+                                  <td>1000</td>
+                                  <td>14000</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- 1.13 Integrity Undertaking -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading113">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse113">
+                            1.13. Integrity Undertaking (Format A)
+                          </button>
+                        </h2>
+                        <div id="collapse113" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <ul class="list-unstyled ms-3">
+                              <li>Title: Integrity Undertaking (Format A)</li>
+                              <li>Date: 11 February 2025</li>
+                              <li>Size: 13 kb</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Continue with 1.6 to 1.13 in same structure -->
+                      <!-- Let me know if you'd like me to generate the remaining accordion blocks for 1.6–1.13 -->
+                    </div>
+                  </div>
+                <div class="tab-pane fade" id="projectCompanyDetails">
+                  <div class="container mt-4">
+
+                    <!-- Fixed Section: 2. Project Company Details -->
+                    <div class="section-title">2. Project Company Details</div>
+                   
+                  
+                    <!-- Accordion for Remaining Sections -->
+                    <div class="accordion mt-4" id="projectAccordion">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading24">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25" aria-expanded="true">
+                            Documents
+                          </button>
+                        </h2>
+                        <div id="collapse25" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>Title</th>
+                                  <th>Date</th>
+                                  <th>Size</th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr><td>2.1 Certificate of Incorporation</td><td>11 February 2025</td><td>13 Kb</td><td>🔗</td></tr>
+                                <tr><td>2.2 Memorandum and Articles of Association</td><td>11 February 2025</td><td>13 Kb</td><td>🔗</td></tr>
+                                <tr><td>2.3 PAN Card</td><td>11 February 2025</td><td>13 Kb</td><td>🔗</td></tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 2.5 Registered Address -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading25">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25" aria-expanded="true">
+                            2.5 Registered Address, Corporate Address, Phone, Email, Website
+                          </button>
+                        </h2>
+                        <div id="collapse25" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            <table class="table table-bordered">
+                              <tbody>
+                                <tr><td>Registered Office Address:</td><td>Test1233</td><td>Corporate Office Address:</td><td>Test1233</td></tr>
+                                <tr><td>Email:</td><td>sudhanshu.btl@semiconindia.com</td><td>Country:</td><td>India</td></tr>
+                                <tr><td>Phone:</td><td>+919582494133</td><td>Website:</td><td><a href="https://www.google.com">https://www.google.com</a></td></tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- 2.6 Capital Structure -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading26">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse26">
+                            2.6 Capital Structure
+                          </button>
+                        </h2>
+                        <div id="collapse26" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            <p><strong>Capital Structure:</strong> Capital Structure</p>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- 2.7 Shareholding Pattern -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading27">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse27">
+                            2.7 Major Shareholding Pattern
+                          </button>
+                        </h2>
+                        <div id="collapse27" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            <p><strong>Total Number of Shares:</strong> 10000</p>
+                            <table class="table table-bordered">
+                              <thead><tr><th>Share Holder Name</th><th>Total Shares Held</th><th>Percentage of shares</th></tr></thead>
+                              <tbody><tr><td>Bittu</td><td>10</td><td>0.1%</td></tr></tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- 2.8 Board of Directors -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading28">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse28">
+                            2.8 Board of Directors Profile
+                          </button>
+                        </h2>
+                        <div id="collapse28" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            <table class="table table-bordered">
+                              <thead><tr><th>Name</th><th>Country</th><th>Contact Number</th><th>Email</th><th>Designation</th></tr></thead>
+                              <tbody><tr><td>Sudhanshu</td><td>India</td><td>+919582494155</td><td>prajjval.btl@semiconindia.com</td><td>CEO</td></tr></tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- 2.9 JV Agreement -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading29">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse29">
+                            2.9 Joint Venture (JV) Agreement
+                          </button>
+                        </h2>
+                        <div id="collapse29" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            <table class="table table-bordered">
+                              <thead><tr><th>Title</th><th>Date</th><th>Size</th><th>Action</th></tr></thead>
+                              <tbody><tr><td>Joint Venture Agreement</td><td>11 February 2025</td><td>13 Kb</td><td>🔗</td></tr></tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- 2.10 Financial Statements -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading210">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse210">
+                            2.10 Audited Financial Statements
+                          </button>
+                        </h2>
+                        <div id="collapse210" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            <table class="table table-bordered">
+                              <thead><tr><th>Title</th><th>Date</th><th>Size</th><th>Action</th></tr></thead>
+                              <tbody>
+                                <tr><td>Financials - 1 Year</td><td>11 February 2025</td><td>13 Kb</td><td>🔗</td></tr>
+                                <tr><td>Financials - 2 Year</td><td>11 February 2025</td><td>13 Kb</td><td>🔗</td></tr>
+                                <tr><td>Financials - 3 Year</td><td>11 February 2025</td><td>13 Kb</td><td>🔗</td></tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- 2.11 Credit History -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading211">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse211">
+                            2.11 Credit History
+                          </button>
+                        </h2>
+                        <div id="collapse211" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            <p><strong>Credit History:</strong> No</p>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- 2.12 & 2.13 Letter and Profile -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading212">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse212">
+                            2.12 Letter of Authorization & 2.13 Business Profile
+                          </button>
+                        </h2>
+                        <div id="collapse212" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            <table class="table table-bordered">
+                              <thead><tr><th>Title</th><th>Date</th><th>Size</th><th>Action</th></tr></thead>
+                              <tbody>
+                                <tr><td>Letter of Authorization</td><td>11 February 2025</td><td>13 Kb</td><td>🔗</td></tr>
+                                <tr><td>Business Profile</td><td>11 February 2025</td><td>13 Kb</td><td>🔗</td></tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                  
+                    </div> <!-- End Accordion -->
+                  
+                  </div>
+
+                </div>
+                <div class="tab-pane fade" id="dpr">
+                  <div class="container mt-4">
+
+                    <!-- Fixed Section: 3. Project/ Detailed Project Report (DPR)-->
+                    <div class="section-title">3. Project/ Detailed Project Report (DPR)</div>
+                    <div class="p-3">
+                      <ul class="list-unstyled">
+
+                        <li>3.1. Project Summary</li>
+                        <li>3.2. Bank/ FI Appraisal Note/ Report, if available</li>
+                      
+                        <li>3.3. Technology Specifications
+                          <ul class="ms-3">
+                            <li>3.3.1. Technology</li>
+                            <li>3.3.2. Target products and applications</li>
+                            <li>3.3.3. ITC/ HS codes for proposed products</li>
+                            <li>3.3.4. Existing and Proposed Installed capacity, number of working days in a year, number of working hours per day</li>
+                            <li>3.3.5. Technology Partnerships – Details of technology partner(s) with relevant documents</li>
+                            <li>3.3.6. Manufacturing Process</li>
+                          </ul>
+                        </li>
+                      
+                        <li>3.4. Proposed Location
+                          <ul class="ms-3">
+                            <li>3.4.1. Complete Address of the proposed manufacturing unit(s)</li>
+                            <li>3.4.2. GPS location</li>
+                            <li>3.4.3. GST Registration (GSTN) Certificate</li>
+                            <li>3.4.4. Registered Sale/ Lease Deed</li>
+                            <li>3.4.5. No-objection certificate (NOC) from owner of land in case of sub-lease</li>
+                            <li>3.4.6. Title Search Report from lawyer including Non-encumbrance certificate</li>
+                            <li>3.4.7. Land area</li>
+                            <li>3.4.8. Describe the locational advantage with respect to supply of raw materials, power, water, fuel and manpower as also with respect to facilities for transportation, effluent disposal and market.</li>
+                          </ul>
+                        </li>
+                      
+                        <li>3.5. Project Financials
+                          <ul class="ms-3">
+                            <li>3.5.1. Total project cost including working capital requirements and year-wise proposed phasing of investment</li>
+                            <li>3.5.2. Sources of fund
+                              <ul class="ms-3">
+                                <li>3.5.2.1. Board Resolution of Project Company for investing the project cost towards setting up of the project</li>
+                                <li>3.5.2.2. Board Resolution/ Undertaking from equity/ unsecured loan providers</li>
+                                <li>3.5.2.3. Proof of equity/ unsecured loans brought in</li>
+                                <li>3.5.2.4. Sanction letter/ Letter of Intent (LoI) and Term Loan Agreement for Debt</li>
+                                <li>3.5.2.5. Documents showing capability of fund providers (not required for Banks/ FIs)</li>
+                                <li>3.5.2.6. Contact details of fund providers</li>
+                              </ul>
+                            </li>
+                            <li>3.5.3. Projected P&amp;L for at least 20 years</li>
+                            <li>3.5.4. Key financial indicators (IRR, ROCE, ROI, EBIDTA, NPV)</li>
+                          </ul>
+                        </li>
+                      
+                        <li>3.6. Operational Details
+                          <ul class="ms-3">
+                            <li>3.6.1. Water, power and other utility requirements and arrangements for their supply</li>
+                            <li>3.6.2. Ramp-up timelines/ Implementation schedule</li>
+                            <li>3.6.3. Management structure</li>
+                          </ul>
+                        </li>
+                      
+                        <li>3.7. Human Resources
+                          <ul class="ms-3">
+                            <li>3.7.1. Availability and Requirement of trained manpower, plan for training and skill development</li>
+                            <li>3.7.2. Proposed employment generation</li>
+                          </ul>
+                        </li>
+                      
+                        <li>3.8. Building
+                          <ul class="ms-3">
+                            <li>3.8.1. Land and Building Layout Plan</li>
+                            <li>3.8.2. Type of construction, Purpose and Built-Up Area of each Building</li>
+                            <li>3.8.3. Cost of Building vis-à-vis CPWD/ State PWD rates</li>
+                          </ul>
+                        </li>
+                      
+                        <li>3.9. Capital Goods
+                          <ul class="ms-3">
+                            <li>3.9.1. Requirement of new/ refurbished capital goods</li>
+                            <li>3.9.2. Itemized list of equipment with details of proposed suppliers and quotations/ purchase orders.</li>
+                            <li>3.9.3. Board-approved Vendor selection process</li>
+                          </ul>
+                        </li>
+                      
+                        <li>3.10. Raw Material
+                          <ul class="ms-3">
+                            <li>3.10.1. Bill of Materials (BOM) - %BOM cost and suppliers</li>
+                            <li>3.10.2. Details regarding sourcing of raw materials, plan for developing the raw material manufacturing ecosystem in India</li>
+                          </ul>
+                        </li>
+                      
+                        <li>3.11. Market Assessment of Proposed Products</li>
+                        <li>3.12. Roadmap for Technology Upgradation</li>
+                        <li>3.13. Plan for R&amp;D Collaboration with Indian academic institutions</li>
+                      
+                        <li>3.14. Regulatory Treatment
+                          <ul class="ms-3">
+                            <li>3.14.1. Requirement of licenses, permits, clearances and third-party approvals necessary to execute the project.</li>
+                            <li>3.14.2. Proposed timelines for obtaining such licenses, permits, clearances and third-party approvals</li>
+                          </ul>
+                        </li>
+                      
+                      </ul>
+                      
+                    </div>
+                    <div class="accordion mt-4" id="projectAccordion">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading24">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25" aria-expanded="true">
+                            3.1 Project/ Detailed Project Report (DPR)
+                          </button>
+                        </h2>
+                        <div id="collapse25" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>Title</th>
+                                  <th>Date</th>
+                                  <th>Size</th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr><td>Detailed Project Report	</td><td>11 February 2025	</td><td>13 Kb</td><td>🔗</td></tr>
+                                
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading24">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25" aria-expanded="true">
+                            3.4 Proposed Location
+                          </button>
+                        </h2>
+                        <div id="collapse25" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>Country</th>
+                                  <th>City</th>
+                                  <th>State</th>
+                                 
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr><td>India</td><td>Agra</td><td>UP</td></tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading24">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25" aria-expanded="true">
+                            3.5.1 Indicative Investment
+                          </button>
+                        </h2>
+                        <div id="collapse25" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+                          <div class="accordion-body">
+                            
+                                <p><strong>Indicative Investment (INR)
+                                  :</strong> 1000000000
+                                </p>
+                             
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              </div>
+                <div class="tab-pane fade" id="transaction">
+                  <div class="container">
+                    <div class="document-head"><h4>Transaction</h4></div>
+                    <table class="table align-middle mb-0">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Transaction ID</th>
+                          <th>Type</th>
+                          <th>Gateway Id</th>
+                          <th>Amount</th>
+                          <th>Date</th>
+                          <th>Receipt</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Testing12345</td>
+                          <td>offline</td>
+                          <td></td>
+                          <td>50.00</td>
+                          <td>11 February 2025</td>
+                          <td><a href="#">200 page sample PDF_merged_compressed.pdf</a></td>
+                          <td><span class="status-paid">Paid</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+                <div class="tab-pane fade" id="documents">
+                  <div class="container">
+                    <div class="document-head">
+                      <h4>Applicant Company - Financial Statements</h4>
+                    </div>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Title</th>
+                          <th>Date</th>
+                          <th>Size</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Audited Financial Statements for last 1 Year</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Audited Financial Statements for last 2 Year</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Audited Financial Statements for last 3 Year</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  
+                    <!-- Section: Applicant Company - Credit History -->
+                    <div class="document-head"><h4>Applicant Company - Credit History</h4></div>
+                    <p>No credit history documents uploaded yet.</p>
+                  
+                    <!-- Section: Applicant Company - Documents -->
+                    <div class="document-head"><h4>Applicant Company - Documents</h4></div>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Title</th>
+                          <th>Date</th>
+                          <th>Size</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Joint Venture (JV) Agreement / Other Business Agreements</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Letter of Authorization by Board of Directors to Managing Director</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Business Profile</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Integrity Undertaking (Format A)</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  
+                    <!-- Section: Project Company - Documents -->
+                    <div class="document-head"> <h4>Project Company - Documents (incorporated in India)</h4></div>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Title</th>
+                          <th>Date</th>
+                          <th>Size</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Certificate of Incorporation</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Memorandum and Articles of Association</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Permanent Account Number (PAN) Card</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Goods & Services Tax Registration (GSTIN Certificate)</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  
+                    <!-- Section: Project Company - Financial Statements -->
+                    <div class="document-head"><h4>Project Company - Financial Statements</h4></div>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Title</th>
+                          <th>Date</th>
+                          <th>Size</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Audited Financial Statements for last 1 Year</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Audited Financial Statements for last 2 Year</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Audited Financial Statements for last 3 Year</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  
+                    <!-- Section: Project Company - Credit History -->
+                    <div class="document-head"><h4>Project Company - Credit History</h4></div>
+                    <p>No credit history documents uploaded yet.</p>
+                  
+                    <!-- Section: Project Company - Documents -->
+                    <div class="document-head"> <h4>Project Company - Documents</h4></div>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Title</th>
+                          <th>Date</th>
+                          <th>Size</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Joint Venture (JV) Agreement / Other Business Agreements</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Letter of Authorization by Board of Directors to Managing Director</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Business Profile</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                        <tr>
+                          <td>Integrity Undertaking (Format A)</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  
+                    <!-- Section: Project Detailed Report -->
+                    <div class="document-head"> <h4>Project Detailed Report (PDR)</h4></div>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Title</th>
+                          <th>Date</th>
+                          <th>Size</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Detailed Project Report</td>
+                          <td>11 February 2025</td>
+                          <td>13 Kb</td>
+                          <td><a href="#"><button class="details-btn">Details</button></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+                <div class="tab-pane fade" id="activity">
+                 <div class="p-3">
+                  <table id="activityTable" class="display rounded-br">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Date</th>
+                        <th>Activity By</th>
+                        <th>From Status</th>
+                        <th>To Status</th>
+                        <th>Comments</th>
+                        <th>Device Type</th>
+                        <th>IP Address</th>
+                        <th>Useragent</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>21 Feb 2025 12:17 PM</td>
+                        <td>ISM Admin</td>
+                        <td>Evaluation</td>
+                        <td>Evaluation</td>
+                        <td></td>
+                        <td>Desktop</td>
+                        <td>164.100.203.24</td>
+                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/133.0.0.0</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>21 Feb 2025 09:22 AM</td>
+                        <td>Rajat</td>
+                        <td>Acknowledged</td>
+                        <td>Evaluation</td>
+                        <td>TEST</td>
+                        <td>Desktop</td>
+                        <td>164.100.203.24</td>
+                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/133.0.0.0</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>20 Feb 2025 04:27 PM</td>
+                        <td>ISM Admin</td>
+                        <td>Preliminary Screening</td>
+                        <td>Acknowledged</td>
+                        <td>&lt;h5&gt;Acknowledgement&lt;/h5&gt;</td>
+                        <td>Desktop</td>
+                        <td>164.100.203.24</td>
+                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/133.0.0.0</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>11 Feb 2025 04:03 PM</td>
+                        <td>ISM Admin</td>
+                        <td>Preliminary Screening</td>
+                        <td>Preliminary Screening</td>
+                        <td></td>
+                        <td>Desktop</td>
+                        <td>164.100.203.24</td>
+                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>11 Feb 2025 04:03 PM</td>
+                        <td>ISM Admin</td>
+                        <td>Preliminary Screening</td>
+                        <td>Preliminary Screening</td>
+                        <td></td>
+                        <td>Desktop</td>
+                        <td>164.100.203.24</td>
+                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>11 Feb 2025 04:01 PM</td>
+                        <td>ISM Admin</td>
+                        <td>Preliminary Screening</td>
+                        <td>Preliminary Screening</td>
+                        <td></td>
+                        <td>Desktop</td>
+                        <td>164.100.203.24</td>
+                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>11 Feb 2025 03:59 PM</td>
+                        <td>ISM Admin</td>
+                        <td>Preliminary Screening</td>
+                        <td>Preliminary Screening</td>
+                        <td></td>
+                        <td>Desktop</td>
+                        <td>164.100.203.24</td>
+                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>11 Feb 2025 03:59 PM</td>
+                        <td>ISM Admin</td>
+                        <td>Preliminary Screening</td>
+                        <td>Preliminary Screening</td>
+                        <td></td>
+                        <td>Desktop</td>
+                        <td>164.100.203.24</td>
+                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>11 Feb 2025 03:59 PM</td>
+                        <td>ISM Admin</td>
+                        <td>Preliminary Screening</td>
+                        <td>Preliminary Screening</td>
+                        <td></td>
+                        <td>Desktop</td>
+                        <td>164.100.203.24</td>
+                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>11 Feb 2025 03:58 PM</td>
+                        <td>ISM Admin</td>
+                        <td>Preliminary Screening</td>
+                        <td>Preliminary Screening</td>
+                        <td></td>
+                        <td>Desktop</td>
+                        <td>164.100.203.24</td>
+                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                 </div>
+                </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+
+
+
+  <script>
+    $(document).ready(function () {
+      $('#activityTable').DataTable({
+        "paging": true,
+        "ordering": true,
+        "info": true
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
