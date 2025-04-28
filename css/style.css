@@ -75,13 +75,17 @@ h4,
 h5,
 h6 {
   font-weight: 600;
-  font-family: "Playfair Display";
+  font-family: "poppins";
   letter-spacing: 0.56px;
+  margin: 0;
+  color: #1c1c1c;
 }
 
 p {
   letter-spacing: 0.32px;
   font-weight: 500;
+  margin: 0;
+  color: #1c1c1c;
 }
 
 .page-wrapper {
@@ -325,7 +329,7 @@ color: #fff;
 }
 
 .application-card_title {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: #192f60;
   letter-spacing: 0.4px;
@@ -335,13 +339,13 @@ color: #fff;
   color: #FFF;
   text-align: center;
   font-family: Poppins;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.56px;
   padding: 0.75rem 1rem;
   border-radius: 8px;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 
@@ -373,4 +377,35 @@ color: #fff;
   border: 1px solid #6C7EB8;
   background: #E1E8FF;
   color: #6C7EB8;
+}
+.evaluation-container {
+  border-radius: 8px;
+  border: 1px solid #192F60;
+  background: #FFF;
+  padding: 1rem;
+}
+.table {
+  border-radius: 8px;
+  border: 2px solid rgba(25, 47, 96, 0.10);
+
+  background: #FFF;
+}
+
+.table thead tr th {
+  border: none;
+  background: #192F60;
+  font-size: 14px;
+  color: #fff;
+}
+
+.table tbody tr td {
+  border: none;
+  font-size: 14px;
+  color: #192F60;
+}
+
+.table tbody tr:nth-child(even) td {
+  border: 1px solid #BAC1D0;
+  background: #F3F6FD;
+  border: none;
 }

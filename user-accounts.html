@@ -28,71 +28,10 @@
   <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
   <script type="text/javascript" src="/js/sidebar.js" defer></script>
   <style>
-    .view-details-btn {
-      outline: none;
-      border-radius: 4px;
-      background: #192F60;
-      padding: 0.25rem 0.75rem;
-      color: #fff;
-      font-size: 14px;
-      border: none;
-    }
 
-    .table {
-      border-radius: 8px;
-      border: 2px solid rgba(25, 47, 96, 0.10);
+    
 
-      background: #FFF;
-    }
-
-    .table thead tr th {
-      border: none;
-      background: #192F60;
-      font-size: 14px;
-      color: #fff;
-    }
-
-    .table tbody tr td {
-      border: none;
-      font-size: 14px;
-      color: #192F60;
-    }
-
-    .table tbody tr:nth-child(even) td {
-      border: 1px solid #BAC1D0;
-      background: #F3F6FD;
-      border: none;
-    }
-
-    .evaluation-container {
-      border-radius: 8px;
-      border: 1px solid #192F60;
-      background: #FFF;
-      padding: 1rem;
-    }
-    .expand-btn {
-      background: none;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    color: #6b7280;
-    vertical-align: middle;
-    margin-left: 4px;
-    color: #192f60;
-    border: 1px solid #192f60;
-    padding: 5px 10px;
-    border-radius: 50%;
-    }
-    .accordion-content {
-      display: none;
-      background: #f3f5fa;
-      border-top: 1px solid #e5e7eb;
-    }
-    .accordion-content td {
-      padding: 20px 18px;
-      color: #4b5563;
-      font-size: 15px;
-    }
+  
   </style>
 </head>
 
@@ -149,7 +88,7 @@
   <nav class="navbar navbar-expand-lg main-header">
     <div class="container">
       <!-- Logo -->
-      <a class="navbar-brand fw-semibold" href="#">Application</a>
+      <a class="navbar-brand fw-semibold" href="#">User Accounts</a>
 
       <!-- Toggler for mobile -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -160,7 +99,8 @@
         <!-- User Profile Dropdown -->
         <ol class="breadcrumb m-0">
           <li class="breadcrumb-item "><a href="">Home</a></li>
-          <li class="breadcrumb-item active"><a href="">Applications</a></li>
+          <li class="breadcrumb-item "><a href="">Entity</a></li>
+          <li class="breadcrumb-item active"><a href="">User Accounts</a></li>
         </ol>
         <ul class="navbar-nav">
 
@@ -176,7 +116,6 @@
                 <hr class="dropdown-divider">
               </li>
               <li><a class="dropdown-item" href="#">View Profile</a></li>
-              <li><a class="dropdown-item" href="/change-password.html">Change Password</a></li>
               <li><a class="dropdown-item text-danger" href="/login.html">Logout</a></li>
             </ul>
           </li>
@@ -205,7 +144,7 @@
             <span>Dashboard</span>
           </a>
         </li>
-        <li class="active">
+        <li>
           <a href="application.html">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
               <path
@@ -216,7 +155,7 @@
         </li>
 
         <li>
-          <a href="">
+          <a href="disbursement.html">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
               <path
                 d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-40q0-17 11.5-28.5T280-880q17 0 28.5 11.5T320-840v40h320v-40q0-17 11.5-28.5T680-880q17 0 28.5 11.5T720-840v40h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
@@ -224,8 +163,8 @@
             <span>Profile</span>
           </a>
         </li>
-        <li>
-          <a href="/user-accounts.html">
+        <li class="active">
+          <a href="user-accounts.html">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
               <path
                 d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Zm80 0h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
@@ -236,141 +175,43 @@
       </ul>
     </nav>
     <section class="page-container">
-      <div class="container-fluid">
-        <div class="row d-flex">
-          <div class="container evaluation-container mb-3">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <h4 id="pageTitle">My Applications
-              </h4>
-            </div>
-
-            <div class="table-responsive">
-              <table class="table align-middle">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Application ID	</th>
-                    <th>Scheme Name </th>
-                    <th>Submission Date	</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1.</td>
-                    <td>PK2408012</td>
-                    <td>Semiconductor fabs
-                    </td>
-                    <td>21-01-2025 | 12:19 PM</td>
-                    <td>Approve</td>
-                    <td><a href="/application-details.html" class="view-details-btn">Details</a></td>
-                    <td><button class="expand-btn" aria-label="Expand"><i class="fa-solid fa-chevron-up"></i></button></td>
-                  </tr>
-                  <tr class="accordion-content">                    
-                    <td><strong>Contact Person : </strong></td>
-                    <td>Gangadhar Shaktiman</td>
-                    <td><strong>Email ID : </strong>  </td>
-                    <td>abc@gmail.com</td>
-                    <td><strong>Mobile Number : </strong> </td>
-                    <td>9876543210</td>
-                    <td></td>                      
-                  </tr>
-                  <tr>
-                    <td>2.</td>
-                    <td>PK2408011</td>
-                    <td>Display Fabs</td>
-                    <td>21-01-2025 | 12:19 PM</td>
-                    <td>Pending</td>
-                    <td><a href="/application-details.html" class="view-details-btn">Details</a></td>
-                    <td><button class="expand-btn" aria-label="Expand"><i class="fa-solid fa-chevron-up"></i></button></td>
-                  </tr>
-                  <tr class="accordion-content">
-                    <td><strong>Contact Person : </strong></td>
-                    <td>Gangadhar Shaktiman</td>
-                    <td><strong>Email ID : </strong>  </td>
-                    <td>abc@gmail.com</td>
-                    <td><strong>Mobile Number : </strong> </td>
-                    <td>9876543210</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+        <div class="container-fluid">
+             
+            <div class="row">
+              <div class="container evaluation-container">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4 id="pageTitle">Account Users (Maximum 5 account)</h4>
+                  <a href="/create-user-accounts.html" target="_blank"><button class="themeCrm-btn-light">+ Add Account</button></a>
+                </div>    
+                <div class="table-responsive">
+                  <table class="table align-middle">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name </th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1.</td>
+                        <td>Dheeraj</td>
+                        <td>dheerajkraaj</td>
+                        <td>abc@gmail.com</td>
+                        <td>Approve</td>
+                        <td><a href="/apply-scheme.html" class="view-details-btn">Apply</a></td>
+                      </tr>                    
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
-
-
-
-        </div>
-
-        <div class="row">
-          <div class="container evaluation-container">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <h4 id="pageTitle">Schemes</h4>
-            </div>
-
-            <div class="table-responsive">
-              <table class="table align-middle">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Scheme Name </th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1.</td>
-                    <td>Semiconductor fabs
-                    </td>
-                    <td><a href="/apply-scheme.html" class="view-details-btn">Apply</a></td>
-                  </tr>
-                  <tr>
-                    <td>2.</td>
-                    <td>Display Fabs</td>
-                    <td><a href="/apply-scheme.html" class="view-details-btn">Apply</a></td>
-                  </tr>
-                  <tr>
-                    <td>3.</td>
-                    <td>Compound Semiconductor</td>
-                    <td><a href="/apply-scheme.html" class="view-details-btn">Apply</a></td>
-                  </tr>
-                  <tr>
-                    <td>4.</td>
-                    <td>Semiconductor ATMP OSAT facilities
-                    </td>
-                    <td><a href="/apply-scheme.html" class="view-details-btn">Apply</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   </div>
-  <script>
-    // Accordion logic
-    document.querySelectorAll('.expand-btn').forEach((btn) => {
-      btn.addEventListener('click', function() {
-        const row = btn.closest('tr');
-        const next = row.nextElementSibling;
-        if (next && next.classList.contains('accordion-content')) {
-          if (next.style.display === 'table-row') {
-            next.style.display = 'none';
-            btn.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
-            btn.setAttribute('aria-label', 'Expand');
-          } else {
-            next.style.display = 'table-row';
-            btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
-            btn.setAttribute('aria-label', 'Collapse');
-          }
-        }
-      });
-    });
-    // Hide all accordions by default
-    document.querySelectorAll('.accordion-content').forEach(row => row.style.display = 'none');
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
