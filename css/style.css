@@ -377,6 +377,14 @@ button {
     color: #0083DB;
   }
 }
+.card-header {
+  background-color: #192f60;
+  color: #fff;
+  font-weight: 500;
+}
+
+
+
 
 /* Login/Forgot Css Start Here */
 
