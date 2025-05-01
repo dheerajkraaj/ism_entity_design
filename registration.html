@@ -8,86 +8,58 @@
   <link rel="icon" href="/images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!--  Poppins Font Family cdn -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>  
+
+
+  <!-- Bootstrap CDN Links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Css Files -->
   <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Css File for Header -->
   <link rel="stylesheet" href="/css/header.css">
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet">
+
+  <!-- Css File for Sidebar  -->
+  <link rel="stylesheet" href="/css/sidebar.css">
+
+  <!-- JS File for Sidebar -->
+  <script type="text/javascript" src="/js/sidebar.js" defer></script>
+
+  <!-- Jquery CDN links -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js" defer=""></script>
+
+  <!-- CSS & JS CDN Links for Datatables -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+
+  <!-- Select2 Jquery Plugins CDN links  -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
 </head>
-<style>
-    .login-section {
-        background-image: url(./images/login_background.webp);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 80vh;
-    }
-     .login-container {
-        background: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 100%;
-    }
-    .theme-crm-btn{
-      padding: 0.5rem;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      background: #192F60;
-      color: #fff;
-    }
-    .theme-crm-btn a{
-      color:#fff;
-    }
-    .theme-crm-btn:hover{
-      padding: 0.5rem;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      background: #192F60;
-      color: #fff;
-    }
-    .main-heading{
-      color: #192F60;
-      font-size: 2rem;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 110%;
-      text-transform: capitalize;
-    }
-    .login-link-text{
-      color: #192F60;
-      font-size: 1rem;
-      font-style: normal;
-      text-transform: capitalize;
-    }
-    .form-section {
-    background-color: #fff;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: 'Poppins';
-}
-.form-section-header {
-    background-color: #192f60;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px 8px 0 0;
-    font-family: 'Poppins';
-}
-.form-section-body {
-    padding: 3rem 1rem;
-}
-</style>
+
 <body>
 
 
-  <!--=============== HEADER ===============-->
+  <!--=============== Main Entity Portal HEADER ===============-->
+  <!-- Page Topbar start Here (Header 1)-->
   <main class="ism-v3-header__topBar">
     <div class="container">
       <div class="row">
@@ -116,435 +88,190 @@
       </div>
     </div>
   </main>
+  <!-- Page Topbar ends Here -->
+
+  <!-- Page Logo Header Bar Start Here (Header 2)-->
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="ism-header__main_box d-flex py-3">
-          <div class="text-start"><a aria-label="Miety logo" class=""
-              href="https://www.meity.gov.in/" target="_blank"><img alt="Miety logo" class="img-fluid"
+          <div class="text-start"><a aria-label="Miety logo" class="" href="https://www.meity.gov.in/"
+              target="_blank"><img alt="Miety logo" class="img-fluid"
                 src="https://uatism.semiconindia.org/Assets/images/header/meity_header_logo.png"> </a>
           </div>
-          <div class="text-center"><a aria-label="Miety logo" class=""
-              href="https://uatism.semiconindia.org/"><img alt="Digital india logo" class="img-fluid"
+          <div class="text-center"><a aria-label="Miety logo" class="" href="https://uatism.semiconindia.org/"><img
+                alt="Digital india logo" class="img-fluid"
                 src="https://uatism.semiconindia.org/Assets/images/header/ism_header_logo.png"></a>
           </div>
-          <div class="text-end"><a aria-label="Miety logo" class=""
-              href="https://dic.gov.in/" target="_blank"><img alt="Digital india logo" class="img-fluid"
+          <div class="text-end"><a aria-label="Miety logo" class="" href="https://dic.gov.in/" target="_blank"><img
+                alt="Digital india logo" class="img-fluid"
                 src="https://uatism.semiconindia.org/Assets/images/header/digi_india_header_logo.png"></a>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- Page Logo Header Bar Ends Here (Header 2)-->
 
-  <section class="py-5">
+  <!-- Page Body Section starts Here -->
+  <section class="p-4" style="background-color: #F3F6FD;">
     <div class="container">
-        <!-- Top Buttons -->
-        <div class="top-buttons mb-4 text-center">
-            <a href="/entity/auth/login" target="_blank">
-                <button class="themeCrm-btn-light" fdprocessedid="cazzj"><i class="fas fa-user mx-2"></i> Existing User | Login</button>
-            </a>
-            <a href="https://d2p5j06zete1i7.cloudfront.net/Cms/2023/Oct/12/1697095823_Instruction_Manual_for_Applications.pdf" target="_blank">
-                <button class="themeCrm-btn-darkBlue" fdprocessedid="35a2wp"><i class="fas fa-file-alt mx-2"></i> Instruction Manual</button>
-            </a>
-        </div>
-        <form id="registrationForm" novalidate="novalidate">
-            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8KJW0jdDQYtPjol2CnhD9Dn11GNR2ONXLoV5MCfDcfOb8Lwl_jmdMNnrqLaaTaqyCVhsHhffBgpG5Wb07ayiBH9sPmpMPDG2TbUJQN2no-sebANDbGUSFMVA3qa3t2RB7yWAJMIU81zXSeqJrq7uZDg">
-            <!-- Entity Details Section -->
-            <div class="form-section">
-                <div class="form-section-header">A. Entity Details</div>
-                <div class="form-section-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label class="form-label" for="registration_title">Organization Name <span class="text-danger">*</span></label>
-                            <input class="form-control" placeholder="Organization Name" type="text" data-val="true" data-val-maxlength="The field Entity Name must be a string or array type with a maximum length of '50'." data-val-maxlength-max="50" data-val-regex="Invalid format for Entity Name." data-val-regex-pattern="^[A-Za-z. ]+$" data-val-required="The Entity Name field is required." id="registration_title" maxlength="50" name="registration.title" value="" fdprocessedid="zslnr">
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.title" data-valmsg-replace="true"></span>
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label" for="registration_identity_no">Organization I.D. (PAN) <span class="text-danger">*</span></label>
-                            <input class="form-control" placeholder="Organization I.D. (PAN)" id="identity_no" type="text" data-val="true" data-val-maxlength="The field Organization I.D. (PAN) must be a string or array type with a maximum length of '10'." data-val-maxlength-max="10" data-val-regex="Invalid PAN format." data-val-regex-pattern="^[A-Z]{5}[0-9]{4}[A-Z]{1}$" data-val-required="The Organization I.D. (PAN) field is required." maxlength="10" name="registration.identity_no" value="" fdprocessedid="825dmd">
-                            <span class="text-danger field-validation-valid" id="identity-no-error" data-valmsg-for="registration.identity_no" data-valmsg-replace="true"></span>
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label" for="registration_company_type_id">Organization Type <span class="text-danger">*</span></label>
-                            <select class="form-select search-dropdown select2-hidden-accessible" data-val="true" data-val-required="The Organization Type field is required." id="registration_company_type_id" name="registration.company_type_id" data-select2-id="registration_company_type_id" tabindex="-1" aria-hidden="true">
-                                <option selected="" value="" data-select2-id="2">Select Organization Type</option>
-                                    <option value="1">Private Limited Company (Pvt Ltd)</option>
-                                    <option value="2">Public Limited Company (Ltd)</option>
-                                    <option value="3">One Person Company (OPC)</option>
-                                    <option value="4">Limited Liability Partnership (LLP)</option>
-                                    <option value="5">Sole Proprietorship</option>
-                                    <option value="6">Non-Profit Organization</option>
-                                    <option value="7">Partnership Firm</option>
-                                    <option value="8">Joint Venture (JV)</option>
-                                    <option value="9">Unlimited Company</option>
-                                    <option value="10">Producer Company</option>
-                                    <option value="11">Holding and Subsidiary Companies</option>
-                                    <option value="12">Startups (Registered under Startup India Initiative)</option>
-                                    <option value="13">Limited Liability Company (LLC)</option>
-                                    <option value="14">Multinational Corporation (MNC)</option>
-                                    <option value="15">Franchise</option>
-                                    <option value="16">Professional Corporation (PC)</option>
-                                    <option value="17">Others</option>
-                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: 372.15px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-registration_company_type_id-container"><span class="select2-selection__rendered" id="select2-registration_company_type_id-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Select</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.company_type_id" data-valmsg-replace="true"></span>
-                        </div>
-                    </div>
+      <!-- Top Buttons -->
+      <div class="top-buttons mb-4 text-center">
+        <a href="/login.html" target="_blank">
+          <button class="themeCrm-btn-light"><i class="fas fa-user mx-2"></i> Existing User | Login</button>
+        </a>
+        <a href="https://d2p5j06zete1i7.cloudfront.net/Cms/2023/Oct/12/1697095823_Instruction_Manual_for_Applications.pdf"
+          target="_blank">
+          <button class="themeCrm-btn-darkBlue"><i class="fas fa-file-alt mx-2"></i> Instruction Manual</button>
+        </a>
+      </div>
+      <form>
+        <!-- Entity Details Section -->
+        <div class="form-section">
+          <div class="form-section-header">A. Entity Details</div>
+          <div class="form-section-body">
+            <div class="row">
+              <div class="col-md-4">
+                <label class="form-label">Organization Name <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" placeholder="Organization Name">
+              </div>
 
-                    <div class="row g-3 mt-4">
-                        <div class="col-md-12">
-                            <label class="form-label" for="registration_address">Registered Address <span class="text-danger">*</span></label>
-                            <textarea class="form-control" rows="3" placeholder="Type Full Registered Address" data-val="true" data-val-maxlength="The field Registered Address must be a string or array type with a maximum length of '255'." data-val-maxlength-max="255" data-val-required="The Registered Address field is required." id="registration_address" maxlength="255" name="registration.address"></textarea>
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.address" data-valmsg-replace="true"></span>
-                        </div>
-                    </div>
+              <div class="col-md-4">
+                <label class="form-label">Organization I.D. (PAN) <span class="text-danger">*</span></label>
+                <input class="form-control" type="text" placeholder="Organization I.D. (PAN)" maxlength="10">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Organization Type <span class="text-danger">*</span></label>
+                <select class="form-select">
+                  <option value="">Select Organization Type</option>
+                  <option value="1">Private Limited Company (Pvt Ltd)</option>
+                  <option value="2">Public Limited Company (Ltd)</option>
+                  <option value="3">One Person Company (OPC)</option>
+                  <option value="4">Limited Liability Partnership (LLP)</option>
+                  <option value="5">Sole Proprietorship</option>
+                  <option value="6">Non-Profit Organization</option>
+                  <option value="7">Partnership Firm</option>
+                  <option value="8">Joint Venture (JV)</option>
+                  <option value="9">Unlimited Company</option>
+                  <option value="10">Producer Company</option>
+                  <option value="11">Holding and Subsidiary Companies</option>
+                  <option value="12">Startups (Registered under Startup India Initiative)</option>
+                  <option value="13">Limited Liability Company (LLC)</option>
+                  <option value="14">Multinational Corporation (MNC)</option>
+                  <option value="15">Franchise</option>
+                  <option value="16">Professional Corporation (PC)</option>
+                  <option value="17">Others</option>
+                </select>
+              </div>
 
-                    <div class="row g-3 mt-4">
-                        <div class="col-md-3">
-                            <label class="form-label" for="registration_country">Country <span class="text-danger">*</span></label>
-                            <select class="form-select search-dropdown countryDropdown select2-hidden-accessible" id="countryDropdown" data-val="true" data-val-required="The Country field is required." name="registration.country" data-select2-id="countryDropdown" tabindex="-1" aria-hidden="true">
-                                <option value="" data-select2-id="4">Select Country of Residence</option>
-                                        <option value="India">India</option>
-                                        <option value="Afghanistan">Afghanistan</option>
-                                        <option value="Åland">Åland</option>
-                                        <option value="Albania">Albania</option>
-                                        <option value="Algeria">Algeria</option>
-                                        <option value="American Samoa">American Samoa</option>
-                                        <option value="Andorra">Andorra</option>
-                                        <option value="Angola">Angola</option>
-                                        <option value="Anguilla">Anguilla</option>
-                                        <option value="Antarctica">Antarctica</option>
-                                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                                        <option value="Argentina">Argentina</option>
-                                        <option value="Armenia">Armenia</option>
-                                        <option value="Aruba">Aruba</option>
-                                        <option value="Australia">Australia</option>
-                                        <option value="Austria">Austria</option>
-                                        <option value="Azerbaijan">Azerbaijan</option>
-                                        <option value="Bahamas">Bahamas</option>
-                                        <option value="Bahrain">Bahrain</option>
-                                        <option value="Bangladesh">Bangladesh</option>
-                                        <option value="Barbados">Barbados</option>
-                                        <option value="Belarus">Belarus</option>
-                                        <option value="Belgium">Belgium</option>
-                                        <option value="Belize">Belize</option>
-                                        <option value="Benin">Benin</option>
-                                        <option value="Bermuda">Bermuda</option>
-                                        <option value="Bhutan">Bhutan</option>
-                                        <option value="Bolivia">Bolivia</option>
-                                        <option value="Bonaire">Bonaire</option>
-                                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                                        <option value="Botswana">Botswana</option>
-                                        <option value="Bouvet Island">Bouvet Island</option>
-                                        <option value="Brazil">Brazil</option>
-                                        <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
-                                        <option value="British Virgin Islands">British Virgin Islands</option>
-                                        <option value="Brunei">Brunei</option>
-                                        <option value="Bulgaria">Bulgaria</option>
-                                        <option value="Burkina Faso">Burkina Faso</option>
-                                        <option value="Burundi">Burundi</option>
-                                        <option value="Cambodia">Cambodia</option>
-                                        <option value="Cameroon">Cameroon</option>
-                                        <option value="Canada">Canada</option>
-                                        <option value="Cape Verde">Cape Verde</option>
-                                        <option value="Cayman Islands">Cayman Islands</option>
-                                        <option value="Central African Republic">Central African Republic</option>
-                                        <option value="Chad">Chad</option>
-                                        <option value="Chile">Chile</option>
-                                        <option value="China">China</option>
-                                        <option value="Christmas Island">Christmas Island</option>
-                                        <option value="Cocos [Keeling] Islands">Cocos [Keeling] Islands</option>
-                                        <option value="Colombia">Colombia</option>
-                                        <option value="Comoros">Comoros</option>
-                                        <option value="Cook Islands">Cook Islands</option>
-                                        <option value="Costa Rica">Costa Rica</option>
-                                        <option value="Croatia">Croatia</option>
-                                        <option value="Cuba">Cuba</option>
-                                        <option value="Curacao">Curacao</option>
-                                        <option value="Cyprus">Cyprus</option>
-                                        <option value="Czechia">Czechia</option>
-                                        <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
-                                        <option value="Denmark">Denmark</option>
-                                        <option value="Djibouti">Djibouti</option>
-                                        <option value="Dominica">Dominica</option>
-                                        <option value="Dominican Republic">Dominican Republic</option>
-                                        <option value="East Timor">East Timor</option>
-                                        <option value="Ecuador">Ecuador</option>
-                                        <option value="Egypt">Egypt</option>
-                                        <option value="El Salvador">El Salvador</option>
-                                        <option value="Equatorial Guinea">Equatorial Guinea</option>
-                                        <option value="Eritrea">Eritrea</option>
-                                        <option value="Estonia">Estonia</option>
-                                        <option value="Ethiopia">Ethiopia</option>
-                                        <option value="Falkland Islands">Falkland Islands</option>
-                                        <option value="Faroe Islands">Faroe Islands</option>
-                                        <option value="Fiji">Fiji</option>
-                                        <option value="Finland">Finland</option>
-                                        <option value="France">France</option>
-                                        <option value="French Guiana">French Guiana</option>
-                                        <option value="French Polynesia">French Polynesia</option>
-                                        <option value="French Southern Territories">French Southern Territories</option>
-                                        <option value="Gabon">Gabon</option>
-                                        <option value="Gambia">Gambia</option>
-                                        <option value="Georgia">Georgia</option>
-                                        <option value="Germany">Germany</option>
-                                        <option value="Ghana">Ghana</option>
-                                        <option value="Gibraltar">Gibraltar</option>
-                                        <option value="Greece">Greece</option>
-                                        <option value="Greenland">Greenland</option>
-                                        <option value="Grenada">Grenada</option>
-                                        <option value="Guadeloupe">Guadeloupe</option>
-                                        <option value="Guam">Guam</option>
-                                        <option value="Guatemala">Guatemala</option>
-                                        <option value="Guernsey">Guernsey</option>
-                                        <option value="Guinea">Guinea</option>
-                                        <option value="Guinea-Bissau">Guinea-Bissau</option>
-                                        <option value="Guyana">Guyana</option>
-                                        <option value="Haiti">Haiti</option>
-                                        <option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
-                                        <option value="Honduras">Honduras</option>
-                                        <option value="Hong Kong">Hong Kong</option>
-                                        <option value="Hungary">Hungary</option>
-                                        <option value="Iceland">Iceland</option>
-                                        <option value="Indonesia">Indonesia</option>
-                                        <option value="Iran">Iran</option>
-                                        <option value="Iraq">Iraq</option>
-                                        <option value="Ireland">Ireland</option>
-                                        <option value="Isle of Man">Isle of Man</option>
-                                        <option value="Israel">Israel</option>
-                                        <option value="Italy">Italy</option>
-                                        <option value="Ivory Coast">Ivory Coast</option>
-                                        <option value="Jamaica">Jamaica</option>
-                                        <option value="Japan">Japan</option>
-                                        <option value="Jersey">Jersey</option>
-                                        <option value="Jordan">Jordan</option>
-                                        <option value="Kazakhstan">Kazakhstan</option>
-                                        <option value="Kenya">Kenya</option>
-                                        <option value="Kiribati">Kiribati</option>
-                                        <option value="Kosovo">Kosovo</option>
-                                        <option value="Kuwait">Kuwait</option>
-                                        <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                        <option value="Laos">Laos</option>
-                                        <option value="Latvia">Latvia</option>
-                                        <option value="Lebanon">Lebanon</option>
-                                        <option value="Lesotho">Lesotho</option>
-                                        <option value="Liberia">Liberia</option>
-                                        <option value="Libya">Libya</option>
-                                        <option value="Liechtenstein">Liechtenstein</option>
-                                        <option value="Lithuania">Lithuania</option>
-                                        <option value="Luxembourg">Luxembourg</option>
-                                        <option value="Macao">Macao</option>
-                                        <option value="Macedonia">Macedonia</option>
-                                        <option value="Madagascar">Madagascar</option>
-                                        <option value="Malawi">Malawi</option>
-                                        <option value="Malaysia">Malaysia</option>
-                                        <option value="Maldives">Maldives</option>
-                                        <option value="Mali">Mali</option>
-                                        <option value="Malta">Malta</option>
-                                        <option value="Marshall Islands">Marshall Islands</option>
-                                        <option value="Martinique">Martinique</option>
-                                        <option value="Mauritania">Mauritania</option>
-                                        <option value="Mauritius">Mauritius</option>
-                                        <option value="Mayotte">Mayotte</option>
-                                        <option value="Mexico">Mexico</option>
-                                        <option value="Micronesia">Micronesia</option>
-                                        <option value="Moldova">Moldova</option>
-                                        <option value="Monaco">Monaco</option>
-                                        <option value="Mongolia">Mongolia</option>
-                                        <option value="Montenegro">Montenegro</option>
-                                        <option value="Montserrat">Montserrat</option>
-                                        <option value="Morocco">Morocco</option>
-                                        <option value="Mozambique">Mozambique</option>
-                                        <option value="Myanmar [Burma]">Myanmar [Burma]</option>
-                                        <option value="Namibia">Namibia</option>
-                                        <option value="Nauru">Nauru</option>
-                                        <option value="Nepal">Nepal</option>
-                                        <option value="Netherlands">Netherlands</option>
-                                        <option value="New Caledonia">New Caledonia</option>
-                                        <option value="New Zealand">New Zealand</option>
-                                        <option value="Nicaragua">Nicaragua</option>
-                                        <option value="Niger">Niger</option>
-                                        <option value="Nigeria">Nigeria</option>
-                                        <option value="Niue">Niue</option>
-                                        <option value="Norfolk Island">Norfolk Island</option>
-                                        <option value="North Korea">North Korea</option>
-                                        <option value="Northern Mariana Islands">Northern Mariana Islands</option>
-                                        <option value="Norway">Norway</option>
-                                        <option value="Oman">Oman</option>
-                                        <option value="Pakistan">Pakistan</option>
-                                        <option value="Palau">Palau</option>
-                                        <option value="Palestine">Palestine</option>
-                                        <option value="Panama">Panama</option>
-                                        <option value="Papua New Guinea">Papua New Guinea</option>
-                                        <option value="Paraguay">Paraguay</option>
-                                        <option value="Peru">Peru</option>
-                                        <option value="Philippines">Philippines</option>
-                                        <option value="Pitcairn Islands">Pitcairn Islands</option>
-                                        <option value="Poland">Poland</option>
-                                        <option value="Portugal">Portugal</option>
-                                        <option value="Puerto Rico">Puerto Rico</option>
-                                        <option value="Qatar">Qatar</option>
-                                        <option value="Republic of the Congo">Republic of the Congo</option>
-                                        <option value="Réunion">Réunion</option>
-                                        <option value="Romania">Romania</option>
-                                        <option value="Russia">Russia</option>
-                                        <option value="Rwanda">Rwanda</option>
-                                        <option value="Saint Barthélemy">Saint Barthélemy</option>
-                                        <option value="Saint Helena">Saint Helena</option>
-                                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                                        <option value="Saint Lucia">Saint Lucia</option>
-                                        <option value="Saint Martin">Saint Martin</option>
-                                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                                        <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
-                                        <option value="Samoa">Samoa</option>
-                                        <option value="San Marino">San Marino</option>
-                                        <option value="São Tomé and Príncipe">São Tomé and Príncipe</option>
-                                        <option value="Saudi Arabia">Saudi Arabia</option>
-                                        <option value="Senegal">Senegal</option>
-                                        <option value="Serbia">Serbia</option>
-                                        <option value="Seychelles">Seychelles</option>
-                                        <option value="Sierra Leone">Sierra Leone</option>
-                                        <option value="Singapore">Singapore</option>
-                                        <option value="Sint Maarten">Sint Maarten</option>
-                                        <option value="Slovakia">Slovakia</option>
-                                        <option value="Slovenia">Slovenia</option>
-                                        <option value="Solomon Islands">Solomon Islands</option>
-                                        <option value="Somalia">Somalia</option>
-                                        <option value="South Africa">South Africa</option>
-                                        <option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
-                                        <option value="South Korea">South Korea</option>
-                                        <option value="South Sudan">South Sudan</option>
-                                        <option value="Spain">Spain</option>
-                                        <option value="Sri Lanka">Sri Lanka</option>
-                                        <option value="Sudan">Sudan</option>
-                                        <option value="Suriname">Suriname</option>
-                                        <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
-                                        <option value="Swaziland">Swaziland</option>
-                                        <option value="Sweden">Sweden</option>
-                                        <option value="Switzerland">Switzerland</option>
-                                        <option value="Syria">Syria</option>
-                                        <option value="Taiwan">Taiwan</option>
-                                        <option value="Tajikistan">Tajikistan</option>
-                                        <option value="Tanzania">Tanzania</option>
-                                        <option value="Thailand">Thailand</option>
-                                        <option value="Togo">Togo</option>
-                                        <option value="Tokelau">Tokelau</option>
-                                        <option value="Tonga">Tonga</option>
-                                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                                        <option value="Tunisia">Tunisia</option>
-                                        <option value="Turkey">Turkey</option>
-                                        <option value="Turkmenistan">Turkmenistan</option>
-                                        <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
-                                        <option value="Tuvalu">Tuvalu</option>
-                                        <option value="U.S. Minor Outlying Islands">U.S. Minor Outlying Islands</option>
-                                        <option value="U.S. Virgin Islands">U.S. Virgin Islands</option>
-                                        <option value="Uganda">Uganda</option>
-                                        <option value="Ukraine">Ukraine</option>
-                                        <option value="United Arab Emirates">United Arab Emirates</option>
-                                        <option value="United Kingdom">United Kingdom</option>
-                                        <option value="United States">United States</option>
-                                        <option value="Uruguay">Uruguay</option>
-                                        <option value="Uzbekistan">Uzbekistan</option>
-                                        <option value="Vanuatu">Vanuatu</option>
-                                        <option value="Vatican City">Vatican City</option>
-                                        <option value="Venezuela">Venezuela</option>
-                                        <option value="Vietnam">Vietnam</option>
-                                        <option value="Wallis and Futuna">Wallis and Futuna</option>
-                                        <option value="Western Sahara">Western Sahara</option>
-                                        <option value="Yemen">Yemen</option>
-                                        <option value="Zambia">Zambia</option>
-                                        <option value="Zimbabwe">Zimbabwe</option>
-                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="3" style="width: 279.12px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-countryDropdown-container"><span class="select2-selection__rendered" id="select2-countryDropdown-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Select</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.country" data-valmsg-replace="true"></span>
-                            <p id="demo"></p>
-                        </div>
-                        <div class="col-md-3" id="stateDropdownDiv" style="display: none;">
-                            <label class="form-label" for="registration_state">State <span class="text-danger">*</span></label>
-                            <select class="form-select search-dropdown select2-hidden-accessible" id="stateDropdown" data-val="true" data-val-required="The State field is required." name="registration.state" data-select2-id="stateDropdown" tabindex="-1" aria-hidden="true"><option value="" data-select2-id="9">Select</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="5" style="width: 279.12px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-stateDropdown-container"><span class="select2-selection__rendered" id="select2-stateDropdown-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Select</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.state" data-valmsg-replace="true"></span>
-                        </div>
-                        <!-- Foreign State Textbox (for Non-India) -->
-                        <div class="col-md-3" id="foreignStateDiv" style="">
-                            <label class="form-label" for="registration_foreign_state">State <span class="text-danger">*</span></label>
-                            <input class="form-control" id="foreignState" placeholder="Enter State" type="text" data-val="true" data-val-required="The State field is required." name="registration.foreign_state" value="" fdprocessedid="h7s7v">
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.foreign_state" data-valmsg-replace="true"></span>
-                        </div>
-                        <div class="col-md-3" id="districtDropdownDiv" style="display: none;">
-                            <label class="form-label" for="registration_city">District/City <span class="text-danger">*</span></label>
-                            <select class="form-select search-dropdown select2-hidden-accessible" id="districtDropdown" data-val="true" data-val-required="The District/City field is required." name="registration.city" data-select2-id="districtDropdown" tabindex="-1" aria-hidden="true"><option value="" data-select2-id="10">Select District</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="7" style="width: 279.12px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-districtDropdown-container"><span class="select2-selection__rendered" id="select2-districtDropdown-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Select</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.city" data-valmsg-replace="true"></span>
-                        </div>
-                        <!-- Foreign State Textbox (for Non-India) -->
-                        <div class="col-md-3" id="foreignCityDiv" style="">
-                            <label class="form-label" for="registration_foreign_city">District/City <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="foreignCity" placeholder="Enter City" data-val="true" data-val-required="The City field is required." name="registration.foreign_city" value="" fdprocessedid="kevail">
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.foreign_city" data-valmsg-replace="true"></span>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label" for="registration_pincode">PIN/ZIP Code <span class="text-danger">*</span></label>
-                                <input class="form-control" id="pincode" placeholder="Enter 5-10 Alphanumeric ZIP Code" disabled="" type="text" data-val="true" data-val-length="Pincode must be between 5 and 10 characters." data-val-length-max="10" data-val-length-min="5" data-val-required="The PIN/ZIP Code field is required." maxlength="10" name="registration.pincode" value="" pattern="^[a-zA-Z0-9 ]{5,10}$" title="Pincode must be 5 to 10 characters." fdprocessedid="9j8z6j">
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.pincode" data-valmsg-replace="true"></span>
-                        </div>
-                    </div>
+              <div class="row g-3 mt-4">
+                <div class="col-md-12">
+                  <label class="form-label">Registered Address <span class="text-danger">*</span></label>
+                  <textarea class="form-control" rows="3" placeholder="Type Full Registered Address"
+                    maxlength="255"></textarea>
                 </div>
-            </div>
+              </div>
 
-            <!-- Authorized Person Details Section -->
-            <div class="form-section">
-                <div class="form-section-header">B. Authorized Person Details</div>
-                <div class="form-section-body">
-                    <div class="row g-4">
-                        <div class="col-md-3">
-                            <label class="form-label" for="registration_firstname">First Name <span class="text-danger">*</span></label>
-                            <input class="form-control" placeholder="First Name" type="text" data-val="true" data-val-maxlength="The field First Name must be a string or array type with a maximum length of '50'." data-val-maxlength-max="50" data-val-regex="Only alphabets and spaces allowed." data-val-regex-pattern="^[A-Za-z ]+$" data-val-required="The First Name field is required." id="registration_firstname" maxlength="50" name="registration.firstname" value="" fdprocessedid="u0zvxl">
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.firstname" data-valmsg-replace="true"></span>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label" for="registration_lastname">Last Name <span class="text-danger">*</span></label>
-                            <input class="form-control" placeholder="Last Name" type="text" data-val="true" data-val-maxlength="The field Last Name must be a string or array type with a maximum length of '50'." data-val-maxlength-max="50" data-val-regex="Only alphabets and spaces allowed." data-val-regex-pattern="^[A-Za-z ]+$" data-val-required="The Last Name field is required." id="registration_lastname" maxlength="50" name="registration.lastname" value="" fdprocessedid="go718l">
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.lastname" data-valmsg-replace="true"></span>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label" for="registration_designation">Designation <span class="text-danger">*</span></label>
-                            <input class="form-control" placeholder="Designation" type="text" data-val="true" data-val-maxlength="The field Designation must be a string or array type with a maximum length of '50'." data-val-maxlength-max="50" data-val-regex="Only alphabets and spaces allowed." data-val-regex-pattern="^[A-Za-z ]+$" data-val-required="The Designation field is required." id="registration_designation" maxlength="50" name="registration.designation" value="" fdprocessedid="1heeum">
-                            <span class="text-danger field-validation-valid" data-valmsg-for="registration.designation" data-valmsg-replace="true"></span>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label" for="registration_email">Email <span class="text-danger">*</span></label>
-                            <input class="form-control" placeholder="Email ID" id="email" type="email" data-val="true" data-val-email="Invalid email format." data-val-required="The Email field is required." name="registration.email" value="" fdprocessedid="7rfgjb">
-                            <span class="text-danger field-validation-valid" id="email-error" data-valmsg-for="registration.email" data-valmsg-replace="true"></span>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label" for="registration_mobile">Phone Number <span class="text-danger">*</span></label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="countryCode">+91</span>
-                                <input type="hidden" name="std_code" id="hiddenCountryCode" value="" data-val="true" data-val-required="The Country Code field is required.">
-                                <input class="form-control" maxlength="15" inputmode="numeric" placeholder="Phone Number" id="mobile" type="text" data-val="true" data-val-required="The Phone Number field is required." name="registration.mobile" value="" fdprocessedid="m29l1m">
-                            </div>
-                            <div>
-                                <span class="text-danger field-validation-valid" data-valmsg-for="registration.mobile" data-valmsg-replace="true"></span>
-                            </div>
-                        </div>
-                    </div>
+
+              <div class="row g-3 mt-4">
+                <div class="col-md-3">
+                  <label class="form-label">Country <span class="text-danger">*</span></label>
+                  <select class="form-select">
+                    <option value="">Select Country of Residence</option>
+                    <option value="India">India</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                  </select>
                 </div>
+
+                <div class="col-md-3">
+                  <label class="form-label">State <span class="text-danger">*</span></label>
+                  <select class="form-select">
+                    <option value="">Select</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label class="form-label">State <span class="text-danger">*</span></label>
+                  <input class="form-control" type="text" placeholder="Enter State">
+                </div>
+
+                <div class="col-md-3">
+                  <label class="form-label">District/City <span class="text-danger">*</span></label>
+                  <select class="form-select">
+                    <option value="">Select District</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label class="form-label">District/City <span class="text-danger">*</span></label>
+                  <input class="form-control" type="text" placeholder="Enter City">
+                </div>
+
+                <div class="col-md-3">
+                  <label class="form-label">PIN/ZIP Code <span class="text-danger">*</span></label>
+                  <input class="form-control" type="text" placeholder="Enter 5-10 Alphanumeric ZIP Code" maxlength="10"
+                    disabled>
+                </div>
+
+              </div>
             </div>
+          </div>
 
-        </form>
-        <!-- Save and Verify Button -->
+          <!-- Authorized Person Details Section -->
+          <div class="form-section">
+            <div class="form-section-header">B. Authorized Person Details</div>
+            <div class="form-section-body">
+              <div class="row g-4">
+                <div class="col-md-3">
+                  <label class="form-label">First Name <span class="text-danger">*</span></label>
+                  <input class="form-control" type="text" placeholder="First Name">
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label">Last Name <span class="text-danger">*</span></label>
+                  <input class="form-control" type="text" placeholder="Last Name">
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label">Designation <span class="text-danger">*</span></label>
+                  <input class="form-control" type="text" placeholder="Designation">
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label">Email <span class="text-danger">*</span></label>
+                  <input class="form-control" type="email" placeholder="Email ID">
+                </div>
+                <div class="col-md-3">
+                  <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text">+91</span>
+                    <input class="form-control" type="text" placeholder="Phone Number" maxlength="15"
+                      inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div class="text-end">
-            <a class="themeCrm-btn-light mt-4 ml-2 float-left mr-2" id="clearSessionButton">Reset</a>
-            <button type="button" class="themeCrm-btn-darkBlue" id="validateAndShowPopup" fdprocessedid="ouio6o">Save and Verify</button>
-        </div>
+
+      </form>
+      <!-- Save and Verify Button -->
+
+      <div class="text-end">
+        <a class="themeCrm-btn-light mt-4 ml-2 float-left mr-2" id="clearSessionButton">Reset</a>
+        <button type="button" class="themeCrm-btn-darkBlue" id="validateAndShowPopup" fdprocessedid="ouio6o">Save and
+          Verify</button>
+      </div>
     </div>
 
-</section>
-<section>
-  <div class="ism-footer-copyright">
-    <p class="m-0">© Copyright India SemiConductor Mission. All Rights Reserved</p>
-  </div>
-</section>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  </section>
+  <!-- Page Body Section Ends Here -->
+
+  <!-- Ism Footer starts Here -->
+  <section>
+    <div class="ism-footer-copyright">
+      <p class="m-0">© Copyright India SemiConductor Mission. All Rights Reserved</p>
+    </div>
+  </section>
+  <!-- Ism Footer Ends Here -->
 </body>
+
 </html>

@@ -1,0 +1,508 @@
+/* Color Scheme */
+:root {
+  --light-bg: #fff;
+  --dark-bg: #1c1c1c;
+
+  --dark-text: #1c1c1c;
+  --light-text: #fff;
+  --link-text: #1351D8;
+
+  --primary-color: #192F60;
+  --secondary-color: #F3F6FD;
+
+  --base-clr: #192F60;
+  --line-clr: #42434a;
+  --hover-clr: #1c1c1c;
+  --text-clr: #e6e6ef;
+  --accent-clr: #5e63ff;
+  --secondary-text-clr: #b0b3c1;
+}
+
+/* Normalize CSS (Reset) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.rounded-br {
+  border-radius: 8px;
+}
+
+/* Flexbox Layout */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-family: "Playfair Display";
+  letter-spacing: 0.56px;
+  margin: 0;
+}
+
+p {
+  letter-spacing: 0.32px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.page-container {
+  background: #F3F6FD;
+  padding: 1rem 0rem;
+}
+
+.ism-footer-copyright {
+  text-align: center;
+  background: #192f60;
+  padding: 0.35rem;
+  color: #fff;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  float: left;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  color: #192f60;
+  content: var(--bs-breadcrumb-divider, ">");
+  font-weight: 600;
+}
+
+.breadcrumb-item a {
+  color: rgba(25, 47, 96, 0.70);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.32px;
+}
+
+.breadcrumb-item.active>a {
+  color: #192f60 !important;
+}
+
+.form-label {
+  font-size: 1rem;
+  letter-spacing: 0.32px;
+  font-weight: 500;
+  color: #192F61;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(25, 47, 96, 0.70);
+  background-color: #f3f6fd;
+  background-clip: padding-box;
+  border: 2px solid rgba(25, 47, 96, 0.10);
+  border-radius: 4px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  height: 2.75rem;
+}
+
+.themeCrm-btn-light {
+  padding: 5px 20px;
+  border-radius: 100px;
+  background: #fff;
+  color: #192F60;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border: 2px solid #192F60;
+}
+
+.themeCrm-btn-darkBlue {
+  padding: 5px 20px;
+  border-radius: 100px;
+  background: #192F60;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border: 2px solid #fff;
+}
+
+.themeCrm-btn-lightBlue {
+  padding: 5px 20px;
+  border-radius: 100px;
+  background: #1351D8;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border: 2px solid #fff;
+}
+
+.selected-items {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#pageTitle {
+  color: #192F60;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.56px;
+
+}
+
+#description {
+  color: #1C1C1C;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+  margin: 0;
+}
+
+.required::after {
+  content: "*";
+  color: red;
+  margin-left: 5px;
+}
+
+.attachment-button {
+  border-radius: 4px;
+  border: 1px solid #192F60;
+  background: #F3F6FD;
+  padding: 0.75rem 1.5rem;
+}
+
+
+
+/* Status Css Start Here ---- Add status with referred class "class="status pending"" */
+.status {
+  padding: 0.5rem 1rem;
+  border-radius: 85px;
+  font-weight: 500;
+  font-size: 0.75rem;
+
+  .pending {
+    background-color: #FFF4CC;
+    color: #DB8900;
+    border: 1px solid #DB8900;
+  }
+
+  .confirmation-awaited {
+    border: 1px solid #B76D00;
+    background: #FFF1D6;
+    color: #B76D00;
+  }
+
+  .confirmed {
+    border: 1px solid #8D9735;
+    background: #F0F4CD;
+    color: #8D9735;
+  }
+
+  .approved {
+    border: 1px solid #10623E;
+    background: #CEEAD6;
+    color: #10623E;
+  }
+
+  .cancel {
+    border: 1px solid #E88C73;
+    background: #F9EEED;
+    color: #E88C73;
+  }
+
+  .failed {
+    border: 1px solid #D1604E;
+    background: #F9EEED;
+    color: #D1604E;
+  }
+
+  .withdraw {
+    border: 1px solid #B3261D;
+    background: #F9EEED;
+    color: #B3261D;
+  }
+
+  .not-approved {
+    border: 1px solid #BD0D10;
+    background: #FCDCDD;
+    color: #BD0D10;
+  }
+
+  .aknowledged {
+    border: 1px solid #6C7EB8;
+    background: #E1E8FF;
+    color: #6C7EB8;
+  }
+
+  .sent {
+    border: 1px solid #10623E;
+    background: #CEEAD6;
+    color: #10623E;
+  }
+
+  .failed-to-send {
+    border: 1px solid #D1604E;
+    background: #F9EEED;
+    color: #D1604E
+  }
+
+  .recieved {
+    border: 1px solid #6C7EB8;
+    background: #E1E8FF;
+    color: #6C7EB8;
+  }
+
+  .payment-pending {
+    border: 1px solid #DB8900;
+    background: #FFF4CC;
+    color: #DB8900;
+  }
+
+  .preliminary-screening {
+    border: 1px solid #B76D00;
+    background: #FFF1D6;
+    color: #B76D00;
+  }
+
+  .evaluation-under-review {
+    border: 1px solid #0083DB;
+    background: #D6F1FF;
+    color: #0083DB;
+  }
+}
+
+/* Status Css End Here */
+
+
+/* Login/Forgot Css Start Here */
+.login-section {
+  background-image: url(../images/login_background.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.theme-crm-btn {
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #192F60;
+  color: #fff;
+}
+
+.theme-crm-btn a {
+  color: #fff;
+}
+
+.theme-crm-btn:hover {
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #192F60;
+  color: #fff;
+}
+
+.main-heading {
+  color: #192F60;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: capitalize;
+}
+
+.login-link-text {
+  color: #192F60;
+  font-size: 1rem;
+  font-style: normal;
+  text-transform: capitalize;
+}
+
+/* Login/Forgot Css End Here */
+
+
+/* Dashboard Css Start Here */
+.dashboard-bg {
+  background-image: url(../images/desktop_home_banner.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 1rem 0.5rem;
+}
+
+.dashboard-card {
+  align-items: center;
+  background-color: #F3F6FD;
+  border-radius: 0.5rem;
+  height: 100%;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+}
+
+.dashboard-card_icon {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+.dashboard-card_title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #192f60;
+  letter-spacing: 0.56px;
+}
+
+.dashboard-card_subtitle {
+  font-size: 0.75rem;
+  color: #1C1C1C;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+}
+
+.main-header {
+  background: #B7C3DF;
+  color: #192F60;
+  height: 3rem;
+}
+
+.main-header .dropdown-toggle::after {
+  display: none;
+}
+
+.profile-icon {
+  background: #192f60;
+}
+
+.bg-primary-aqua {
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.60);
+  padding: 2rem;
+}
+
+.notification-container {
+  max-height: 315px;
+  overflow: auto;
+  padding-right: 0.5rem;
+}
+
+.scheme-tabs {
+  padding: 1rem;
+  border: none;
+  display: inline-flex;
+  background: #fff;
+  border-radius: 0.5rem;
+}
+
+.nav-link {
+  color: #1C1C1C !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: #fff !important;
+  background-color: #1c1c1c;
+  border-color: none !important;
+}
+
+.notification-heading {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.56px;
+}
+
+.sub-heading {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+}
+
+.notification-tabs {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.notification-text {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+}
+
+.notification-icon img {
+  height: 2.5rem;
+}
+
+.notification-date {
+  color: #1351D8;
+}
+
+/* Dashboard Css Ends Here */

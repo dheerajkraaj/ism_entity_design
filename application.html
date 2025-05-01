@@ -266,7 +266,7 @@
                     <td>21-01-2025 | 12:19 PM</td>
                     <td>Approve</td>
                     <td><a href="/application-details.html" class="view-details-btn">Details</a></td>
-                    <td><button class="expand-btn" aria-label="Expand"><i class="fa-solid fa-chevron-up"></i></button></td>
+                    <td><button class="expand-btn" aria-label="Expand"><i class="fa-solid fa-chevron-down"></i></button></td>
                   </tr>
                   <tr class="accordion-content">                    
                     <td><strong>Contact Person : </strong></td>
@@ -284,7 +284,7 @@
                     <td>21-01-2025 | 12:19 PM</td>
                     <td>Pending</td>
                     <td><a href="/application-details.html" class="view-details-btn">Details</a></td>
-                    <td><button class="expand-btn" aria-label="Expand"><i class="fa-solid fa-chevron-up"></i></button></td>
+                    <td><button class="expand-btn" aria-label="Expand"><i class="fa-solid fa-chevron-down"></i></button></td>
                   </tr>
                   <tr class="accordion-content">
                     <td><strong>Contact Person : </strong></td>
@@ -299,11 +299,7 @@
               </table>
             </div>
           </div>
-
-
-
         </div>
-
         <div class="row">
           <div class="container evaluation-container">
             <div class="d-flex justify-content-between align-items-center mb-3">
@@ -359,11 +355,11 @@
         if (next && next.classList.contains('accordion-content')) {
           if (next.style.display === 'table-row') {
             next.style.display = 'none';
-            btn.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+            btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
             btn.setAttribute('aria-label', 'Expand');
           } else {
             next.style.display = 'table-row';
-            btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+            btn.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
             btn.setAttribute('aria-label', 'Collapse');
           }
         }

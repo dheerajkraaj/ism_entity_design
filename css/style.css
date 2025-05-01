@@ -85,7 +85,7 @@ p {
   letter-spacing: 0.32px;
   font-weight: 500;
   margin: 0;
-  color: #1c1c1c;
+
 }
 
 .page-wrapper {
@@ -99,7 +99,7 @@ p {
   padding: 0.35rem;
   color: #fff;
   bottom: 0;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
 }
 
@@ -121,7 +121,23 @@ p {
 .breadcrumb-item.active>a {
   color: #192f60 !important;
 }
-
+.form-section {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins';
+}
+.form-section-header {
+  background-color: #192f60;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px 8px 0 0;
+  font-family: 'Poppins';
+}
+.form-section-body {
+  padding: 3rem 1rem;
+}
 .form-label {
   font-size: 1rem;
   letter-spacing: 0.32px;
@@ -409,3 +425,58 @@ color: #fff;
   background: #F3F6FD;
   border: none;
 }
+
+
+
+
+
+/* Login/Forgot Css Start Here */
+
+.login-section {
+  background-image: url(../images/login_background.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.login-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.theme-crm-btn{
+padding: 0.5rem;
+justify-content: center;
+align-items: center;
+border-radius: 8px;
+background: #192F60;
+color: #fff;
+}
+.theme-crm-btn a{
+color:#fff;
+}
+.theme-crm-btn:hover{
+padding: 0.5rem;
+justify-content: center;
+align-items: center;
+border-radius: 8px;
+background: #192F60;
+color: #fff;
+}
+.main-heading{
+color: #192F60;
+font-size: 2rem;
+font-style: normal;
+font-weight: 700;
+line-height: 110%;
+text-transform: capitalize;
+}
+.login-link-text{
+color: #192F60;
+font-size: 1rem;
+font-style: normal;
+text-transform: capitalize;
+}
+
+/* Login/Forgot Css End Here */
