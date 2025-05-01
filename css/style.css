@@ -121,6 +121,7 @@ p {
 .breadcrumb-item.active>a {
   color: #192f60 !important;
 }
+
 .form-section {
   background-color: #fff;
   border-radius: 8px;
@@ -128,6 +129,7 @@ p {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: 'Poppins';
 }
+
 .form-section-header {
   background-color: #192f60;
   color: white;
@@ -135,9 +137,11 @@ p {
   border-radius: 8px 8px 0 0;
   font-family: 'Poppins';
 }
+
 .form-section-body {
   padding: 3rem 1rem;
 }
+
 .form-label {
   font-size: 1rem;
   letter-spacing: 0.32px;
@@ -252,92 +256,203 @@ button {
 #pageTitle {
   color: #192F60;
   font-family: Poppins;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.56px;
- 
+
 }
 
 #description {
   color: #1C1C1C;
   font-family: Poppins;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.28px;
   margin: 0;
 }
 
+.evaluation-container {
+  border-radius: 8px;
+  border: 1px solid #192F60;
+  background: #FFF;
+  padding: 1rem;
+}
 
-
-
-table.dataTable.display tbody tr.odd {
-  background-color: #fff;
-}
-table.dataTable.display tbody tr.even {
-  background-color: #F3F6FD;
-}
-table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-  background-color: transparent;
-}
-table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-  background-color: transparent;
-}
-table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-  background-color: transparent;
-}
-table.dataTable thead th, table.dataTable thead td {
-  padding: 10px 18px;
-  border-bottom: 1px solid #111;
-  font-size: 14px;
-  font-weight: 500;
-}
-table.dataTable.no-footer {
-  border-bottom: none;
-}
-.dataTables_wrapper .dataTables_length, .dataTables_filter{
-color: rgba(25, 47, 96, 0.70) !important;
-font-size: 14px;
-}
-.dataTables_wrapper .dataTables_filter input {
-  border: 1px solid #aaa;
-  border-radius: 25px;
+/* Status Css Start Here ---- Add status with referred class "class="status pending"" */
+.status {
   padding: 0.5rem 1rem;
-  background-color:#fff;
-  margin-left: 3px;
-  border: 2px solid rgba(25, 47, 96, 0.10);
-}
-.dataTables_wrapper .dataTables_length select {
-  border: 1px solid #aaa;
+  border-radius: 85px;
+  font-weight: 500;
+  font-size: 0.75rem;
 
-  padding: 5px;
-  background-color:#fff;
-  margin-left: 3px;
-  border: 2px solid rgba(25, 47, 96, 0.10);
-}
-.dataTables_wrapper .dataTables_info, .dataTables_paginate{
-color: rgba(25, 47, 96, 0.70) !important;
-font-size: 14px;
-}
-.dataTables_wrapper .dataTables_paginate .paginate_button{
-background-color: #192f60;
-color: #fff;
-}
-
-
-/* For small devices */
-@media screen and (max-width: 546px) {
-  .ism-v3-header__topBar {
-    display: none;
+  .pending {
+    background-color: #FFF4CC;
+    color: #DB8900;
+    border: 1px solid #DB8900;
   }
 
-  .meity,
-  .dic {
-    display: none;
+  .confirmation-awaited {
+    border: 1px solid #B76D00;
+    background: #FFF1D6;
+    color: #B76D00;
+  }
+
+  .confirmed {
+    border: 1px solid #8D9735;
+    background: #F0F4CD;
+    color: #8D9735;
+  }
+
+  .approved {
+    border: 1px solid #10623E;
+    background: #CEEAD6;
+    color: #10623E;
+  }
+
+  .cancel {
+    border: 1px solid #E88C73;
+    background: #F9EEED;
+    color: #E88C73;
+  }
+
+  .failed {
+    border: 1px solid #D1604E;
+    background: #F9EEED;
+    color: #D1604E;
+  }
+
+  .withdraw {
+    border: 1px solid #B3261D;
+    background: #F9EEED;
+    color: #B3261D;
+  }
+
+  .not-approved {
+    border: 1px solid #BD0D10;
+    background: #FCDCDD;
+    color: #BD0D10;
+  }
+
+  .aknowledged {
+    border: 1px solid #6C7EB8;
+    background: #E1E8FF;
+    color: #6C7EB8;
+  }
+
+  .sent {
+    border: 1px solid #10623E;
+    background: #CEEAD6;
+    color: #10623E;
+  }
+
+  .failed-to-send {
+    border: 1px solid #D1604E;
+    background: #F9EEED;
+    color: #D1604E
+  }
+
+  .recieved {
+    border: 1px solid #6C7EB8;
+    background: #E1E8FF;
+    color: #6C7EB8;
+  }
+
+  .payment-pending {
+    border: 1px solid #DB8900;
+    background: #FFF4CC;
+    color: #DB8900;
+  }
+
+  .preliminary-screening {
+    border: 1px solid #B76D00;
+    background: #FFF1D6;
+    color: #B76D00;
+  }
+
+  .evaluation-under-review {
+    border: 1px solid #0083DB;
+    background: #D6F1FF;
+    color: #0083DB;
   }
 }
 
+/* Login/Forgot Css Start Here */
+
+.login-section {
+  background-image: url(../images/login_background.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.login-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.theme-crm-btn {
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #192F60;
+  color: #fff;
+}
+
+.theme-crm-btn a {
+  color: #fff;
+}
+
+.theme-crm-btn:hover {
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #192F60;
+  color: #fff;
+}
+
+.main-heading {
+  color: #192F60;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  text-transform: capitalize;
+}
+
+.login-link-text {
+  color: #192F60;
+  font-size: 1rem;
+  font-style: normal;
+  text-transform: capitalize;
+}
+
+/* Login/Forgot Css End Here */
+
+
+/* Dashboard Css Start Here */
+.dashboard-bg {
+  background-image: url(../images/desktop_home_banner.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 1rem 0.5rem;
+}
+
+.dashboard-card {
+  align-items: center;
+  background-color: #F3F6FD;
+  border-radius: 0.5rem;
+  height: 100%;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+}
 
 .application-card_icon {
   font-size: 3rem;
@@ -349,6 +464,8 @@ color: #fff;
   font-weight: 600;
   color: #192f60;
   letter-spacing: 0.4px;
+  padding: 0.25rem;
+
 }
 
 .application-card_count {
@@ -363,120 +480,173 @@ color: #fff;
   border-radius: 8px;
   margin-right: 0.5rem;
 }
-
-
-
-
-
-
-/* Status Button */
-.status {
-  padding: 0.5rem 1rem;
-  border-radius: 85px;
-  font-weight: 500;
-  font-size: 0.75rem;
+.main-header {
+  background: #B7C3DF;
+  color: #192F60;
+  height: 3rem;
 }
 
-.pending {
-  background-color: #F0F4CD;
-  color: #8D9735;
-  border: 1px solid #8D9735;
+.main-header .dropdown-toggle::after {
+  display: none;
 }
 
-.not-approved {
-  border: 1px solid #BD0D10;
-  background: #FCDCDD;
-  color: #BD0D10;
-}
-
-.under-review {
-  border: 1px solid #6C7EB8;
-  background: #E1E8FF;
-  color: #6C7EB8;
-}
-.evaluation-container {
+.bg-primary-aqua {
   border-radius: 8px;
-  border: 1px solid #192F60;
+  background: rgba(0, 0, 0, 0.60);
+  padding: 2rem;
+}
+
+.notification-container {
+  max-height: 315px;
+  overflow: auto;
+  padding-right: 0.5rem;
+}
+
+.scheme-tabs {
+  padding: 1rem;
+  border: none;
+  display: inline-flex;
+  background: #fff;
+  border-radius: 0.5rem;
+}
+
+.nav-link {
+  color: #1C1C1C !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: #fff !important;
+  background-color: #1c1c1c;
+  border-color: none !important;
+}
+
+.notification-heading {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.56px;
+}
+
+.sub-heading {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+}
+
+.notification-tabs {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.notification-text {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+}
+
+.notification-icon img {
+  height: 2.5rem;
+}
+
+.notification-date {
+  color: #1351D8;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #192f60;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.info {
+  margin-bottom: 10px;
+}
+
+.info span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.info .value {
+  font-weight: normal;
+}
+
+.edit-link {
+  font-size: 14px;
+  color: #192f60;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+}
+
+.info-card {
+  border-radius: 8px;
+  border: 1px solid #BAC1D0;
   background: #FFF;
+}
+
+.info-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #192f60;
+  font-weight: bold;
+  background: #F3F6FD;
+  padding: 1rem;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.info-card-header h5 {
+  color: #192F60;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+
+}
+
+.info-card-body {
   padding: 1rem;
 }
-.table {
-  border-radius: 8px;
-  border: 2px solid rgba(25, 47, 96, 0.10);
 
-  background: #FFF;
-}
-
-.table thead tr th {
-  border: none;
-  background: #192F60;
+.info p {
   font-size: 14px;
-  color: #fff;
+  font-weight: 600;
 }
 
-.table tbody tr td {
-  border: none;
+.info-card table {
   font-size: 14px;
-  color: #192F60;
 }
 
-.table tbody tr:nth-child(even) td {
-  border: 1px solid #BAC1D0;
+.info-card .table th {
+  /* color: #192f60; */
+  padding: 0.5rem 0;
+  font-weight: 600;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
   background: #F3F6FD;
-  border: none;
 }
 
-
-
-
-
-/* Login/Forgot Css Start Here */
-
-.login-section {
-  background-image: url(../images/login_background.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.login-container {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-.theme-crm-btn{
-padding: 0.5rem;
-justify-content: center;
-align-items: center;
-border-radius: 8px;
-background: #192F60;
-color: #fff;
-}
-.theme-crm-btn a{
-color:#fff;
-}
-.theme-crm-btn:hover{
-padding: 0.5rem;
-justify-content: center;
-align-items: center;
-border-radius: 8px;
-background: #192F60;
-color: #fff;
-}
-.main-heading{
-color: #192F60;
-font-size: 2rem;
-font-style: normal;
-font-weight: 700;
-line-height: 110%;
-text-transform: capitalize;
-}
-.login-link-text{
-color: #192F60;
-font-size: 1rem;
-font-style: normal;
-text-transform: capitalize;
-}
-
-/* Login/Forgot Css End Here */
+/* Dashboard Css Ends Here */
