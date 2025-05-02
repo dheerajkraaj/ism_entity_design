@@ -155,10 +155,10 @@
     /* background: #FFF; */
   }
 .application-child-tabs-container{
-  border-radius: 8px;
-  border-right: 2px solid #BAC1D0;
-  border-bottom: 2px solid  #BAC1D0;
-  border-left: 2px solid  #BAC1D0;
+  /* border-radius: 8px; */
+  border-right: 1px solid #BAC1D0;
+  border-bottom: 1px solid  #BAC1D0;
+  border-left: 1px solid  #BAC1D0;
   background: #FFF;
 }
   .application-child-tabs .nav-tabs .nav-link,
