@@ -100,11 +100,11 @@
   }
   
   .application-tabs-icon {
-    height: 30px;
+    height: 25px;
   }
   
   .application-tabs-counter {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 600;
   }
   
@@ -151,20 +151,27 @@
   /* Child Tabs */
   .application-child-tabs,
   .disbursement-child-tabs {
-    border: 1px solid #BAC1D0;
-    background: #FFF;
+    /* border: 1px solid #BAC1D0; */
+    /* background: #FFF; */
   }
-  
+.application-child-tabs-container{
+  border-radius: 8px;
+  border-right: 2px solid #BAC1D0;
+  border-bottom: 2px solid  #BAC1D0;
+  border-left: 2px solid  #BAC1D0;
+  background: #FFF;
+}
   .application-child-tabs .nav-tabs .nav-link,
   .disbursement-child-tabs .nav-tabs .nav-link {
     border: 1px solid rgba(25, 47, 96, 0.3);
     background: #F3F6FD;
     color: rgba(25, 47, 96, 0.7);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.28px;
     text-align: center;
     margin-right: 0;
+    border-radius: 0;
   }
   
   .application-child-tabs .nav-tabs .nav-link.active,
@@ -293,4 +300,25 @@
   .report_req1 {
     padding: 0.5rem;
   }
-  
+  .expand-btn {
+    background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 4px;
+  color: #192f60;
+  /* border: 1px solid #192f60; */
+  /* padding: 5px 10px;
+  border-radius: 50%; */
+  }
+  .accordion-content {
+    display: none;
+    background: #f3f5fa;
+    border-top: 1px solid #e5e7eb;
+  }
+  .accordion-content td {
+    padding: 20px 18px;
+    color: #4b5563;
+    font-size: 15px;
+  }

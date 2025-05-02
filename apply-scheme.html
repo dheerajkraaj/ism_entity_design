@@ -4,329 +4,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>ISM Website</title>
   <link rel="icon" href="/images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!--  Poppins Font Family cdn -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  <!-- Bootstrap CDN Links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  
   <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Main Css Files -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <!-- Css File for Header -->
+  <link rel="stylesheet" href="/css/header.css">
+  
+  <!-- Css File for Sidebar  -->
   <link rel="stylesheet" href="/css/sidebar.css">
+  
+  <!-- Css File for application Page -->
+  <link rel="stylesheet" href="/css/application.css">
+  
+  <!-- Css File for tables -->
+  <link rel="stylesheet" href="/css/table.css">
+  
+  <!-- JS File for Sidebar -->
+  <script type="text/javascript" src="/js/sidebar.js" defer></script>
+  
+  <!-- Jquery CDN links -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- CSS & JS CDN Links for Datatables -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
-  <script type="text/javascript" src="/js/sidebar.js" defer></script>
-  <style>
-    .page-container {
-      background: #F3F6FD;
-      padding: 1rem;
-    }
+  
+  <!-- Select2 Jquery Plugins CDN links  -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+  <style>   
 
-    .application-card {
-      align-items: center;
-      background-color: #F3F6FD;
-      border-radius: 0.5rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .application-card_icon {
-      font-size: 3rem;
-      margin-right: 1rem;
-    }
-
-    .application-card_title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #192f60;
-      letter-spacing: 0.4px;
-    }
-
-    .application-card_count {
-      color: #FFF;
-      text-align: center;
-      font-family: Poppins;
-      font-size: 1.25rem;
-      font-style: normal;
-      font-weight: 600;
-      letter-spacing: 0.56px;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      margin-right: 1rem;
-    }
-
-    table.dataTable thead {
-      background-color: #0e2a47;
-      color: white;
-    }
-
-    .status {
-      padding: 0.5rem 1rem;
-      border-radius: 85px;
-      font-weight: 500;
-      font-size: 0.75rem;
-    }
-
-    .pending {
-      background-color: #F0F4CD;
-      ;
-      color: #8D9735;
-      border: 1px solid #8D9735;
-    }
-
-    .not-approved {
-      border: 1px solid #BD0D10;
-
-      background: #FCDCDD;
-      color: #BD0D10;
-    }
-
-    .under-review {
-      border: 1px solid #6C7EB8;
-
-      background: #E1E8FF;
-      color: #6C7EB8;
-      ;
-    }
-
-    .details-btn {
-      outline: none;
-      border-radius: 4px;
-      background: #192F60;
-      padding: 0.25rem 0.75rem;
-      color: #fff;
-      font-size: 14px;
-      border: none;
-    }
-
-    table.dataTable tbody th,
-    table.dataTable tbody td {
-      padding: 8px 10px;
-      font-size: 14px;
-      color: #1c1c1c;
-      letter-spacing: 0.28px;
-    }
-
-    table.dataTable.display tbody tr.odd {
-      background-color: #fff;
-    }
-
-    table.dataTable.display tbody tr.even {
-      background-color: #F3F6FD;
-    }
-
-    table.dataTable.display tbody tr.odd>.sorting_1,
-    table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-      background-color: transparent;
-    }
-
-    table.dataTable.display tbody tr.even>.sorting_1,
-    table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-      background-color: transparent;
-    }
-
-    table.dataTable.display tbody tr.odd>.sorting_1,
-    table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-      background-color: transparent;
-    }
-
-    table.dataTable thead th,
-    table.dataTable thead td {
-      padding: 10px 18px;
-      border-bottom: 1px solid #111;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    table.dataTable.no-footer {
-      border-bottom: none;
-    }
-
-    .dataTables_wrapper .dataTables_length,
-    .dataTables_filter {
-      color: rgba(25, 47, 96, 0.70) !important;
-      font-size: 14px;
-    }
-
-    .dataTables_wrapper .dataTables_filter input {
-      border: 1px solid #aaa;
-      border-radius: 25px;
-      padding: 5px;
-      background-color: #fff;
-      margin-left: 3px;
-      border: 2px solid rgba(25, 47, 96, 0.10);
-    }
-
-    .dataTables_wrapper .dataTables_length select {
-      border: 1px solid #aaa;
-
-      padding: 0.5rem 1rem;
-      background-color: #fff;
-      margin-left: 3px;
-      border: 2px solid rgba(25, 47, 96, 0.10);
-    }
-
-    .dataTables_wrapper .dataTables_info,
-    .dataTables_paginate {
-      color: rgba(25, 47, 96, 0.70) !important;
-      font-size: 14px;
-    }
-
-    .dataTables_wrapper .dataTables_paginate .paginate_button {
-      background-color: #192f60;
-      color: #fff;
-    }
-
-    .application-tabs li a {
-      padding: 0.5rem;
-    }
-
-    .application-tabs-icon {
-      height: 30px;
-    }
-
-    .application-tabs-counter {
-      font-weight: 600;
-      font-size: 2rem;
-    }
-
-    .application-tabs-title {
-      font-size: 0.75rem;
-      letter-spacing: 0.28px;
-      font-weight: 500;
-      margin: 0;
-    }
-
-    .application-steps-items {
-      align-items: center;
-      justify-content: space-between;
-      display: flex;
-    }
-
-    .application-tabs .nav-tabs .nav-link {
-      border-radius: 0px;
-      border: 1px solid #192f60;
-      margin-right: 5px;
-    }
-
-    .application-tabs>.nav-tabs .nav-link.active {
-      border: 1px solid #192F60;
-      background: #192F60;
-      color: #fff;
-    }
-
-    .application-tabs>.nav-tabs .nav-link {
-      border: 1px solid #192F60;
-      background: #fff;
-      color: #192F60;
-    }
-
-    .application-tabs>.nav-tabs .nav-link.disabled {
-      border: 1px solid rgba(25, 47, 96, 0.30);
-      background: #F3F6FD;
-      opacity: .9;
-      filter: alpha(opacity=50);
-      cursor: not-allowed;
-      color: rgba(120, 57, 184, 0.50) !important;
-    }
-
-    .w-12 {
-      max-width: 10rem;
-      min-width: 9rem;
-    }
-
-    .application-child-tabs {
-      border: 1px solid #BAC1D0;
-      background: #FFF;
-      /* border-radius: 8px; */
-    }
-
-    .application-child-tabs .nav-tabs .nav-link {
-      border: 1px solid rgba(25, 47, 96, 0.30);
-      color: rgba(25, 47, 96, 0.70);
-      background: #F3F6FD;
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.28px;
-      margin-right: 0;
-      text-align: center;
-    }
-
-    .application-child-tabs .nav-tabs .nav-link.active {
-
-      border-top: 1px solid rgba(25, 47, 96, 0.30);
-      border-right: 1px solid rgba(25, 47, 96, 0.30);
-      border-left: 1px solid rgba(25, 47, 96, 0.30);
-      color: #192f60;
-      background: #FFF;
-      border-bottom: 1px solid #fff;
-
-    }
-
-    .section-title {
-      background-color: #192f60;
-      color: white;
-      padding: 10px;
-      font-weight: bold;
-      border-radius: 10px 10px 0 0;
-      font-size: 14px;
-    font-weight: 500;
-    }
-    .info-table td {
-      padding: 8px;
-      font-size: 14px;
-    }
-    .info-table td:first-child {
-      font-weight: 600;
-      width: 200px;
-    }
-    .info-box {
-      border: 1px solid #dcdcdc;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    .default-badge {
-      border-radius: 58px;
-    border: 1px solid #6C7EB8;
-    background: #F3F6FD;
-    color: #5A6B8F;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 0.28px;
-    padding: 0.15rem 0.75rem;
-    }
-    tbody, td, tfoot, th, thead, tr{
-      font-size: 14px;
-    }
-
-
-.document-head{
-  background: #192F60;
-}
-   .document-head h4{
-    color: #FFF;
-font-family: Poppins;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-padding: 1rem;
-letter-spacing: 0.28px;
-   }
-   .document-head table{
-    font-size: 14px;
-    border: none;
-   }
-   .document-head table tr td{
-    border: none;
-   }
+    
 
   </style>
 </head>
@@ -472,20 +199,9 @@ letter-spacing: 0.28px;
       </ul>
     </nav>
     <section class="page-container ">
-      <div class="container-fluid">
-        <div class="row my-3">
-          <div class="col">
-            <h2 id="pageTitle">Application No. - <span>1234567890</span></h2>
-            <p id="description">Company Name - Scheme Name</p>
-          </div>
-          <div class="col text-end">
-            <button type="button" class="themeCrm-btn-light"><i
-                class="fa-regular fa-message me-2"></i>Communication</button>
-            <button type="button" class="themeCrm-btn-darkBlue"><i
-                class="fa-solid fa-ellipsis-vertical me-2"></i>Action</button>
-          </div>
-        </div>
-        <div class="application-tabs mt-4">
+   
+
+        <div class="application-tabs">
           <!-- Main Tabs -->
           <ul class="nav nav-tabs d-flex w-100" id="mainTabs">
             <li class="nav-item flex-fill">
@@ -639,136 +355,24 @@ letter-spacing: 0.28px;
             <div class="tab-pane fade show active" id="application">
               <ul class="nav nav-tabs d-flex w-100" id="subTabs">
                 <li class="nav-item flex-fill">
-                  <a class="nav-link active" aria-current="page" data-bs-toggle="tab" href="#profile">Profile</a>
+                  <a class="nav-link active" data-bs-toggle="tab" href="#applicantCompanyDetails">Applicant Company</a>
                 </li>
                 <li class="nav-item flex-fill">
-                  <a class="nav-link" data-bs-toggle="tab" href="#applicantCompanyDetails">Applicant Company Details</a>
+                  <a class="nav-link" data-bs-toggle="tab" href="#projectCompanyDetails">Project Company</a>
                 </li>
                 <li class="nav-item flex-fill">
-                  <a class="nav-link" data-bs-toggle="tab" href="#projectCompanyDetails">Project Company Details</a>
+                  <a class="nav-link" data-bs-toggle="tab" href="#dpr">Detail Project Report (DPR)</a>
                 </li>
                 <li class="nav-item flex-fill">
-                  <a class="nav-link" data-bs-toggle="tab" href="#dpr">Project/ Detailed Project Report (DPR)</a>
+                  <a class="nav-link" data-bs-toggle="tab" href="#reviewAndSubmit">Review & Submit</a>
                 </li>
                 <li class="nav-item flex-fill">
-                  <a class="nav-link" data-bs-toggle="tab" href="#transaction">Transaction</a>
+                  <a class="nav-link" data-bs-toggle="tab" href="#payment">Payment</a>
                 </li>
-                <li class="nav-item flex-fill">
-                  <a class="nav-link" data-bs-toggle="tab" href="#documents">Documents</a>
-                </li>
-                <li class="nav-item flex-fill">
-                  <a class="nav-link" data-bs-toggle="tab" href="#activity">Activity</a>
-                </li>
-
               </ul>
 
-              <div class="tab-content mt-3">
-                <div class="tab-pane fade show active" id="profile">
-                  <div class="row px-4 py-2">
-                    <!-- A. Organization Info -->
-                    <div class="col-md-5">
-                      <div class="info-box">
-                        <div class="section-title">A. Organization Information</div>
-                        <table class="table info-table mb-0">
-                          <tbody>
-                            <tr><td>Country</td><td>: India</td></tr>
-                            <tr><td>Headquarters</td><td>: -</td></tr>
-                            <tr><td>Global CEO</td><td>: -</td></tr>
-                            <tr><td>Geographical Region</td><td>: -</td></tr>
-                            <tr><td>India Presence</td><td>: Yes</td></tr>
-                            <tr><td>India Head</td><td>: -</td></tr>
-                            <tr><td>Number of Employees</td><td>: -</td></tr>
-                            <tr><td>Address</td><td>: -</td></tr>
-                            <tr><td>State</td><td>: -</td></tr>
-                            <tr><td>City</td><td>: -</td></tr>
-                            <tr><td>Postal Code</td><td>: -</td></tr>
-                            <tr><td>Website</td><td>: -</td></tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                
-                    <!-- Right Column -->
-                    <div class="col-md-7">
-                      <!-- B. Financial Details -->
-                      <div class="info-box">
-                        <div class="section-title">B. Financial Details</div>
-                        <table class="table mb-0">
-                          <thead class="table-light">
-                            <tr>
-                              <th>Year</th>
-                              <th>Revenue (In Amount)</th>
-                              <th>Net Income (In Amount)</th>
-                              <th>Market Capitalization (In Amount)</th>
-                              <th>Documents</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Year</td>
-                              <td>Revenue (In Amount)</td>
-                              <td>Net Income (In Amount)</td>
-                              <td>Market Capitalization (In Amount)</td>
-                              <td>Documents</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                
-                      <!-- C. Contact Details -->
-                      <div class="info-box">
-                        <div class="section-title d-flex justify-content-between align-items-center">
-                          <span>C. Contact Details</span>
-                          <a href="#" class="text-white text-decoration-none">+ Add Contact</a>
-                        </div>
-                        <table class="table mb-0">
-                          <thead class="table-light">
-                            <tr>
-                              <th>Name</th>
-                              <th>Mobile</th>
-                              <th>Email</th>
-                              <th>Designation</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Krishna <span class="default-badge">Default</span></td>
-                              <td><a href="tel:+918839135975">+918839135975</a></td>
-                              <td><a href="mailto:prajjval.btpl@semiconindia.org">prajjval.btpl@semiconindia.org</a></td>
-                              <td>CTO</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                
-                      <!-- D. Key Stakeholder -->
-                      <div class="info-box">
-                        <div class="section-title">D. Key Stakeholder</div>
-                        <table class="table mb-0">
-                          <thead class="table-light">
-                            <tr>
-                              <th>Name</th>
-                              <th>Mobile</th>
-                              <th>Email</th>
-                              <th>Country</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>sudhanshu holder name</td>
-                              <td><a href="tel:+918839135975">+918839135975</a></td>
-                              <td><a href="mailto:rajatrrrai.gupta@bellurbis.com">rajatrrrai.gupta@bellurbis.com</a></td>
-                              <td>India</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                
-
-                </div>
-                <div class="tab-pane fade" id="applicantCompanyDetails">
+              <div class="tab-content mt-3 application-child-tabs-container">
+                <div class="tab-pane fade show active" id="applicantCompanyDetails">
                     <h5 class="section-title">1. Applicant Company</h5>
                 
                     <div class="accordion" id="accordionExample">  
@@ -1391,7 +995,7 @@ letter-spacing: 0.28px;
                 </div>
               </div>
               </div>
-                <div class="tab-pane fade" id="transaction">
+                <div class="tab-pane fade" id="reviewAndSubmit">
                   <div class="container">
                     <div class="document-head"><h4>Transaction</h4></div>
                     <table class="table align-middle mb-0">
@@ -1423,7 +1027,7 @@ letter-spacing: 0.28px;
                   </div>
 
                 </div>
-                <div class="tab-pane fade" id="documents">
+                <div class="tab-pane fade" id="payment">
                   <div class="container">
                     <div class="document-head">
                       <h4>Applicant Company - Financial Statements</h4>
@@ -1639,138 +1243,7 @@ letter-spacing: 0.28px;
                     </table>
                   </div>
 
-                </div>
-                <div class="tab-pane fade" id="activity">
-                 <div class="p-3">
-                  <table id="activityTable" class="display rounded-br">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Date</th>
-                        <th>Activity By</th>
-                        <th>From Status</th>
-                        <th>To Status</th>
-                        <th>Comments</th>
-                        <th>Device Type</th>
-                        <th>IP Address</th>
-                        <th>Useragent</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>21 Feb 2025 12:17 PM</td>
-                        <td>ISM Admin</td>
-                        <td>Evaluation</td>
-                        <td>Evaluation</td>
-                        <td></td>
-                        <td>Desktop</td>
-                        <td>164.100.203.24</td>
-                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/133.0.0.0</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>21 Feb 2025 09:22 AM</td>
-                        <td>Rajat</td>
-                        <td>Acknowledged</td>
-                        <td>Evaluation</td>
-                        <td>TEST</td>
-                        <td>Desktop</td>
-                        <td>164.100.203.24</td>
-                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/133.0.0.0</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>20 Feb 2025 04:27 PM</td>
-                        <td>ISM Admin</td>
-                        <td>Preliminary Screening</td>
-                        <td>Acknowledged</td>
-                        <td>&lt;h5&gt;Acknowledgement&lt;/h5&gt;</td>
-                        <td>Desktop</td>
-                        <td>164.100.203.24</td>
-                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/133.0.0.0</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>11 Feb 2025 04:03 PM</td>
-                        <td>ISM Admin</td>
-                        <td>Preliminary Screening</td>
-                        <td>Preliminary Screening</td>
-                        <td></td>
-                        <td>Desktop</td>
-                        <td>164.100.203.24</td>
-                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>11 Feb 2025 04:03 PM</td>
-                        <td>ISM Admin</td>
-                        <td>Preliminary Screening</td>
-                        <td>Preliminary Screening</td>
-                        <td></td>
-                        <td>Desktop</td>
-                        <td>164.100.203.24</td>
-                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>11 Feb 2025 04:01 PM</td>
-                        <td>ISM Admin</td>
-                        <td>Preliminary Screening</td>
-                        <td>Preliminary Screening</td>
-                        <td></td>
-                        <td>Desktop</td>
-                        <td>164.100.203.24</td>
-                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>11 Feb 2025 03:59 PM</td>
-                        <td>ISM Admin</td>
-                        <td>Preliminary Screening</td>
-                        <td>Preliminary Screening</td>
-                        <td></td>
-                        <td>Desktop</td>
-                        <td>164.100.203.24</td>
-                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td>11 Feb 2025 03:59 PM</td>
-                        <td>ISM Admin</td>
-                        <td>Preliminary Screening</td>
-                        <td>Preliminary Screening</td>
-                        <td></td>
-                        <td>Desktop</td>
-                        <td>164.100.203.24</td>
-                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
-                      </tr>
-                      <tr>
-                        <td>9</td>
-                        <td>11 Feb 2025 03:59 PM</td>
-                        <td>ISM Admin</td>
-                        <td>Preliminary Screening</td>
-                        <td>Preliminary Screening</td>
-                        <td></td>
-                        <td>Desktop</td>
-                        <td>164.100.203.24</td>
-                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>11 Feb 2025 03:58 PM</td>
-                        <td>ISM Admin</td>
-                        <td>Preliminary Screening</td>
-                        <td>Preliminary Screening</td>
-                        <td></td>
-                        <td>Desktop</td>
-                        <td>164.100.203.24</td>
-                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/132.0.0.0</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                 </div>
-                </div>              
+                </div>            
             </div>
           </div>
         </div>

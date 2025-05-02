@@ -96,9 +96,7 @@ button {
 .menu.show {
   display: block;
 }
-.profile-icon {
-  background: #192f60;
-}
+
 /*=============== BREAKPOINTS ===============*/
 
 /* For small devices */

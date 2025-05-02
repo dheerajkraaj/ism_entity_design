@@ -286,7 +286,7 @@ button {
   border-radius: 85px;
   font-weight: 500;
   font-size: 0.75rem;
-
+}
   .pending {
     background-color: #FFF4CC;
     color: #DB8900;
@@ -335,7 +335,7 @@ button {
     color: #BD0D10;
   }
 
-  .aknowledged {
+  .acknowledged {
     border: 1px solid #6C7EB8;
     background: #E1E8FF;
     color: #6C7EB8;
@@ -376,7 +376,6 @@ button {
     background: #D6F1FF;
     color: #0083DB;
   }
-}
 .card-header {
   background-color: #192f60;
   color: #fff;
