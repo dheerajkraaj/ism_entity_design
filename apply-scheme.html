@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,7 +65,8 @@
 </head>
 
 <body>
-  <!--=============== HEADER ===============-->
+ <!--=============== Main Entity Portal HEADER ===============-->
+<!-- Page Topbar start Here (Header 1)-->
   <main class="ism-v3-header__topBar">
     <div class="container">
       <div class="row">
@@ -95,6 +95,9 @@
       </div>
     </div>
   </main>
+    <!-- Page Topbar ends Here -->
+
+ <!-- Page Logo Header Bar Start Here (Header 2)-->
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -115,6 +118,9 @@
       </div>
     </div>
   </div>
+   <!-- Page Logo Header Bar Ends Here (Header 2)-->
+
+<!-- Page title & breadcrumb menu bar start here (Header 3) -->
   <nav class="navbar navbar-expand-lg main-header">
     <div class="container">
       <!-- Logo -->
@@ -154,7 +160,12 @@
       </div>
     </div>
   </nav>
+    <!-- Page title & breadcrumb menu bar ends here (Header 3) -->
+
+
+<!-- Page Body wrapper Starts Here -->
   <div class="page-wrapper">
+    <!-- page body left sidebar start here -->
     <nav id="sidebar">
       <ul>
         <li>
@@ -205,11 +216,12 @@
         </li>
       </ul>
     </nav>
-    <section class="page-container ">
+     <!-- page body left sidebar Ends here -->
 
-
+    <!-- Page main body right side content starts here -->
+    <section class="page-container">
       <div class="application-tabs">
-        <!-- Main Tabs -->
+        <!-- Main navigation tabs start here -->
         <ul class="nav nav-tabs d-flex w-100" id="mainTabs">
           <li class="nav-item flex-fill">
             <a class="nav-link active" data-bs-toggle="tab" href="#application">
@@ -356,9 +368,10 @@
             </a>
           </li>
         </ul>
+         <!-- Main navigation tabs ends here -->
 
         <div class="application-child-tabs tab-content mt-3">
-          <!-- Application Tab -->
+          <!-- Application main tab Internals child tabs start here -->
           <div class="tab-pane fade show active" id="application">
             <ul class="nav nav-tabs d-flex w-100" id="subTabs">
               <li class="nav-item flex-fill">
@@ -377,8 +390,11 @@
                 <a class="nav-link" data-bs-toggle="tab" href="#payment">Payment</a>
               </li>
             </ul>
+            <!-- Application maain tab Internals child tabs ends here -->
 
+            <!-- Application Child tabs body start here -->
             <div class="tab-content pt-3 application-child-tabs-container">
+              <!-- Application company details tabs start here  -->
               <div class="tab-pane fade show active" id="applicantCompanyDetails">
                 <div class="container">
                   <h5 class="section-title">1. Applicant Company</h5>
@@ -619,7 +635,7 @@
                               <thead>
                                 <tr>
                                   <th>#</th>
-                                  <th>Document</th>
+                                  <th width="15%">Document</th>
                                   <th>Upload</th>
                                   <th>Name</th>
                                   <th>Date</th>
@@ -630,7 +646,13 @@
                                 <tr>
                                   <td>1</td>
                                   <td>Joint Venture (JV) Agreement/ Other Business Agreements, if applicable</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
+                                  <td><div class="">
+                                    <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                        <i class="fa-solid fa-paperclip"></i> Attach Files
+                                    </label>
+                                    <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                        multiple>                              
+                                    </div></td>
                                   <td><a href="#">1738460544241.pdf</a></td>
                                   <td>02/05/2025</td>
                                   <td><button class="btn btn-danger btn-sm">✖</button></td>
@@ -655,7 +677,7 @@
                               <thead>
                                 <tr>
                                   <th>#</th>
-                                  <th>Document</th>
+                                  <th width="15%">Document</th>
                                   <th>Upload</th>
                                   <th>Name</th>
                                   <th>Date</th>
@@ -666,7 +688,13 @@
                                 <tr>
                                   <td>1</td>
                                   <td>For last 1 year</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
+                                  <td><div class="">
+                                    <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                        <i class="fa-solid fa-paperclip"></i> Attach Files
+                                    </label>
+                                    <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                        multiple>                              
+                                    </div></td>
                                   <td><a href="#">1738460544233.pdf</a></td>
                                   <td>02/05/2025</td>
                                   <td><button class="btn btn-danger btn-sm">✖</button></td>
@@ -674,7 +702,13 @@
                                 <tr>
                                   <td>2</td>
                                   <td>For last 2 year</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
+                                  <td><div class="">
+                                    <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                        <i class="fa-solid fa-paperclip"></i> Attach Files
+                                    </label>
+                                    <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                        multiple>                              
+                                    </div></td>
                                   <td><a href="#">1738460544234.pdf</a></td>
                                   <td>02/05/2025</td>
                                   <td><button class="btn btn-danger btn-sm">✖</button></td>
@@ -682,7 +716,13 @@
                                 <tr>
                                   <td>3</td>
                                   <td>For last 3 year</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
+                                  <td><div class="">
+                                    <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                        <i class="fa-solid fa-paperclip"></i> Attach Files
+                                    </label>
+                                    <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                        multiple>                              
+                                    </div></td>
                                   <td><a href="#">1738460544232.pdf</a></td>
                                   <td>02/05/2025</td>
                                   <td><button class="btn btn-danger btn-sm">✖</button></td>
@@ -729,7 +769,7 @@
                               <thead>
                                 <tr>
                                   <th>#</th>
-                                  <th>Document</th>
+                                  <th width="15%">Document</th>
                                   <th>Upload</th>
                                   <th>Name</th>
                                   <th>Date</th>
@@ -740,7 +780,13 @@
                                 <tr>
                                   <td>1</td>
                                   <td>Letter of Authorization</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
+                                  <td><div class="">
+                                    <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                        <i class="fa-solid fa-paperclip"></i> Attach Files
+                                    </label>
+                                    <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                        multiple>                              
+                                    </div></td>
                                   <td><a href="#">1738460544234.pdf</a></td>
                                   <td>02/05/2025</td>
                                   <td><button class="btn btn-danger btn-sm">✖</button></td>
@@ -764,7 +810,7 @@
                               <thead>
                                 <tr>
                                   <th>#</th>
-                                  <th>Document</th>
+                                  <th width="15%">Document</th>
                                   <th>Upload</th>
                                   <th>Name</th>
                                   <th>Date</th>
@@ -775,7 +821,13 @@
                                 <tr>
                                   <td>1</td>
                                   <td>Business Profile</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
+                                  <td><div class="">
+                                    <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                        <i class="fa-solid fa-paperclip"></i> Attach Files
+                                    </label>
+                                    <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                        multiple>                              
+                                    </div></td>
                                   <td><a href="#">1738460544434.pdf</a></td>
                                   <td>02/05/2025</td>
                                   <td><button class="btn btn-danger btn-sm">✖</button></td>
@@ -860,7 +912,7 @@
                               <thead>
                                 <tr>
                                   <th>#</th>
-                                  <th>Document</th>
+                                  <th width="15%">Document</th>
                                   <th>Upload</th>
                                   <th>Name</th>
                                   <th>Date</th>
@@ -871,7 +923,13 @@
                                 <tr>
                                   <td>1</td>
                                   <td>Integrity Undertaking (Format A)</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
+                                  <td><div class="">
+                                    <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                        <i class="fa-solid fa-paperclip"></i> Attach Files
+                                    </label>
+                                    <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                        multiple>                              
+                                    </div></td>
                                   <td><a href="#">1738460544237.pdf</a></td>
                                   <td>02/05/2025</td>
                                   <td><button class="btn btn-danger btn-sm">✖</button></td>
@@ -881,92 +939,124 @@
                           </div>
                         </div>
                       </div>
-                      <!-- Continue with 1.6 to 1.13 in same structure -->
-                      <!-- Let me know if you'd like me to generate the remaining accordion blocks for 1.6–1.13 -->
+                      <div class="d-flex justify-content-between p-3">
+                        <button class="themeCrm-btn-light">Back</button>
+                        <button class="themeCrm-btn-lightBlue">Save & Next</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-                </div>
-                <div class="tab-pane fade" id="projectCompanyDetails">
-                  <div class="container mt-4">
+              </div>
+              <!-- Application company details tabs end here  -->
 
-                    <!-- Fixed Section: 2. Project Company Details -->
-                    <!-- <div class="section-title">2. Project Company Details</div> -->
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>Document</th>
-                          <th>Upload</th>
-                          <th>Name</th>
-                          <th>Date</th>
-                          <th>Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>2.1.</td>
-                          <td>Certificate of Incorporation</td>
-                          <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                          <td><a href="#">1738460544241.pdf</a></td>
-                          <td>02/05/2025</td>
-                          <td><button class="btn btn-danger btn-sm">✖</button></td>
-                        </tr>
-                        <tr>
-                          <td>2.2.</td>
-                          <td>Memorandum and Articles of Association</td>
-                          <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                          <td><a href="#">1738460544241.pdf</a></td>
-                          <td>02/05/2025</td>
-                          <td><button class="btn btn-danger btn-sm">✖</button></td>
-                        </tr>
-                        <tr>
-                          <td>2.3.</td>
-                          <td>Permanent Account Number (PAN) Card</td>
-                          <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                          <td><a href="#">1738460544241.pdf</a></td>
-                          <td>02/05/2025</td>
-                          <td><button class="btn btn-danger btn-sm">✖</button></td>
-                        </tr>
-                        <tr>
-                          <td>2.4.</td>
-                          <td>Goods & Services Tax Registration (GSTN) Certificate</td>
-                          <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                          <td><a href="#">1738460544241.pdf</a></td>
-                          <td>02/05/2025</td>
-                          <td><button class="btn btn-danger btn-sm">✖</button></td>
-                        </tr>
-                       
-                      </tbody>
-                    </table>
+               <!-- Application Project company details tabs start here  -->
+              <div class="tab-pane fade" id="projectCompanyDetails">
+                <div class="container mt-4">
+                  <!-- Fixed Section: 2. Project Company Details -->
+                  <!-- <div class="section-title">2. Project Company Details</div> -->
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th width="15%">Document</th>
+                        <th>Upload</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>2.1.</td>
+                        <td>Certificate of Incorporation</td>
+                        <td><div class="">
+                          <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                              <i class="fa-solid fa-paperclip"></i> Attach Files
+                          </label>
+                          <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                              multiple>                              
+                          </div></td>
+                        <td><a href="#">1738460544241.pdf</a></td>
+                        <td>02/05/2025</td>
+                        <td><button class="btn btn-danger btn-sm">✖</button></td>
+                      </tr>
+                      <tr>
+                        <td>2.2.</td>
+                        <td>Memorandum and Articles of Association</td>
+                        <td><div class="">
+                          <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                              <i class="fa-solid fa-paperclip"></i> Attach Files
+                          </label>
+                          <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                              multiple>                              
+                          </div></td>
+                        <td><a href="#">1738460544241.pdf</a></td>
+                        <td>02/05/2025</td>
+                        <td><button class="btn btn-danger btn-sm">✖</button></td>
+                      </tr>
+                      <tr>
+                        <td>2.3.</td>
+                        <td>Permanent Account Number (PAN) Card</td>
+                        <td><div class="">
+                          <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                              <i class="fa-solid fa-paperclip"></i> Attach Files
+                          </label>
+                          <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                              multiple>                              
+                          </div></td>
+                        <td><a href="#">1738460544241.pdf</a></td>
+                        <td>02/05/2025</td>
+                        <td><button class="btn btn-danger btn-sm">✖</button></td>
+                      </tr>
+                      <tr>
+                        <td>2.4.</td>
+                        <td>Goods & Services Tax Registration (GSTN) Certificate</td>
+                        <td><div class="">
+                          <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                              <i class="fa-solid fa-paperclip"></i> Attach Files
+                          </label>
+                          <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                              multiple>                              
+                          </div></td>
+                        <td><a href="#">1738460544241.pdf</a></td>
+                        <td>02/05/2025</td>
+                        <td><button class="btn btn-danger btn-sm">✖</button></td>
+                      </tr>
 
-                    <!-- Accordion for Remaining Sections -->
-                    <div class="accordion mt-4" id="projectAccordion">
-                      <!-- 2.5 Registered Address -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading25">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse25" aria-expanded="true">
-                            2.5 Registered Address, Corporate Address, Phone, Email, Website
-                          </button>
-                        </h2>
-                        <div id="collapse25" class="accordion-collapse collapse show"
-                          data-bs-parent="#projectAccordion">
-                         <div class="accordion-body row g-3">
+                    </tbody>
+                  </table>
+
+                  <!-- Accordion for Remaining Sections -->
+                  <div class="accordion mt-4" id="projectAccordion">
+                    <!-- 2.5 Registered Address -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading25">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse25" aria-expanded="true">
+                          2.5 Registered Address, Corporate Address, Phone, Email, Website
+                        </button>
+                      </h2>
+                      <div id="collapse25" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+                        <div class="accordion-body row g-3">
                           <div class="row mt-3">
                             <div class="col-md-6">
-                              <label for="registeredAddress" class="form-label">a. Registered Office Address <span class="text-danger">*</span></label>
-                              <textarea class="form-control" id="registeredAddress" rows="3" maxlength="255" spellcheck="false">test</textarea>
+                              <label for="registeredAddress" class="form-label">a. Registered Office Address <span
+                                  class="text-danger">*</span></label>
+                              <textarea class="form-control" id="registeredAddress" rows="3" maxlength="255"
+                                spellcheck="false">test</textarea>
                             </div>
                             <div class="col-md-6">
-                              <label for="corporateAddress" class="form-label">b. Corporate Office Address <span class="text-danger">*</span></label>
-                              <textarea class="form-control" id="corporateAddress" rows="3" maxlength="255">test</textarea>
+                              <label for="corporateAddress" class="form-label">b. Corporate Office Address <span
+                                  class="text-danger">*</span></label>
+                              <textarea class="form-control" id="corporateAddress" rows="3"
+                                maxlength="255">test</textarea>
                             </div>
                           </div>
 
                           <div class="row mt-3">
                             <div class="col-md-6">
-                              <label for="country" class="form-label">c. Country <span class="text-danger">*</span></label>
+                              <label for="country" class="form-label">c. Country <span
+                                  class="text-danger">*</span></label>
                               <select class="form-select" id="country" fdprocessedid="73r25c">
                                 <option selected="">India</option>
                                 <option>USA</option>
@@ -977,7 +1067,8 @@
                               <label for="phone" class="form-label">d. Phone <span class="text-danger">*</span></label>
                               <div class="input-group">
                                 <span class="input-group-text">+91</span>
-                                <input type="text" class="form-control" id="phone" value="7017697352" fdprocessedid="w6d7wi">
+                                <input type="text" class="form-control" id="phone" value="7017697352"
+                                  fdprocessedid="w6d7wi">
                               </div>
                             </div>
                           </div>
@@ -985,582 +1076,146 @@
                           <div class="row mt-3">
                             <div class="col-md-6">
                               <label for="email" class="form-label">e. Email <span class="text-danger">*</span></label>
-                              <input type="email" class="form-control" id="email" value="dheerajkraaj@gmail.com" fdprocessedid="p0tt6">
+                              <input type="email" class="form-control" id="email" value="dheerajkraaj@gmail.com"
+                                fdprocessedid="p0tt6">
                             </div>
                             <div class="col-md-6">
-                              <label for="website" class="form-label">f. Website <span class="text-danger">*</span></label>
+                              <label for="website" class="form-label">f. Website <span
+                                  class="text-danger">*</span></label>
                               <input type="url" class="form-control" id="website" value="https://google.com">
                             </div>
                           </div>
                         </div>
-                        </div>
                       </div>
-
-                      <!-- 2.6 Credit History -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading211">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse211">
-                            2.6 Capital Structure
-                          </button>
-                        </h2>
-                        <div id="collapse211" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
-                          <div class="accordion-body">
-                            <div class="mb-3">
-                              <label class="form-label">Capital Structure <span class="text-danger">*</span></label>
-                              <textarea class="form-control" id="corporateAddress" rows="3" maxlength="255">test</textarea>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-                      <!-- 2.7 Shareholding Pattern -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading27">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse27">
-                            2.7 Major Shareholding Pattern
-                          </button>
-                        </h2>
-                        <div id="collapse27" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
-                          <div class="accordion-body row g-3 d-flex align-items-end">
-                            <div class="col-md-3">
-                              <label class="form-label">Total No. of Shares <span class="text-danger">*</span></label>
-                              <input type="number" class="form-control">
-                            </div>
-  
-                            <div class="col-md-3">
-                              <label class="form-label">Share Holder Name <span class="text-danger">*</span></label>
-                              <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                              <label class="form-label">Total Shares Held <span class="text-danger">*</span></label>
-                              <input type="number" class="form-control">
-                            </div>
-                            <div class="col-md-2">
-                              <label class="form-label">Percentage of Shares <span class="text-danger">*</span></label>
-                              <input type="number" class="form-control">
-                            </div>
-                            <div class="col-md-1">
-                              <button class="btn btn-primary">+</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- 2.8 Board of Directors -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading28">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse28">
-                            2.8 Board of Directors Profile
-                          </button>
-                        </h2>
-                        <div id="collapse28" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
-                          <div class="accordion-body">
-                            <div class="row mt-3 align-items-end">
-                              <div class="col-md-4">
-                                <label for="directorName" class="form-label">a. Name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="directorName" value="test">
-                              </div>
-                              <div class="col-md-4">
-                                <label for="directorCountry" class="form-label">b. Country <span class="text-danger">*</span></label>
-                                <select class="form-select" id="directorCountry">
-                                  <option selected="">India</option>
-                                  <option>USA</option>
-                                  <option>UK</option>
-                                </select>
-                              </div>
-                              <div class="col-md-4">
-                                <label for="directorPhone" class="form-label">c. Phone Number <span class="text-danger">*</span></label>
-                                <div class="input-group">
-                                  <span class="input-group-text">+91</span>
-                                  <input type="text" class="form-control" id="directorPhone" value="7017697352">
-                                </div>
-                              </div>
-                              <div class="col-md-4">
-                                <label for="directorEmail" class="form-label">d. Email <span class="text-danger">*</span></label>
-                                <input type="email" class="form-control" id="directorEmail" value="dheerajkraaj@gmail.com">
-                              </div>
-  
-                              <div class="col-md-4">
-                                <label for="designation" class="form-label">e. Designation <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="designation" value="test">
-                              </div>
-                              <div class="col-sm-4">
-                                <label for="designation" class="form-label invisible">*</label>
-                                <button type="button" class="btn btn-outline-primary">
-                                  <strong>+</strong>
-                                </button>
-                              </div>
-  
-  
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- 2.9 JV Agreement -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading29">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse29">
-                            2.9 Joint Venture (JV) Agreement
-                          </button>
-                        </h2>
-                        <div id="collapse29" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
-                          <div class="accordion-body">
-                            <table class="table table-bordered">
-                              <thead>
-                                <tr>
-                                  <th>#</th>
-                                  <th>Document</th>
-                                  <th>Upload</th>
-                                  <th>Name</th>
-                                  <th>Date</th>
-                                  <th>Action</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>1</td>
-                                  <td>Joint Venture (JV) Agreement/ Other Business Agreements, if applicable</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                                  <td><a href="#">1738460544241.pdf</a></td>
-                                  <td>02/05/2025</td>
-                                  <td><button class="btn btn-danger btn-sm">✖</button></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- 2.10 Financial Statements -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading210">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse210">
-                            2.10 Audited Financial Statements
-                          </button>
-                        </h2>
-                        <div id="collapse210" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
-                          <div class="accordion-body">
-                            <table class="table table-bordered">
-                              <thead>
-                                <tr>
-                                  <th>#</th>
-                                  <th>Document</th>
-                                  <th>Upload</th>
-                                  <th>Name</th>
-                                  <th>Date</th>
-                                  <th>Action</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>1</td>
-                                  <td>For last 1 year</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                                  <td><a href="#">1738460544233.pdf</a></td>
-                                  <td>02/05/2025</td>
-                                  <td><button class="btn btn-danger btn-sm">✖</button></td>
-                                </tr>
-                                <tr>
-                                  <td>2</td>
-                                  <td>For last 2 year</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                                  <td><a href="#">1738460544234.pdf</a></td>
-                                  <td>02/05/2025</td>
-                                  <td><button class="btn btn-danger btn-sm">✖</button></td>
-                                </tr>
-                                <tr>
-                                  <td>3</td>
-                                  <td>For last 3 year</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                                  <td><a href="#">1738460544232.pdf</a></td>
-                                  <td>02/05/2025</td>
-                                  <td><button class="btn btn-danger btn-sm">✖</button></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- 2.11 Credit History -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading211">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse211">
-                            2.11 Credit History
-                          </button>
-                        </h2>
-                        <div id="collapse211" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
-                          <div class="accordion-body">
-                            <div class="mb-3">
-                              <label class="form-label">Do you have credit history? <span class="text-danger">*</span></label>
-                              <select class="form-select">
-                                <option selected="">No</option>
-                                <option>Yes</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- 2.12 & 2.13 Letter and Profile  -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading212">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse212">
-                            2.12 Letter of Authorization
-                          </button>
-                        </h2>
-                        <div id="collapse212" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
-                          <div class="accordion-body">
-                            <table class="table table-bordered">
-                              <thead>
-                                <tr>
-                                  <th>#</th>
-                                  <th>Document</th>
-                                  <th>Upload</th>
-                                  <th>Name</th>
-                                  <th>Date</th>
-                                  <th>Action</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>1</td>
-                                  <td>2.12. Letter of Authorization by Board of Directors or Managing Director</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                                  <td><a href="#">1738460544241.pdf</a></td>
-                                  <td>02/05/2025</td>
-                                  <td><button class="btn btn-danger btn-sm">✖</button></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading213">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#heading213">
-                            2.13. Business Profile
-                          </button>
-                        </h2>
-                        <div id="heading213" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
-                          <div class="accordion-body">
-                            <table class="table table-bordered">
-                              <thead>
-                                <tr>
-                                  <th>#</th>
-                                  <th>Document</th>
-                                  <th>Upload</th>
-                                  <th>Name</th>
-                                  <th>Date</th>
-                                  <th>Action</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>1</td>
-                                  <td>2.13. Business Profile</td>
-                                  <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                                  <td><a href="#">1738460544241.pdf</a></td>
-                                  <td>02/05/2025</td>
-                                  <td><button class="btn btn-danger btn-sm">✖</button></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div> <!-- End Accordion -->
-
-                  </div>
-
-                </div>
-                <div class="tab-pane fade" id="dpr">
-                  <div class="container mt-4">
-
-                    <!-- Fixed Section: 3. Project/ Detailed Project Report (DPR)-->
-                    <div class="section-title">3. Detail Project Report (DPR)</div>
-                    <div class="p-3">
-                      <ul class="list-unstyled">
-
-                        <li>3.1. Project Summary</li>
-                        <li>3.2. Bank/ FI Appraisal Note/ Report, if available</li>
-
-                        <li>3.3. Technology Specifications
-                          <ul class="ms-3">
-                            <li>3.3.1. Technology</li>
-                            <li>3.3.2. Target products and applications</li>
-                            <li>3.3.3. ITC/ HS codes for proposed products</li>
-                            <li>3.3.4. Existing and Proposed Installed capacity, number of working days in a year,
-                              number of working hours per day</li>
-                            <li>3.3.5. Technology Partnerships – Details of technology partner(s) with relevant
-                              documents</li>
-                            <li>3.3.6. Manufacturing Process</li>
-                          </ul>
-                        </li>
-
-                        <li>3.4. Proposed Location
-                          <ul class="ms-3">
-                            <li>3.4.1. Complete Address of the proposed manufacturing unit(s)</li>
-                            <li>3.4.2. GPS location</li>
-                            <li>3.4.3. GST Registration (GSTN) Certificate</li>
-                            <li>3.4.4. Registered Sale/ Lease Deed</li>
-                            <li>3.4.5. No-objection certificate (NOC) from owner of land in case of sub-lease</li>
-                            <li>3.4.6. Title Search Report from lawyer including Non-encumbrance certificate</li>
-                            <li>3.4.7. Land area</li>
-                            <li>3.4.8. Describe the locational advantage with respect to supply of raw materials, power,
-                              water, fuel and manpower as also with respect to facilities for transportation, effluent
-                              disposal and market.</li>
-                          </ul>
-                        </li>
-
-                        <li>3.5. Project Financials
-                          <ul class="ms-3">
-                            <li>3.5.1. Total project cost including working capital requirements and year-wise proposed
-                              phasing of investment</li>
-                            <li>3.5.2. Sources of fund
-                              <ul class="ms-3">
-                                <li>3.5.2.1. Board Resolution of Project Company for investing the project cost towards
-                                  setting up of the project</li>
-                                <li>3.5.2.2. Board Resolution/ Undertaking from equity/ unsecured loan providers</li>
-                                <li>3.5.2.3. Proof of equity/ unsecured loans brought in</li>
-                                <li>3.5.2.4. Sanction letter/ Letter of Intent (LoI) and Term Loan Agreement for Debt
-                                </li>
-                                <li>3.5.2.5. Documents showing capability of fund providers (not required for Banks/
-                                  FIs)</li>
-                                <li>3.5.2.6. Contact details of fund providers</li>
-                              </ul>
-                            </li>
-                            <li>3.5.3. Projected P&amp;L for at least 20 years</li>
-                            <li>3.5.4. Key financial indicators (IRR, ROCE, ROI, EBIDTA, NPV)</li>
-                          </ul>
-                        </li>
-
-                        <li>3.6. Operational Details
-                          <ul class="ms-3">
-                            <li>3.6.1. Water, power and other utility requirements and arrangements for their supply
-                            </li>
-                            <li>3.6.2. Ramp-up timelines/ Implementation schedule</li>
-                            <li>3.6.3. Management structure</li>
-                          </ul>
-                        </li>
-
-                        <li>3.7. Human Resources
-                          <ul class="ms-3">
-                            <li>3.7.1. Availability and Requirement of trained manpower, plan for training and skill
-                              development</li>
-                            <li>3.7.2. Proposed employment generation</li>
-                          </ul>
-                        </li>
-
-                        <li>3.8. Building
-                          <ul class="ms-3">
-                            <li>3.8.1. Land and Building Layout Plan</li>
-                            <li>3.8.2. Type of construction, Purpose and Built-Up Area of each Building</li>
-                            <li>3.8.3. Cost of Building vis-à-vis CPWD/ State PWD rates</li>
-                          </ul>
-                        </li>
-
-                        <li>3.9. Capital Goods
-                          <ul class="ms-3">
-                            <li>3.9.1. Requirement of new/ refurbished capital goods</li>
-                            <li>3.9.2. Itemized list of equipment with details of proposed suppliers and quotations/
-                              purchase orders.</li>
-                            <li>3.9.3. Board-approved Vendor selection process</li>
-                          </ul>
-                        </li>
-
-                        <li>3.10. Raw Material
-                          <ul class="ms-3">
-                            <li>3.10.1. Bill of Materials (BOM) - %BOM cost and suppliers</li>
-                            <li>3.10.2. Details regarding sourcing of raw materials, plan for developing the raw
-                              material manufacturing ecosystem in India</li>
-                          </ul>
-                        </li>
-
-                        <li>3.11. Market Assessment of Proposed Products</li>
-                        <li>3.12. Roadmap for Technology Upgradation</li>
-                        <li>3.13. Plan for R&amp;D Collaboration with Indian academic institutions</li>
-
-                        <li>3.14. Regulatory Treatment
-                          <ul class="ms-3">
-                            <li>3.14.1. Requirement of licenses, permits, clearances and third-party approvals necessary
-                              to execute the project.</li>
-                            <li>3.14.2. Proposed timelines for obtaining such licenses, permits, clearances and
-                              third-party approvals</li>
-                          </ul>
-                        </li>
-
-                      </ul>
-
                     </div>
-                    <div class="accordion mt-4" id="projectAccordion">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading24">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse25" aria-expanded="true">
-                            3.15. Proposed Location
-                          </button>
-                        </h2>
-                        <div id="collapse25" class="accordion-collapse collapse show"
-                          data-bs-parent="#projectAccordion">
-                          <div class="accordion-body row g-3 align-items-end">
+
+                    <!-- 2.6 Credit History -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading211">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse211">
+                          2.6 Capital Structure
+                        </button>
+                      </h2>
+                      <div id="collapse211" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <label class="form-label">Capital Structure <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="corporateAddress" rows="3"
+                              maxlength="255">test</textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <!-- 2.7 Shareholding Pattern -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading27">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse27">
+                          2.7 Major Shareholding Pattern
+                        </button>
+                      </h2>
+                      <div id="collapse27" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                        <div class="accordion-body row g-3 d-flex align-items-end">
+                          <div class="col-md-3">
+                            <label class="form-label">Total No. of Shares <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control">
+                          </div>
+
+                          <div class="col-md-3">
+                            <label class="form-label">Share Holder Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="col-md-3">
+                            <label class="form-label">Total Shares Held <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control">
+                          </div>
+                          <div class="col-md-2">
+                            <label class="form-label">Percentage of Shares <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control">
+                          </div>
+                          <div class="col-md-1">
+                            <button class="btn btn-primary">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2.8 Board of Directors -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading28">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse28">
+                          2.8 Board of Directors Profile
+                        </button>
+                      </h2>
+                      <div id="collapse28" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                        <div class="accordion-body">
+                          <div class="row mt-3 align-items-end">
                             <div class="col-md-4">
-                              <label class="form-label">a. Country <span class="text-danger">*</span></label>
-                              <select class="form-select" fdprocessedid="4qdr7">
+                              <label for="directorName" class="form-label">a. Name <span
+                                  class="text-danger">*</span></label>
+                              <input type="text" class="form-control" id="directorName" value="test">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="directorCountry" class="form-label">b. Country <span
+                                  class="text-danger">*</span></label>
+                              <select class="form-select" id="directorCountry">
                                 <option selected="">India</option>
-                                <option>Other</option>
+                                <option>USA</option>
+                                <option>UK</option>
                               </select>
                             </div>
                             <div class="col-md-4">
-                              <label class="form-label">b. State<span class="text-danger">*</span></label>
-                              <select class="form-select" fdprocessedid="4qdr7">
-                                <option selected="">India</option>
-                                <option>Other</option>
-                              </select>
+                              <label for="directorPhone" class="form-label">c. Phone Number <span
+                                  class="text-danger">*</span></label>
+                              <div class="input-group">
+                                <span class="input-group-text">+91</span>
+                                <input type="text" class="form-control" id="directorPhone" value="7017697352">
+                              </div>
                             </div>
-                            <div class="col-md-3">
-                              <label class="form-label">c. City <span class="text-danger">*</span></label>
-                              <select class="form-select" fdprocessedid="4qdr7">
-                                <option selected="">India</option>
-                                <option>Other</option>
-                              </select>
+                            <div class="col-md-4">
+                              <label for="directorEmail" class="form-label">d. Email <span
+                                  class="text-danger">*</span></label>
+                              <input type="email" class="form-control" id="directorEmail"
+                                value="dheerajkraaj@gmail.com">
                             </div>
-                            <div class="col-md-1">                              
-                             <button class="btn btn-outline-primary">+</button>
+
+                            <div class="col-md-4">
+                              <label for="designation" class="form-label">e. Designation <span
+                                  class="text-danger">*</span></label>
+                              <input type="text" class="form-control" id="designation" value="test">
                             </div>
+                            <div class="col-sm-4">
+                              <label for="designation" class="form-label invisible">*</label>
+                              <button type="button" class="btn btn-outline-primary">
+                                <strong>+</strong>
+                              </button>
+                            </div>
+
+
                           </div>
                         </div>
                       </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading24">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse25" aria-expanded="true">
-                            3.16. Total project cost including working capital requirements and year-wise proposed phasing of investment
-                          </button>
-                        </h2>
-                        <div id="collapse25" class="accordion-collapse collapse show"
-                          data-bs-parent="#projectAccordion">
-                          <div class="accordion-body">
-                            <div class="mb-3">
-                              <label class="form-label">a. Indicative Investment (INR)
-                                <span class="text-danger">*</span></label>
-                              
-                                <input type="text" placeholder="Indicative Amount" class="form-control">
-                            </div>
-                          </div>
-                        </div>
-                      </div>                    
                     </div>
 
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>Document</th>
-                          <th>Upload</th>
-                          <th>Name</th>
-                          <th>Date</th>
-                          <th>Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>1.</td>
-                          <td>Detailed Project Report
-                          </td>
-                          <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                          <td><a href="#">1738460544241.pdf</a></td>
-                          <td>02/05/2025</td>
-                          <td><button class="btn btn-danger btn-sm">✖</button></td>
-                        </tr>                       
-                      </tbody>
-                    </table>
-
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="reviewAndSubmit">
-                  <div class="container">
-                    
-                  </div>
-
-                </div>
-                <div class="tab-pane fade" id="payment">
-                    <div class="container my-2">
-                      <div class="section-title">Choose Payment Options</div>
-                      <div class="form-section p-3">
-                    
-                        <div class="mb-3">
-                          <label class="form-label">Payment Mode</label>
-                          <div class="d-flex gap-4">
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="paymentMode" id="offline" checked>
-                              <label class="form-check-label" for="offline">Offline</label>
-                            </div>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="paymentMode" id="online">
-                              <label class="form-check-label" for="online">Online</label>
-                            </div>
-                            <div class="form-check">
-                              <input class="form-check-input" type="radio" name="paymentMode" id="neft">
-                              <label class="form-check-label" for="neft">E-RTGS/E-NEFT</label>
-                            </div>
-                          </div>
-                        </div>
-                    
-                        <div class="mt-4">
-                          <div class="section-title">Payment Details</div>
-                          <table class="table table-bordered mt-2">
-                            <tbody>
-                              <tr>
-                                <th>Beneficiary Name</th>
-                                <td>Digital India Corporation - India Semiconductor Mission (DICSM)</td>
-                              </tr>
-                              <tr>
-                                <th>Bank</th>
-                                <td>Bank of India</td>
-                              </tr>
-                              <tr>
-                                <th>Branch</th>
-                                <td>CGO Complex, Lodhi Road, Delhi</td>
-                              </tr>
-                              <tr>
-                                <th>Account Type</th>
-                                <td>Saving</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                    
-                        <div class="row mt-4">
-                          <div class="col-md-6">
-                            <label class="form-label required">Transaction Reference ID</label>
-                            <input type="text" class="form-control" placeholder="Enter here">
-                          </div>
-                          <div class="col-md-6">
-                            <label class="form-label required">Payment Date</label>
-                            <input type="date" class="form-control">
-                          </div>
-                        </div>
-                    
-                        <div class="mt-4">
-                          <label class="form-label required">Payment Receipt</label>
-                          <table class="table table-bordered mt-2">
+                    <!-- 2.9 JV Agreement -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading29">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse29">
+                          2.9 Joint Venture (JV) Agreement
+                        </button>
+                      </h2>
+                      <div id="collapse29" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
                             <thead>
                               <tr>
                                 <th>#</th>
-                                <th>Document</th>
+                                <th width="15%">Document</th>
                                 <th>Upload</th>
                                 <th>Name</th>
                                 <th>Date</th>
@@ -1570,46 +1225,1377 @@
                             <tbody>
                               <tr>
                                 <td>1</td>
-                                <td>Payment Receipt</td>
-                                <td><button class="btn btn-primary btn-sm">Attach files</button></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>Joint Venture (JV) Agreement/ Other Business Agreements, if applicable</td>
+                                <td><div class="">
+                                  <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                      <i class="fa-solid fa-paperclip"></i> Attach Files
+                                  </label>
+                                  <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                      multiple>                              
+                                  </div></td>
+                                <td><a href="#">1738460544241.pdf</a></td>
+                                <td>02/05/2025</td>
+                                <td><button class="btn btn-danger btn-sm">✖</button></td>
                               </tr>
                             </tbody>
                           </table>
                         </div>
-                    
-                        <div class="d-flex justify-content-between mt-4">
-                          <button class="btn btn-secondary">Back</button>
-                          <button class="btn btn-primary">Submit</button>
+                      </div>
+                    </div>
+
+                    <!-- 2.10 Financial Statements -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading210">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse210">
+                          2.10 Audited Financial Statements
+                        </button>
+                      </h2>
+                      <div id="collapse210" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th width="15%">Document</th>
+                                <th>Upload</th>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>For last 1 year</td>
+                                <td><div class="">
+                                  <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                      <i class="fa-solid fa-paperclip"></i> Attach Files
+                                  </label>
+                                  <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                      multiple>                              
+                                  </div></td>
+                                <td><a href="#">1738460544233.pdf</a></td>
+                                <td>02/05/2025</td>
+                                <td><button class="btn btn-danger btn-sm">✖</button></td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>For last 2 year</td>
+                                <td><div class="">
+                                  <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                      <i class="fa-solid fa-paperclip"></i> Attach Files
+                                  </label>
+                                  <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                      multiple>                              
+                                  </div></td>
+                                <td><a href="#">1738460544234.pdf</a></td>
+                                <td>02/05/2025</td>
+                                <td><button class="btn btn-danger btn-sm">✖</button></td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>For last 3 year</td>
+                                <td><div class="">
+                                  <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                      <i class="fa-solid fa-paperclip"></i> Attach Files
+                                  </label>
+                                  <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                      multiple>                              
+                                  </div></td>
+                                <td><a href="#">1738460544232.pdf</a></td>
+                                <td>02/05/2025</td>
+                                <td><button class="btn btn-danger btn-sm">✖</button></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2.11 Credit History -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading211">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse211">
+                          2.11 Credit History
+                        </button>
+                      </h2>
+                      <div id="collapse211" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <label class="form-label">Do you have credit history? <span
+                                class="text-danger">*</span></label>
+                            <select class="form-select">
+                              <option selected="">No</option>
+                              <option>Yes</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 2.12 & 2.13 Letter and Profile  -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading212">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse212">
+                          2.12 Letter of Authorization
+                        </button>
+                      </h2>
+                      <div id="collapse212" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th width="15%">Document</th>
+                                <th>Upload</th>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>2.12. Letter of Authorization by Board of Directors or Managing Director</td>
+                                <td><div class="">
+                                  <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                      <i class="fa-solid fa-paperclip"></i> Attach Files
+                                  </label>
+                                  <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                      multiple>                              
+                                  </div></td>
+                                <td><a href="#">1738460544241.pdf</a></td>
+                                <td>02/05/2025</td>
+                                <td><button class="btn btn-danger btn-sm">✖</button></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading213">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#heading213">
+                          2.13. Business Profile
+                        </button>
+                      </h2>
+                      <div id="heading213" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th width="15%">Document</th>
+                                <th>Upload</th>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>2.13. Business Profile</td>
+                                <td><div class="">
+                                  <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                      <i class="fa-solid fa-paperclip"></i> Attach Files
+                                  </label>
+                                  <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                      multiple>                              
+                                  </div></td>
+                                <td><a href="#">1738460544241.pdf</a></td>
+                                <td>02/05/2025</td>
+                                <td><button class="btn btn-danger btn-sm">✖</button></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div> <!-- End Accordion -->
+
+                </div>
+                <div class="d-flex justify-content-between p-3">
+                  <button class="themeCrm-btn-light">Back</button>
+                  <button class="themeCrm-btn-lightBlue">Save & Next</button>
+                </div>
+              </div>
+               <!-- Application Project company details tabs end here  -->
+
+              <!-- Application DPR tabs start here  -->
+              <div class="tab-pane fade" id="dpr">
+                <div class="container mt-4">
+
+                  <!-- Fixed Section: 3. Project/ Detailed Project Report (DPR)-->
+                  <div class="section-title">3. Detail Project Report (DPR)</div>
+                  <div class="p-3">
+                    <ul class="list-unstyled">
+
+                      <li>3.1. Project Summary</li>
+                      <li>3.2. Bank/ FI Appraisal Note/ Report, if available</li>
+
+                      <li>3.3. Technology Specifications
+                        <ul class="ms-3">
+                          <li>3.3.1. Technology</li>
+                          <li>3.3.2. Target products and applications</li>
+                          <li>3.3.3. ITC/ HS codes for proposed products</li>
+                          <li>3.3.4. Existing and Proposed Installed capacity, number of working days in a year,
+                            number of working hours per day</li>
+                          <li>3.3.5. Technology Partnerships – Details of technology partner(s) with relevant
+                            documents</li>
+                          <li>3.3.6. Manufacturing Process</li>
+                        </ul>
+                      </li>
+
+                      <li>3.4. Proposed Location
+                        <ul class="ms-3">
+                          <li>3.4.1. Complete Address of the proposed manufacturing unit(s)</li>
+                          <li>3.4.2. GPS location</li>
+                          <li>3.4.3. GST Registration (GSTN) Certificate</li>
+                          <li>3.4.4. Registered Sale/ Lease Deed</li>
+                          <li>3.4.5. No-objection certificate (NOC) from owner of land in case of sub-lease</li>
+                          <li>3.4.6. Title Search Report from lawyer including Non-encumbrance certificate</li>
+                          <li>3.4.7. Land area</li>
+                          <li>3.4.8. Describe the locational advantage with respect to supply of raw materials, power,
+                            water, fuel and manpower as also with respect to facilities for transportation, effluent
+                            disposal and market.</li>
+                        </ul>
+                      </li>
+
+                      <li>3.5. Project Financials
+                        <ul class="ms-3">
+                          <li>3.5.1. Total project cost including working capital requirements and year-wise proposed
+                            phasing of investment</li>
+                          <li>3.5.2. Sources of fund
+                            <ul class="ms-3">
+                              <li>3.5.2.1. Board Resolution of Project Company for investing the project cost towards
+                                setting up of the project</li>
+                              <li>3.5.2.2. Board Resolution/ Undertaking from equity/ unsecured loan providers</li>
+                              <li>3.5.2.3. Proof of equity/ unsecured loans brought in</li>
+                              <li>3.5.2.4. Sanction letter/ Letter of Intent (LoI) and Term Loan Agreement for Debt
+                              </li>
+                              <li>3.5.2.5. Documents showing capability of fund providers (not required for Banks/
+                                FIs)</li>
+                              <li>3.5.2.6. Contact details of fund providers</li>
+                            </ul>
+                          </li>
+                          <li>3.5.3. Projected P&amp;L for at least 20 years</li>
+                          <li>3.5.4. Key financial indicators (IRR, ROCE, ROI, EBIDTA, NPV)</li>
+                        </ul>
+                      </li>
+
+                      <li>3.6. Operational Details
+                        <ul class="ms-3">
+                          <li>3.6.1. Water, power and other utility requirements and arrangements for their supply
+                          </li>
+                          <li>3.6.2. Ramp-up timelines/ Implementation schedule</li>
+                          <li>3.6.3. Management structure</li>
+                        </ul>
+                      </li>
+
+                      <li>3.7. Human Resources
+                        <ul class="ms-3">
+                          <li>3.7.1. Availability and Requirement of trained manpower, plan for training and skill
+                            development</li>
+                          <li>3.7.2. Proposed employment generation</li>
+                        </ul>
+                      </li>
+
+                      <li>3.8. Building
+                        <ul class="ms-3">
+                          <li>3.8.1. Land and Building Layout Plan</li>
+                          <li>3.8.2. Type of construction, Purpose and Built-Up Area of each Building</li>
+                          <li>3.8.3. Cost of Building vis-à-vis CPWD/ State PWD rates</li>
+                        </ul>
+                      </li>
+
+                      <li>3.9. Capital Goods
+                        <ul class="ms-3">
+                          <li>3.9.1. Requirement of new/ refurbished capital goods</li>
+                          <li>3.9.2. Itemized list of equipment with details of proposed suppliers and quotations/
+                            purchase orders.</li>
+                          <li>3.9.3. Board-approved Vendor selection process</li>
+                        </ul>
+                      </li>
+
+                      <li>3.10. Raw Material
+                        <ul class="ms-3">
+                          <li>3.10.1. Bill of Materials (BOM) - %BOM cost and suppliers</li>
+                          <li>3.10.2. Details regarding sourcing of raw materials, plan for developing the raw
+                            material manufacturing ecosystem in India</li>
+                        </ul>
+                      </li>
+
+                      <li>3.11. Market Assessment of Proposed Products</li>
+                      <li>3.12. Roadmap for Technology Upgradation</li>
+                      <li>3.13. Plan for R&amp;D Collaboration with Indian academic institutions</li>
+
+                      <li>3.14. Regulatory Treatment
+                        <ul class="ms-3">
+                          <li>3.14.1. Requirement of licenses, permits, clearances and third-party approvals necessary
+                            to execute the project.</li>
+                          <li>3.14.2. Proposed timelines for obtaining such licenses, permits, clearances and
+                            third-party approvals</li>
+                        </ul>
+                      </li>
+
+                    </ul>
+
+                  </div>
+                  <div class="accordion mt-4" id="projectAccordion">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading24">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse25" aria-expanded="true">
+                          3.15. Proposed Location
+                        </button>
+                      </h2>
+                      <div id="collapse25" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+                        <div class="accordion-body row g-3 align-items-end">
+                          <div class="col-md-4">
+                            <label class="form-label">a. Country <span class="text-danger">*</span></label>
+                            <select class="form-select" fdprocessedid="4qdr7">
+                              <option selected="">India</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4">
+                            <label class="form-label">b. State<span class="text-danger">*</span></label>
+                            <select class="form-select" fdprocessedid="4qdr7">
+                              <option selected="">India</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                          <div class="col-md-3">
+                            <label class="form-label">c. City <span class="text-danger">*</span></label>
+                            <select class="form-select" fdprocessedid="4qdr7">
+                              <option selected="">India</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                          <div class="col-md-1">
+                            <button class="btn btn-outline-primary">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading24">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse25" aria-expanded="true">
+                          3.16. Total project cost including working capital requirements and year-wise proposed phasing
+                          of investment
+                        </button>
+                      </h2>
+                      <div id="collapse25" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <label class="form-label">a. Indicative Investment (INR)
+                              <span class="text-danger">*</span></label>
+
+                            <input type="text" placeholder="Indicative Amount" class="form-control">
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th width="15%">Document</th>
+                        <th>Upload</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1.</td>
+                        <td>Detailed Project Report
+                        </td>
+                        <td><div class="">
+                          <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                              <i class="fa-solid fa-paperclip"></i> Attach Files
+                          </label>
+                          <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                              multiple>                              
+                          </div></td>
+                        <td><a href="#">1738460544241.pdf</a></td>
+                        <td>02/05/2025</td>
+                        <td><button class="btn btn-danger btn-sm">✖</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+                <div class="d-flex justify-content-between p-3">
+                  <button class="themeCrm-btn-light">Back</button>
+                  <button class="themeCrm-btn-lightBlue">Save & Next</button>
                 </div>
               </div>
+              <!-- Application DPR tabs end here  -->
+
+              <!-- Application review & submit tabs start here  -->
+              <div class="tab-pane fade" id="reviewAndSubmit">
+                <div class="container">
+                  <div class="accordion" id="accordionExample">
+                    <div class="application-card-header">
+                      <h5 class="section-title">1. Applicant Company</h5>
+                    </div>
+                    <!-- 1.1 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading11">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse11" aria-expanded="true" aria-controls="collapse12">
+                          1.1. Date & Country of Incorporation
+                        </button>
+                      </h2>
+                      <div id="collapse11" class="accordion-collapse collapse show" aria-labelledby="heading11"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="align-middle table table-borderless">
+                              <tbody>
+                                <tr>
+                                  <td><strong>Contact Person : </strong></td>
+                                  <td>Gangadhar Shaktiman</td>
+                                  <td><strong>Email ID : </strong> </td>
+                                  <td>abc@gmail.com</td>
+                                  <td><strong>Mobile Number : </strong> </td>
+                                  <td>9876543210</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 1.2 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading12">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse12">
+                          1.2. Registered Address, Corporate Address, Phone, Email, Website
+                        </button>
+                      </h2>
+                      <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="align-middle table table-borderless">
+                              <tbody>
+                                <tr>
+                                  <td><strong>a. Registered Office Address :
+                                    </strong></td>
+                                  <td>Test</td>
+                                  <td><strong>b. Corporate Office Address : </strong> </td>
+                                  <td>abc@gmail.com</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>c. Country : </strong></td>
+                                  <td>Test</td>
+                                  <td><strong>d. Phone : </strong> </td>
+                                  <td>9876543210</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>e. Email : </strong></td>
+                                  <td>abc@gmail.com</td>
+                                  <td><strong>f. Website
+                                      : </strong> </td>
+                                  <td>https://www.google.com</td>
+
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.3 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading13">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse13">
+                          1.3. Major Shareholding Pattern
+                        </button>
+                      </h2>
+                      <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="table table-borderless">
+                              <tbody>
+                                <thead>
+                                  <tr>
+                                    <td><strong>a.Total Numbers of Shares</strong></td>
+                                    <td><strong>b. Share Holder Name</strong></td>
+                                    <td><strong>c. Total Shares Held</strong></td>
+                                    <td><strong>d. Percentage of shares</strong></td>
+                                  </tr>
+                                </thead>
+                                <tr>
+                                  <td>100</td>
+                                  <td>Prajwal</td>
+                                  <td>100</td>
+                                  <td>0.1%</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.4 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading14">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse14">
+                          1.4. Profile and Contact Details of Major Shareholders
+                        </button>
+                      </h2>
+                      <div id="collapse14" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="table table-borderless">
+                              <thead>
+                                <tr>
+                                  <td><strong>a. Share Holder Name</strong></td>
+                                  <td><strong>b. Country</strong></td>
+                                  <td><strong>c. Contact Number</strong></td>
+                                  <td><strong>D. Email</strong></td>
+                                  </trd </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Prajwal</td>
+                                  <td>India</td>
+                                  <td>+919582341153</td>
+                                  <td>prajwal.td1@google.com</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Repeat same pattern for 1.5 to 1.13 -->
+                    <!-- Example for 1.5 below -->
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading15">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse15">
+                          1.5. Profile and Contact Details of Board of Directors
+                        </button>
+                      </h2>
+                      <div id="collapse15" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table table-borderless">
+                            <thead>
+                              <tr>
+                                <td><strong>Name</strong></td>
+                                <td><strong>Country</strong></td>
+                                <td><strong>Contact Number</strong></td>
+                                <td><strong>Email</strong></td>
+                                <td><strong>Designation</strong></td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Suchanshe</td>
+                                <td>India</td>
+                                <td>+919582841144</td>
+                                <td>suchanshe.b@google.com</td>
+                                <td>CEO</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading16">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse16">
+                          1.6. Joint Venture (JV)/Agreement/Other Business Agreements
+                        </button>
+                      </h2>
+                      <div id="collapse16" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="">#</th>
+                                <th class="">Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a.</td>
+                                <td>Joint Venture (JV) Agreement/ Other Business Agreements, if applicable</td>
+                                <td>
+                                  <!-- <a href="javascript:;" class="ism-btn ism-btn--theme small"><span class="fa fa-file-pdf me-1"></span>View</a> -->
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.7 Audited Financial Statements -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading17">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse17">
+                          1.7. Audited Financial Statements
+                        </button>
+                      </h2>
+                      <div id="collapse17" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="">#</th>
+                                <th class="">Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a.</td>
+                                <td>For last 1 year</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>b.</td>
+                                <td>For last 2 year</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>c.</td>
+                                <td>For last 3 year</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.8 Credit History -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading18">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse18">
+                          1.8. Credit History
+                        </button>
+                      </h2>
+                      <div id="collapse18" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="">#</th>
+                                <th class="">Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a.</td>
+                                <td>Credit History 1</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>b.</td>
+                                <td>Credit History 2</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>c.</td>
+                                <td>Credit History 3</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+
+
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.9 Letter of Authorization & 1.10 Business Profile -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading19">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse19">
+                          1.9. Letter of Authorization & 1.10. Business Profile
+                        </button>
+                      </h2>
+                      <div id="collapse19" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="">#</th>
+                                <th class="">Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a.</td>
+                                <td>Letter of Authorization by Board of Directors or Managing Director</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>b.</td>
+                                <td>Business Profile</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818985965.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=439044c041f560ea21cffd9f548d8e45813608ebe24f7d33edd1c3e1baef8f79"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.11 Operational Experience -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading111">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse111">
+                          1.11. Operational Experience
+                        </button>
+                      </h2>
+                      <div id="collapse111" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <p>a. Opretional Experience : No</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.12 Existing Manufacturing Facilities -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading112">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse112">
+                          1.12. Details of Current Manufacturing Facilities in India and Abroad
+                        </button>
+                      </h2>
+                      <div id="collapse112" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table table-borderless">
+                            <thead>
+                              <tr>
+                                <td><strong>Location</strong></td>
+                                <td><strong>Products</strong></td>
+                                <td><strong>No. of Employees</strong></td>
+                                <td><strong>Total Area</strong></td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>New Delhi</td>
+                                <td>Chips</td>
+                                <td>1000</td>
+                                <td>14000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.13 Integrity Undertaking -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading113">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse113">
+                          1.13. Integrity Undertaking (Format A)
+                        </button>
+                      </h2>
+                      <div id="collapse113" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="">#</th>
+                                <th class="">Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a.</td>
+                                <td>Integrity Undertaking (Format A)</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818985965.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=439044c041f560ea21cffd9f548d8e45813608ebe24f7d33edd1c3e1baef8f79"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <div class="container my-3">
+
+                  <div class="accordion" id="accordionExample21">
+                    <div class="application-card-header">
+                      <h5 class="section-title">2. Project Company (Company incorporated in India for the purpose of the
+                        Scheme) </h5>
+                    </div>
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading21">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse21" aria-expanded="true" aria-controls="collapse21">
+                          Documents
+                        </button>
+                      </h2>
+                      <div id="collapse21" class="accordion-collapse collapse show" aria-labelledby="heading21">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>2.1.</td>
+                                <td>Certificate of Incorporation</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                              <tr>
+                                <td>2.2.</td>
+                                <td>Memorandum and Articles of Association</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                              <tr>
+                                <td>2.3.</td>
+                                <td>Permanent Account Number (PAN) Card</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                              <tr>
+                                <td>2.4.</td>
+                                <td>Goods & Services Tax Registration (GSTN) Certificate</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading22">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                          2.5. Registered Address, Corporate Address, Phone, Email, Website </button>
+                      </h2>
+                      <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="align-middle table table-borderless">
+                              <tbody>
+                                <tr>
+                                  <td><strong>a. Registered Office Address :
+                                    </strong></td>
+                                  <td>Test</td>
+                                  <td><strong>b. Corporate Office Address : </strong> </td>
+                                  <td>abc@gmail.com</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>c. Country : </strong></td>
+                                  <td>Test</td>
+                                  <td><strong>d. Phone : </strong> </td>
+                                  <td>9876543210</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>e. Email : </strong></td>
+                                  <td>abc@gmail.com</td>
+                                  <td><strong>f. Website
+                                      : </strong> </td>
+                                  <td>https://www.google.com</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Repeat for items 3 to 8 -->
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading23">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                          2.6 Capital Structure
+                        </button>
+                      </h2>
+                      <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="heading23">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <label class="form-label">Capital Structure</label>
+                            <textarea class="form-control" id="corporateAddress" rows="3" maxlength="255"
+                              disabled>test</textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading24">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                          2.7 Major Shareholding Pattern </button>
+                      </h2>
+                      <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="table table-borderless">
+                              <tbody>
+                                <thead>
+                                  <tr>
+                                    <td><strong>a.Total Numbers of Shares</strong></td>
+                                    <td><strong>b. Share Holder Name</strong></td>
+                                    <td><strong>c. Total Shares Held</strong></td>
+                                    <td><strong>d. Percentage of shares</strong></td>
+                                  </tr>
+                                </thead>
+                                <tr>
+                                  <td>100</td>
+                                  <td>Prajwal</td>
+                                  <td>100</td>
+                                  <td>0.1%</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 5 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading25">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                          2.8 Profile and contact details of Board of Directors </button>
+                      </h2>
+                      <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="heading25">
+                        <div class="accordion-body">
+                          <table class="table table-borderless">
+                            <thead>
+                              <tr>
+                                <td><strong>Name</strong></td>
+                                <td><strong>Country</strong></td>
+                                <td><strong>Contact Number</strong></td>
+                                <td><strong>Email</strong></td>
+                                <td><strong>Designation</strong></td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Suchanshe</td>
+                                <td>India</td>
+                                <td>+919582841144</td>
+                                <td>suchanshe.b@google.com</td>
+                                <td>CEO</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 6 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading26">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                          2.9 Joint Venture (JV) Agreement/ Other Business Agreements, if applicable </button>
+                      </h2>
+                      <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Joint Venture (JV) Agreement/ Other Business Agreements, if applicable</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 7 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading27">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                          2.10 Audited Financial Statements </button>
+                      </h2>
+                      <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="heading27">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>For last 1 year</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>For last 2 year</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>For last 3 year</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 8 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading28">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                          2.11 Credit History </button>
+                      </h2>
+                      <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <label class="form-label">Do you have credit history? : <span>value</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item 9 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading28">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                          2.12 Letter of Authorization by Board of Directors or Managing Director & 2.13 Business
+                          Profile </button>
+                      </h2>
+                      <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>2.13. Business Profile</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container my-3">
+                  <div class="accordion" id="accordionExample21">
+                    <div class="application-card-header">
+                      <h5 class="section-title"> 3. Project/ Detailed Project Report (DPR)
+                      </h5>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading26">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                          3.1 Project/ Detailed Project Report (DPR)</button>
+                      </h2>
+                      <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a</td>
+                                <td>Project/ Detailed Project Report (DPR)</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading28">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse28" aria-expanded="true" aria-controls="collapse28">
+                          3.4. Proposed Location </button>
+                      </h2>
+                      <div id="collapse28" class="accordion-collapse collapse show" aria-labelledby="heading28"
+                        style="">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <label class="form-label">Do you have credit history? : <span>value</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading28">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse28" aria-expanded="true" aria-controls="collapse28">
+                          3.5.1. Total project cost including working capital requirements and year-wise proposed
+                          phasing of investment </button>
+                      </h2>
+                      <div id="collapse28" class="accordion-collapse collapse show" aria-labelledby="heading28"
+                        style="">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="align-middle table table-borderless">
+                              <tbody>
+                                <tr>
+                                  <td><strong>a. Country : </strong></td>
+                                  <td>India</td>
+                                  <td><strong>b. State : </strong> </td>
+                                  <td>UP</td>
+                                  <td><strong>c. City : </strong> </td>
+                                  <td>Agra</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mt-4 p-3">
+                  <button class="themeCrm-btn-light">Back</button>
+                  <button class="themeCrm-btn-lightBlue">Save & Next</button>
+                </div>
+
+
+              </div>
+              <!-- Application review & submit tabs end here  -->
+
+              <!-- Application payment tabs start here  -->
+              <div class="tab-pane fade" id="payment">
+                <div class="container my-2">
+                  <div class="section-title">Choose Payment Options</div>
+                  <div class="form-section p-3">
+
+                    <div class="mb-3 text-center">
+                      <label class="form-label">Payment Mode</label>
+                      <div class="d-flex gap-4 justify-content-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="paymentMode" id="offline" checked>
+                          <label class="form-check-label" for="offline">Offline</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="paymentMode" id="online">
+                          <label class="form-check-label" for="online">Online</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="paymentMode" id="neft">
+                          <label class="form-check-label" for="neft">E-RTGS/E-NEFT</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-4">
+                      <div class="section-title">Payment Details</div>
+                      <table class="table table-bordered mt-2">
+                        <tbody>
+                          <tr>
+                            <th>Beneficiary Name</th>
+                            <td>Digital India Corporation - India Semiconductor Mission (DICSM)</td>
+                          </tr>
+                          <tr>
+                            <th>Bank</th>
+                            <td>Bank of India</td>
+                          </tr>
+                          <tr>
+                            <th>Branch</th>
+                            <td>CGO Complex, Lodhi Road, Delhi</td>
+                          </tr>
+                          <tr>
+                            <th>Account Type</th>
+                            <td>Saving</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="row mt-4">
+                      <div class="col-md-6">
+                        <label class="form-label required">Transaction Reference ID</label>
+                        <input type="text" class="form-control" placeholder="Enter here">
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label required">Payment Date</label>
+                        <input type="date" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="mt-4">
+                      <label class="form-label required">Payment Receipt</label>
+                      <table class="table table-bordered mt-2">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th width="15%">Document</th>
+                            <th>Upload</th>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Payment Receipt</td>
+                            <td>
+                              <div class="">
+                              <label for="fileUpload" class="themeCrm-btn-light me-3 mb-0">
+                                  <i class="fa-solid fa-paperclip"></i> Attach Files
+                              </label>
+                              <input type="file" id="fileUpload" name="attachments[]" class="d-none"
+                                  multiple>                              
+                              </div>
+                          </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-4">
+                      <button class="themeCrm-btn-light">Back</button>
+                      <button class="themeCrm-btn-lightBlue">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Application payment tabs end here  -->
             </div>
           </div>
         </div>
-    </section>
-  </div>
+      </div>
+  
+  </section>
+ <!-- Page main body right side content ends here -->
+   
+</div>
+<!-- Page Body wrapper ends Here -->
 
 
-
-
-
-
-  <script>
-    $(document).ready(function () {
-      $('#activityTable').DataTable({
-        "paging": true,
-        "ordering": true,
-        "info": true
-      });
-    });
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

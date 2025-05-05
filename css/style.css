@@ -166,12 +166,12 @@ p {
 }
 
 .themeCrm-btn-light {
-  padding: 5px 20px;
+  padding: 2px 12px;
   border-radius: 100px;
   background: #fff;
   color: #192F60;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.4px;
@@ -179,12 +179,12 @@ p {
 }
 
 .themeCrm-btn-darkBlue {
-  padding: 5px 20px;
+  padding: 2px 12px;
   border-radius: 100px;
   background: #192F60;
   color: #FFF;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.4px;
@@ -192,12 +192,12 @@ p {
 }
 
 .themeCrm-btn-lightBlue {
-  padding: 5px 20px;
+  padding: 2px 12px;
   border-radius: 100px;
   background: #1351D8;
   color: #FFF;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.4px;
@@ -252,7 +252,12 @@ button {
 .menu.show {
   display: block;
 }
-
+.attachment-button {
+  border-radius: 4px;
+  border: 1px solid #192F60;
+  background: #F3F6FD;
+  padding: 0.75rem 1.5rem;
+}
 #pageTitle {
   color: #192F60;
   font-family: Poppins;
@@ -279,7 +284,15 @@ button {
   background: #FFF;
   padding: 1rem;
 }
-
+.accordion-button{
+  border-radius: 4px;
+  border: 2px solid rgba(25, 47, 96, 0.10);
+  color: rgba(25, 47, 96, 0.70);
+  background: #F3F6FD;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 5px;
+}
 /* Status Css Start Here ---- Add status with referred class "class="status pending"" */
 .status {
   padding: 0.5rem 1rem;
