@@ -166,7 +166,7 @@ p {
 }
 
 .themeCrm-btn-light {
-  padding: 2px 12px;
+  padding: 5px 12px;
   border-radius: 100px;
   background: #fff;
   color: #192F60;
@@ -179,7 +179,7 @@ p {
 }
 
 .themeCrm-btn-darkBlue {
-  padding: 2px 12px;
+  padding: 5px 12px;
   border-radius: 100px;
   background: #192F60;
   color: #FFF;
@@ -192,7 +192,7 @@ p {
 }
 
 .themeCrm-btn-lightBlue {
-  padding: 2px 12px;
+  padding: 5px 12px;
   border-radius: 100px;
   background: #1351D8;
   color: #FFF;

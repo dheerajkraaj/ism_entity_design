@@ -1,6 +1,139 @@
+/* Communication Css Here */
 .compose-mail-card {
     border-radius: 8px;
     border: 1px solid #BAC1D0;
     background: #FFF;
     padding: 1rem;
-}
+  }
+  
+  .file-table {
+    border: 1px solid #BAC1D0;
+    border-radius: 8px 8px 0px 0px;
+  }
+  
+  .file-table th,
+  .file-table td {
+    vertical-align: middle;
+    font-size: 14px;
+    border: none;
+  }
+  
+  .file-table th {
+    /* border-radius: 8px 8px 0px 0px; */
+    /* border: 1px solid #BAC1D0; */
+    background: #F3F6FD;
+    font-weight: 500;
+  }
+  
+  .btn-send {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  .btn-send:hover {
+    background-color: #1e40af;
+  }
+  
+  #bodyEditor+.ck-editor {
+    min-height: 10rem;
+  }
+  
+  .ck-editor__editable_inline {
+    min-height: 10rem;
+  }
+  
+  .email-card {
+    border-radius: 8px;
+    overflow: hidden;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
+    background-color: #F3F6FD;
+  }
+  
+  .email-header {
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid #BAC1D0;
+    background: #F3F6FD;
+    padding: 10px 20px;
+  }
+  
+  .email-subject {
+    color: #192F60;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38.051px;
+    /* 190.254% */
+    letter-spacing: 0.4px;
+  }
+  
+  .status-btn {
+    border-radius: 20px;
+    padding: 2px 16px;
+    font-size: 0.875rem;
+    margin-left: 10px;
+  }
+  
+  .status-btn.active {
+    background-color: #4c63cb;
+    color: white;
+    border: none;
+  }
+  
+  .email-body {
+    padding: 1.5rem;
+    background-color: #fff;
+  }
+  
+  .email-label {
+    font-weight: 500;
+    width: 4rem;
+  }
+  
+  .email-header-tags {
+    font-size: 14px;
+    font-family: poppins;
+    padding: 4px 16px;
+    border-radius: 25px;
+    border: 1px solid #BAC1D0;
+    color: #5A6B8F;
+  
+  }
+  
+  .email-tag {
+    border-radius: 4px;
+    border: 1px solid var(--Light-Stroke, #DDE3EE);
+    background: #F3F6FD;
+    display: inline-flex;
+    padding: 3px 16px;
+    justify-content: center;
+    align-items: center;
+    color: var(--Inactive-text, #5A6B8F);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    margin-right: 1rem;
+  }
+  
+  .email-date {
+    color: #1C1C1C;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.28px;
+  }
+  
+  .accordion-button::after {
+    margin-left: auto;
+  }
+  
+  .email-footer {
+    display: flex;
+    gap: 16px;
+    justify-content: end;
+  }

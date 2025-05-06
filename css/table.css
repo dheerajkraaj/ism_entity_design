@@ -29,11 +29,11 @@ table.dataTable tbody td {
 }
 
 table.dataTable thead {
-    background-color: #0e2a47;
+    background-color: #192F60;
     color: white;
-}
+} 
 
-table.dataTable.display tbody tr.odd {
+/* table.dataTable.display tbody tr.odd {
     background-color: #fff;
 }
 
@@ -45,7 +45,7 @@ table.dataTable.display tbody tr.odd>.sorting_1,
 table.dataTable.order-column.stripe tbody tr.odd>.sorting_1,
 table.dataTable.display tbody tr.even>.sorting_1 {
     background-color: transparent;
-}
+} */
 
 table.dataTable thead th,
 table.dataTable thead td {
@@ -56,7 +56,7 @@ table.dataTable thead td {
 }
 
 table.dataTable.no-footer {
-    border-bottom: none;
+    border-bottom: none !important;
 }
 
 .dataTables_wrapper .dataTables_length,
