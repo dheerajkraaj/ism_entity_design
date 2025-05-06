@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,364 +7,66 @@
   <link rel="icon" href="/images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+
   <!--  Poppins Font Family cdn -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  
+
+
   <!-- Bootstrap CDN Links -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
   <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Main Css Files -->
   <link rel="stylesheet" href="/css/style.css">
-  
+
   <!-- Css File for Header -->
   <link rel="stylesheet" href="/css/header.css">
-  
+
   <!-- Css File for Sidebar  -->
   <link rel="stylesheet" href="/css/sidebar.css">
-  
+
   <!-- Css File for application Page -->
   <link rel="stylesheet" href="/css/application.css">
-  
+
   <!-- Css File for tables -->
   <link rel="stylesheet" href="/css/table.css">
-  
+
   <!-- JS File for Sidebar -->
   <script type="text/javascript" src="/js/sidebar.js" defer></script>
-  
+
   <!-- Jquery CDN links -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
+
   <!-- CSS & JS CDN Links for Datatables -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
   <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
-  
+
   <!-- Select2 Jquery Plugins CDN links  -->
   <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
   <style>
 
-    .application-card {
-      align-items: center;
-      background-color: #F3F6FD;
-      border-radius: 0.5rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .application-card_icon {
-      font-size: 3rem;
-      margin-right: 1rem;
-    }
-
-    .application-card_title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #192f60;
-      letter-spacing: 0.4px;
-    }
-
-    .application-card_count {
-      color: #FFF;
-      text-align: center;
-      font-family: Poppins;
-      font-size: 1.25rem;
-      font-style: normal;
-      font-weight: 600;
-      letter-spacing: 0.56px;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      margin-right: 1rem;
-    }
-
-    table.dataTable thead {
-      background-color: #0e2a47;
-      color: white;
-    }
-
-    .status {
-      padding: 0.5rem 1rem;
-      border-radius: 85px;
-      font-weight: 500;
-      font-size: 0.75rem;
-    }
-
-    .pending {
-      background-color: #F0F4CD;
-      ;
-      color: #8D9735;
-      border: 1px solid #8D9735;
-    }
-
-    .not-approved {
-      border: 1px solid #BD0D10;
-
-      background: #FCDCDD;
-      color: #BD0D10;
-    }
-
-    .under-review {
-      border: 1px solid #6C7EB8;
-
-      background: #E1E8FF;
-      color: #6C7EB8;
-      ;
-    }
-
-    .details-btn {
-      outline: none;
-      border-radius: 4px;
-      background: #192F60;
-      padding: 0.25rem 0.75rem;
-      color: #fff;
-      font-size: 14px;
-      border: none;
-    }
-
-    table.dataTable tbody th,
-    table.dataTable tbody td {
-      padding: 8px 10px;
-      font-size: 14px;
-      color: #1c1c1c;
-      letter-spacing: 0.28px;
-    }
-
-    table.dataTable.display tbody tr.odd {
-      background-color: #fff;
-    }
-
-    table.dataTable.display tbody tr.even {
-      background-color: #F3F6FD;
-    }
-
-    table.dataTable.display tbody tr.odd>.sorting_1,
-    table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-      background-color: transparent;
-    }
-
-    table.dataTable.display tbody tr.even>.sorting_1,
-    table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-      background-color: transparent;
-    }
-
-    table.dataTable.display tbody tr.odd>.sorting_1,
-    table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-      background-color: transparent;
-    }
-
-    table.dataTable thead th,
-    table.dataTable thead td {
-      padding: 10px 18px;
-      border-bottom: 1px solid #111;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    table.dataTable.no-footer {
-      border-bottom: none;
-    }
-
-    .dataTables_wrapper .dataTables_length,
-    .dataTables_filter {
-      color: rgba(25, 47, 96, 0.70) !important;
-      font-size: 14px;
-    }
-
-    .dataTables_wrapper .dataTables_filter input {
-      border: 1px solid #aaa;
-      border-radius: 25px;
-      padding: 5px;
-      background-color: #fff;
-      margin-left: 3px;
-      border: 2px solid rgba(25, 47, 96, 0.10);
-    }
-
-    .dataTables_wrapper .dataTables_length select {
-      border: 1px solid #aaa;
-
-      padding: 0.5rem 1rem;
-      background-color: #fff;
-      margin-left: 3px;
-      border: 2px solid rgba(25, 47, 96, 0.10);
-    }
-
-    .dataTables_wrapper .dataTables_info,
-    .dataTables_paginate {
-      color: rgba(25, 47, 96, 0.70) !important;
-      font-size: 14px;
-    }
-
-    .dataTables_wrapper .dataTables_paginate .paginate_button {
-      background-color: #192f60;
-      color: #fff;
-    }
-
-    .application-tabs li a {
-      padding: 0.5rem;
-    }
-
-    .application-tabs-icon {
-      height: 30px;
-    }
-
-    .application-tabs-counter {
-      font-weight: 600;
-      font-size: 2rem;
-    }
-
-    .application-tabs-title {
-      font-size: 0.75rem;
-      letter-spacing: 0.28px;
-      font-weight: 500;
-      margin: 0;
-    }
-
-    .application-steps-items {
-      align-items: center;
-      justify-content: space-between;
-      display: flex;
-    }
-
-    .application-tabs .nav-tabs .nav-link {
-      border-radius: 0px;
-      border: 1px solid #192f60;
-      margin-right: 5px;
-    }
-
-    .application-tabs>.nav-tabs .nav-link.active {
-      border: 1px solid #192F60;
-      background: #192F60;
-      color: #fff;
-    }
-
-    .application-tabs>.nav-tabs .nav-link {
-      border: 1px solid #192F60;
-      background: #fff;
-      color: #192F60;
-    }
-
-    .application-tabs>.nav-tabs .nav-link.disabled {
-      border: 1px solid rgba(25, 47, 96, 0.30);
-      background: #F3F6FD;
-      opacity: .9;
-      filter: alpha(opacity=50);
-      cursor: not-allowed;
-      color: rgba(120, 57, 184, 0.50) !important;
-    }
-
-    .w-12 {
-      max-width: 10rem;
-      min-width: 9rem;
-    }
-
-    .application-child-tabs {
-      border: 1px solid #BAC1D0;
-      background: #FFF;
-      /* border-radius: 8px; */
-    }
-
-    .application-child-tabs .nav-tabs .nav-link {
-      border: 1px solid rgba(25, 47, 96, 0.30);
-      color: rgba(25, 47, 96, 0.70);
-      background: #F3F6FD;
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.28px;
-      margin-right: 0;
-      text-align: center;
-    }
-
-    .application-child-tabs .nav-tabs .nav-link.active {
-
-      border-top: 1px solid rgba(25, 47, 96, 0.30);
-      border-right: 1px solid rgba(25, 47, 96, 0.30);
-      border-left: 1px solid rgba(25, 47, 96, 0.30);
-      color: #192f60;
-      background: #FFF;
-      border-bottom: 1px solid #fff;
-
-    }
-
-    .section-title {
-      background-color: #192f60;
-      color: white;
-      padding: 10px;
-      font-weight: bold;
-      border-radius: 10px 10px 0 0;
-      font-size: 14px;
-    font-weight: 500;
-    }
-    .info-table td {
-      padding: 8px;
-      font-size: 14px;
-    }
-    .info-table td:first-child {
-      font-weight: 600;
-      width: 200px;
-    }
-    .info-box {
-      border: 1px solid #dcdcdc;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    .default-badge {
-      border-radius: 58px;
-    border: 1px solid #6C7EB8;
-    background: #F3F6FD;
-    color: #5A6B8F;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 0.28px;
-    padding: 0.15rem 0.75rem;
-    }
-    tbody, td, tfoot, th, thead, tr{
-      font-size: 14px;
-    }
 
 
-.document-head{
-  background: #192F60;
-}
-   .document-head h4{
-    color: #FFF;
-font-family: Poppins;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-padding: 1rem;
-letter-spacing: 0.28px;
-   }
-   .document-head table{
-    font-size: 14px;
-    border: none;
-   }
-   .document-head table tr td{
-    border: none;
-   }
-   .application-card-header{
-    background: #192F60;
-    padding: 0.75rem;
-    } 
-    .application-card-header h5{
-        margin: 0;
-        color: #fff;
-        font-size: 1rem;
-        font-family: poppins;
-    }
-    
-</style>
+  </style>
 </head>
 
 <body>
-  <!--=============== HEADER ===============-->
+ <!--=============== Main Entity Portal HEADER ===============-->
+<!-- Page Topbar start Here (Header 1)-->
   <main class="ism-v3-header__topBar">
     <div class="container">
       <div class="row">
@@ -394,6 +95,9 @@ letter-spacing: 0.28px;
       </div>
     </div>
   </main>
+    <!-- Page Topbar ends Here -->
+
+ <!-- Page Logo Header Bar Start Here (Header 2)-->
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -414,6 +118,9 @@ letter-spacing: 0.28px;
       </div>
     </div>
   </div>
+   <!-- Page Logo Header Bar Ends Here (Header 2)-->
+
+<!-- Page title & breadcrumb menu bar start here (Header 3) -->
   <nav class="navbar navbar-expand-lg main-header">
     <div class="container">
       <!-- Logo -->
@@ -453,7 +160,12 @@ letter-spacing: 0.28px;
       </div>
     </div>
   </nav>
+    <!-- Page title & breadcrumb menu bar ends here (Header 3) -->
+
+
+<!-- Page Body wrapper Starts Here -->
   <div class="page-wrapper">
+    <!-- page body left sidebar start here -->
     <nav id="sidebar">
       <ul>
         <li>
@@ -504,248 +216,274 @@ letter-spacing: 0.28px;
         </li>
       </ul>
     </nav>
-    <section class="page-container ">
-      <div class="container-fluid">
-        <div class="row my-3">
-          <div class="col d-none">
-            <h2 id="pageTitle">Application No. - <span>1234567890</span></h2>
-            <p id="description">Company Name - Scheme Name</p>
-          </div>
-          <div class="col text-end">
-            <button type="button" class="themeCrm-btn-light"><i
-                class="fa-regular fa-message me-2"></i>Communication</button>
-            <button type="button" class="themeCrm-btn-darkBlue"><i
-                class="fa-solid fa-ellipsis-vertical me-2"></i>Action</button>
-          </div>
-        </div>
-        <div class="application-tabs mt-4">
-          <!-- Main Tabs -->
-          <ul class="nav nav-tabs d-flex w-100" id="mainTabs">
-            <li class="nav-item flex-fill">
-              <a class="nav-link active" data-bs-toggle="tab" href="#application">
-                <div class="application-steps-container">
-                  <div class="application-steps-items">
-                    <div class="d-flex align-items-center application-tabs-header">
-                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
-                      <span class="application-tabs-counter">1</span>
-                    </div>
-                    <div>
-                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
-                    </div>
-                  </div>
-                  <p class="application-tabs-title">Application</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item flex-fill">
-              <a class="nav-link" data-bs-toggle="tab" href="#preliminary">
-                <div class="application-steps-container">
-                  <div class="application-steps-items">
-                    <div class="d-flex align-items-center application-tabs-header">
-                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
-                      <span class="application-tabs-counter">2</span>
-                    </div>
-                    <div>
-                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
-                    </div>
-                  </div>
-                  <p class="application-tabs-title">Preliminary Screening</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item flex-fill">
-              <a class="nav-link" data-bs-toggle="tab" href="#acknowledgement">
-                <div class="application-steps-container">
-                  <div class="application-steps-items">
-                    <div class="d-flex align-items-center application-tabs-header">
-                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
-                      <span class="application-tabs-counter">3</span>
-                    </div>
-                    <div>
-                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
-                    </div>
-                  </div>
-                  <p class="application-tabs-title">Acknowledgement</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item flex-fill">
-              <a class="nav-link" data-bs-toggle="tab" href="#evaluation">
-                <div class="application-steps-container">
-                  <div class="application-steps-items">
-                    <div class="d-flex align-items-center application-tabs-header">
-                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
-                      <span class="application-tabs-counter">4</span>
-                    </div>
-                    <div>
-                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
-                    </div>
-                  </div>
-                  <p class="application-tabs-title">Evaluation</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item flex-fill">
-              <a class="nav-link" data-bs-toggle="tab" href="#decision">
-                <div class="application-steps-container">
-                  <div class="application-steps-items">
-                    <div class="d-flex align-items-center application-tabs-header">
-                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
-                      <span class="application-tabs-counter">5</span>
-                    </div>
-                    <div>
-                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
-                    </div>
-                  </div>
-                  <p class="application-tabs-title">Decision</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item flex-fill">
-              <a class="nav-link" data-bs-toggle="tab" href="#agreement">
-                <div class="application-steps-container">
-                  <div class="application-steps-items">
-                    <div class="d-flex align-items-center application-tabs-header">
-                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
-                      <span class="application-tabs-counter">6</span>
-                    </div>
-                    <div>
-                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
-                    </div>
-                  </div>
-                  <p class="application-tabs-title">Agreement</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item flex-fill">
-              <a class="nav-link" data-bs-toggle="tab" href="#disbursement">
-                <div class="application-steps-container">
-                  <div class="application-steps-items">
-                    <div class="d-flex align-items-center application-tabs-header">
-                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
-                      <span class="application-tabs-counter">7</span>
-                    </div>
-                    <div>
-                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
-                    </div>
-                  </div>
-                  <p class="application-tabs-title">Disbursement</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item flex-fill">
-              <a class="nav-link" data-bs-toggle="tab" href="#reports">
-                <div class="application-steps-container">
-                  <div class="application-steps-items">
-                    <div class="d-flex align-items-center application-tabs-header">
-                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
-                      <span class="application-tabs-counter">8</span>
-                    </div>
-                    <div>
-                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
-                    </div>
-                  </div>
-                  <p class="application-tabs-title">Reports</p>
-                </div>
-              </a>
-            </li>
-            <li class="nav-item flex-fill">
-              <a class="nav-link disabled" data-bs-toggle="tab" href="#project">
-                <div class="application-steps-container">
-                  <div class="application-steps-items">
-                    <div class="d-flex align-items-center application-tabs-header">
-                      <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
-                      <span class="application-tabs-counter">9</span>
-                    </div>
-                    <div>
-                      <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
-                    </div>
-                  </div>
-                  <p class="application-tabs-title">Project Closure</p>
-                </div>
-              </a>
-            </li>
-          </ul>
+     <!-- page body left sidebar Ends here -->
 
-          <div class="application-child-tabs tab-content mt-3">
-            <!-- Application Tab -->
-            <div class="tab-pane fade show active" id="application">
-              <ul class="nav nav-tabs d-flex w-100" id="subTabs">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" data-bs-toggle="tab" href="#review">Review</a>
-                </li>
-              </ul>
+    <!-- Page main body right side content starts here -->
+    <section class="page-container">
+      <div class="application-tabs">
+        <!-- Main navigation tabs start here -->
+        <ul class="nav nav-tabs d-flex w-100" id="mainTabs">
+          <li class="nav-item flex-fill">
+            <a class="nav-link active" data-bs-toggle="tab" href="#application">
+              <div class="application-steps-container">
+                <div class="application-steps-items">
+                  <div class="d-flex align-items-center application-tabs-header">
+                    <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                    <span class="application-tabs-counter">1</span>
+                  </div>
+                  <div>
+                    <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                  </div>
+                </div>
+                <p class="application-tabs-title">Application</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item flex-fill">
+            <a class="nav-link" data-bs-toggle="tab" href="#preliminary">
+              <div class="application-steps-container">
+                <div class="application-steps-items">
+                  <div class="d-flex align-items-center application-tabs-header">
+                    <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                    <span class="application-tabs-counter">2</span>
+                  </div>
+                  <div>
+                    <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                  </div>
+                </div>
+                <p class="application-tabs-title">Preliminary Screening</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item flex-fill">
+            <a class="nav-link" data-bs-toggle="tab" href="#acknowledgement">
+              <div class="application-steps-container">
+                <div class="application-steps-items">
+                  <div class="d-flex align-items-center application-tabs-header">
+                    <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                    <span class="application-tabs-counter">3</span>
+                  </div>
+                  <div>
+                    <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                  </div>
+                </div>
+                <p class="application-tabs-title">Acknowledgement</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item flex-fill">
+            <a class="nav-link" data-bs-toggle="tab" href="#evaluation">
+              <div class="application-steps-container">
+                <div class="application-steps-items">
+                  <div class="d-flex align-items-center application-tabs-header">
+                    <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                    <span class="application-tabs-counter">4</span>
+                  </div>
+                  <div>
+                    <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                  </div>
+                </div>
+                <p class="application-tabs-title">Evaluation</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item flex-fill">
+            <a class="nav-link" data-bs-toggle="tab" href="#decision">
+              <div class="application-steps-container">
+                <div class="application-steps-items">
+                  <div class="d-flex align-items-center application-tabs-header">
+                    <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                    <span class="application-tabs-counter">5</span>
+                  </div>
+                  <div>
+                    <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                  </div>
+                </div>
+                <p class="application-tabs-title">Decision</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item flex-fill">
+            <a class="nav-link" data-bs-toggle="tab" href="#agreement">
+              <div class="application-steps-container">
+                <div class="application-steps-items">
+                  <div class="d-flex align-items-center application-tabs-header">
+                    <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                    <span class="application-tabs-counter">6</span>
+                  </div>
+                  <div>
+                    <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                  </div>
+                </div>
+                <p class="application-tabs-title">Agreement</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item flex-fill">
+            <a class="nav-link" data-bs-toggle="tab" href="#disbursement">
+              <div class="application-steps-container">
+                <div class="application-steps-items">
+                  <div class="d-flex align-items-center application-tabs-header">
+                    <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                    <span class="application-tabs-counter">7</span>
+                  </div>
+                  <div>
+                    <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                  </div>
+                </div>
+                <p class="application-tabs-title">Disbursement</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item flex-fill">
+            <a class="nav-link" data-bs-toggle="tab" href="#reports">
+              <div class="application-steps-container">
+                <div class="application-steps-items">
+                  <div class="d-flex align-items-center application-tabs-header">
+                    <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                    <span class="application-tabs-counter">8</span>
+                  </div>
+                  <div>
+                    <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                  </div>
+                </div>
+                <p class="application-tabs-title">Reports</p>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item flex-fill">
+            <a class="nav-link disabled" data-bs-toggle="tab" href="#project">
+              <div class="application-steps-container">
+                <div class="application-steps-items">
+                  <div class="d-flex align-items-center application-tabs-header">
+                    <img src="./images/icon/document_icon.png" alt="" class="application-tabs-icon">
+                    <span class="application-tabs-counter">9</span>
+                  </div>
+                  <div>
+                    <img src="/images/icon/check-tick.png" alt="" class="application-tabs-icon">
+                  </div>
+                </div>
+                <p class="application-tabs-title">Project Closure</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+         <!-- Main navigation tabs ends here -->
 
-              <div class="tab-content mt-3">
-                <div class="tab-pane fade show active" id="review">
-                  <div class="row px-4 py-2">
-                    <div class="container evaluation-container">
-                    <div class="accordion" id="accordionExample">
-                        <div class="application-card-header">
-                            <h5>1. Applicant Company
-                            </h5>
-                        </div>  
-                        <!-- 1.1 -->
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="heading11">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="true" aria-controls="collapse12">
-                              1.1. Date & Country of Incorporation
-                            </button>
-                          </h2>
-                          <div id="collapse11" class="accordion-collapse collapse show" aria-labelledby="heading11" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                              <ul class="list-unstyled ms-3">
-                                <li>Date of Incorporation: 10 February 2025</li>
-                                <li>Country of Incorporation: India</li>
-                                <li>Incorporation Inclusive: Test123456789</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>                
-                      <!-- 1.2 -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading12">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
-                            1.2. Registered Address, Corporate Address, Phone, Email, Website
-                          </button>
-                        </h2>
-                        <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <ul class="list-unstyled ms-3">
-                              <li>Registered Office Address: Address</li>
-                              <li>Phone: +919582841477</li>
-                              <li>Email: suchanshe.b@google.com</li>
-                              <li>Corporate Office Address: Address</li>
-                              <li>Country: India</li>
-                              <li>Website: <a href="https://www.google.com">https://www.google.com</a></li>
-                            </ul>
+        <div class="application-child-tabs tab-content mt-3">
+          <!-- Application main tab Internals child tabs start here -->
+          <div class="tab-pane fade show active" id="application">
+            <ul class="nav nav-tabs d-flex w-25" id="subTabs">
+
+              <li class="nav-item flex-fill">
+                <a class="nav-link active" data-bs-toggle="tab" href="#review">Review</a>
+              </li>
+            </ul>
+            <!-- Application maain tab Internals child tabs ends here -->
+
+            <!-- Application Child tabs body start here -->
+            <div class="tab-content pt-3 application-child-tabs-container">
+         
+             <!-- Application review & submit tabs start here  -->
+              <div class="tab-pane fade show active" id="reviewAndSubmit">
+                <div class="container">
+                  <div class="accordion" id="accordionExample">
+                    <div class="application-card-header">
+                      <h5 class="section-title">1. Applicant Company</h5>
+                    </div>
+                    <!-- 1.1 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading11">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse11" aria-expanded="true" aria-controls="collapse12">
+                          1.1. Date & Country of Incorporation
+                        </button>
+                      </h2>
+                      <div id="collapse11" class="accordion-collapse collapse show" aria-labelledby="heading11"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="align-middle table table-borderless">
+                              <tbody>
+                                <tr>
+                                  <td><strong>Contact Person : </strong></td>
+                                  <td>Gangadhar Shaktiman</td>
+                                  <td><strong>Email ID : </strong> </td>
+                                  <td>abc@gmail.com</td>
+                                  <td><strong>Mobile Number : </strong> </td>
+                                  <td>9876543210</td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </div>
                         </div>
                       </div>
-                  
-                      <!-- 1.3 -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading13">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
-                            1.3. Major Shareholding Pattern
-                          </button>
-                        </h2>
-                        <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <table class="table table-bordered w-75">
-                              <thead>
-                                <tr>
-                                  <th>a.Total Numbers of Shares</th>
-                                  <th>b. Share Holder Name                                </th>
-                                  <th>c. Total Shares Held
-                                </th>
-                                <th>d. Percentage of shares
-                                </th>
-                                </tr>
-                              </thead>
+                    </div>
+                    <!-- 1.2 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading12">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse12">
+                          1.2. Registered Address, Corporate Address, Phone, Email, Website
+                        </button>
+                      </h2>
+                      <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="align-middle table table-borderless">
                               <tbody>
                                 <tr>
-                                    <td>100</td>
+                                  <td><strong>a. Registered Office Address :
+                                    </strong></td>
+                                  <td>Test</td>
+                                  <td><strong>b. Corporate Office Address : </strong> </td>
+                                  <td>abc@gmail.com</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>c. Country : </strong></td>
+                                  <td>Test</td>
+                                  <td><strong>d. Phone : </strong> </td>
+                                  <td>9876543210</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>e. Email : </strong></td>
+                                  <td>abc@gmail.com</td>
+                                  <td><strong>f. Website
+                                      : </strong> </td>
+                                  <td>https://www.google.com</td>
+
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.3 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading13">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse13">
+                          1.3. Major Shareholding Pattern
+                        </button>
+                      </h2>
+                      <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="table table-borderless">
+                              <tbody>
+                                <thead>
+                                  <tr>
+                                    <td><strong>a.Total Numbers of Shares</strong></td>
+                                    <td><strong>b. Share Holder Name</strong></td>
+                                    <td><strong>c. Total Shares Held</strong></td>
+                                    <td><strong>d. Percentage of shares</strong></td>
+                                  </tr>
+                                </thead>
+                                <tr>
+                                  <td>100</td>
                                   <td>Prajwal</td>
                                   <td>100</td>
                                   <td>0.1%</td>
@@ -755,339 +493,741 @@ letter-spacing: 0.28px;
                           </div>
                         </div>
                       </div>
-                  
-                      <!-- 1.4 -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading14">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14">
-                            1.4. Profile and Contact Details of Major Shareholders
-                          </button>
-                        </h2>
-                        <div id="collapse14" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <table class="table table-bordered w-75">
+                    </div>
+
+                    <!-- 1.4 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading14">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse14">
+                          1.4. Profile and Contact Details of Major Shareholders
+                        </button>
+                      </h2>
+                      <div id="collapse14" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="table table-borderless">
                               <thead>
                                 <tr>
-                                  <th>a. Share Holder Name
-                                </th>
-                                  <th>b. Country</th>
-                                  <th>c. Contact Number</th>
-                                  <th>D. Email</th>
-                                  
-                                </tr>
-                              </thead>
+                                  <td><strong>a. Share Holder Name</strong></td>
+                                  <td><strong>b. Country</strong></td>
+                                  <td><strong>c. Contact Number</strong></td>
+                                  <td><strong>D. Email</strong></td>
+                                  </trd </thead>
                               <tbody>
                                 <tr>
                                   <td>Prajwal</td>
                                   <td>India</td>
                                   <td>+919582341153</td>
                                   <td>prajwal.td1@google.com</td>
-                                
                                 </tr>
                               </tbody>
                             </table>
                           </div>
                         </div>
                       </div>
-                  
-                      <!-- Repeat same pattern for 1.5 to 1.13 -->
-                      <!-- Example for 1.5 below -->
-                  
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading15">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15">
-                            1.5. Profile and Contact Details of Board of Directors
-                          </button>
-                        </h2>
-                        <div id="collapse15" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <table class="table table-bordered w-75">
-                              <thead>
-                                <tr>
-                                  <th>Name</th>
-                                  <th>Country</th>
-                                  <th>Contact Number</th>
-                                  <th>Email</th>
-                                  <th>Designation</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Suchanshe</td>
-                                  <td>India</td>
-                                  <td>+919582841144</td>
-                                  <td>suchanshe.b@google.com</td>
-                                  <td>CEO</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading16">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16">
-                            1.6. Joint Venture (JV)/Agreement/Other Business Agreements
-                          </button>
-                        </h2>
-                        <div id="collapse16" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="">#</th>
-                                        <th class="">Title</th>
-                                        <th width="15%">Document</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                                                                            <tr>
-                                            <td>a.</td>
-                                            <td>Joint Venture (JV) Agreement/ Other Business Agreements, if applicable</td>
-                                            <td>
-                                                <!-- <a href="javascript:;" class="ism-btn ism-btn--theme small"><span class="fa fa-file-pdf me-2"></span>View</a> -->
-                                                <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801" target="_blank" class="themeCrm-btn-light"> <span class="fa fa-file-pdf me-2"></span>View </a>
-                                            </td>
-                                        </tr>
-                                                                                    </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- 1.7 Audited Financial Statements -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading17">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17">
-                            1.7. Audited Financial Statements
-                          </button>
-                        </h2>
-                        <div id="collapse17" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="">#</th>
-                                        <th class="">Title</th>
-                                        <th width="15%">Document</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                                                                            <tr>
-                                            <td>a.</td>
-                                            <td>For last 1 year</td>
-                                            <td>
-                                                <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801" target="_blank" class="themeCrm-btn-light"> <span class="fa fa-file-pdf me-2"></span>View </a>
-                                            </td>
-                                        </tr>
-                                    
-                                                                                            <tr>
-                                            <td>b.</td>
-                                            <td>For last 2 year</td>
-                                            <td>
-                                                <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801" target="_blank" class="themeCrm-btn-light"> <span class="fa fa-file-pdf me-2"></span>View </a>
-                                            </td>
-                                        </tr>
-                                                                                                                                                <tr>
-                                            <td>c.</td>
-                                            <td>For last 3 year</td>
-                                            <td>
-                                                <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801" target="_blank" class="themeCrm-btn-light"> <span class="fa fa-file-pdf me-2"></span>View </a>
-                                            </td>
-                                        </tr>
-                                                                                    </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <!-- 1.8 Credit History -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading18">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18">
-                            1.8. Credit History
-                          </button>
-                        </h2>
-                        <div id="collapse18" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="">#</th>
-                                        <th class="">Title</th>
-                                        <th width="15%">Document</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                             <tr>
-                                                <td>a.</td>
-                                                <td>Credit History 1</td>
-                                                <td>
-                                                    <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801" target="_blank" class="themeCrm-btn-light"> <span class="fa fa-file-pdf me-2"></span>View </a>
-                                                </td>
-                                            </tr>
-                                                                                                    <tr>
-                                                <td>b.</td>
-                                                <td>Credit History 2</td>
-                                                <td>
-                                                    <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801" target="_blank" class="themeCrm-btn-light"> <span class="fa fa-file-pdf me-2"></span>View </a>
-                                                </td>
-                                            </tr>
-                                                                                                    <tr>
-                                                <td>c.</td>
-                                                <td>Credit History 3</td>
-                                                <td>
-                                                    <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801" target="_blank" class="themeCrm-btn-light"> <span class="fa fa-file-pdf me-2"></span>View </a>
-                                                </td>
-                                            </tr>
-                                                                                            
+                    </div>
 
-                                </tbody>
-                            </table>
-                          </div>
+                    <!-- Repeat same pattern for 1.5 to 1.13 -->
+                    <!-- Example for 1.5 below -->
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading15">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse15">
+                          1.5. Profile and Contact Details of Board of Directors
+                        </button>
+                      </h2>
+                      <div id="collapse15" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table table-borderless">
+                            <thead>
+                              <tr>
+                                <td><strong>Name</strong></td>
+                                <td><strong>Country</strong></td>
+                                <td><strong>Contact Number</strong></td>
+                                <td><strong>Email</strong></td>
+                                <td><strong>Designation</strong></td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Suchanshe</td>
+                                <td>India</td>
+                                <td>+919582841144</td>
+                                <td>suchanshe.b@google.com</td>
+                                <td>CEO</td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
-                      
-                      <!-- 1.9 Letter of Authorization & 1.10 Business Profile -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading19">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19">
-                            1.9. Letter of Authorization & 1.10. Business Profile
-                          </button>
-                        </h2>
-                        <div id="collapse19" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="">#</th>
-                                        <th class="">Title</th>
-                                        <th width="15%">Document</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                         <tr>
-                                            <td>a.</td>
-                                            <td>Letter of Authorization by Board of Directors or Managing Director</td>
-                                            <td>
-                                                <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801" target="_blank" class="themeCrm-btn-light"> <span class="fa fa-file-pdf me-2"></span>View </a>
-                                            </td>
-                                        </tr>
-                                    
-                                          <tr>
-                                            <td>b.</td>
-                                            <td>Business Profile</td>
-                                            <td>
-                                                <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818985965.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=439044c041f560ea21cffd9f548d8e45813608ebe24f7d33edd1c3e1baef8f79" target="_blank" class="themeCrm-btn-light"> <span class="fa fa-file-pdf me-2"></span>View </a>
-                                            </td>
-                                        </tr>
-                                                                                    </tbody>
-                            </table>
-                          </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading16">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse16">
+                          1.6. Joint Venture (JV)/Agreement/Other Business Agreements
+                        </button>
+                      </h2>
+                      <div id="collapse16" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="">#</th>
+                                <th class="">Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a.</td>
+                                <td>Joint Venture (JV) Agreement/ Other Business Agreements, if applicable</td>
+                                <td>
+                                  <!-- <a href="javascript:;" class="ism-btn ism-btn--theme small"><span class="fa fa-file-pdf me-1"></span>View</a> -->
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
-                      
-                      <!-- 1.11 Operational Experience -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading111">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse111">
-                            1.11. Operational Experience
-                          </button>
-                        </h2>
-                        <div id="collapse111" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <p>a. Opretional Experience : No</p>
-                          </div>
+                    </div>
+
+                    <!-- 1.7 Audited Financial Statements -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading17">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse17">
+                          1.7. Audited Financial Statements
+                        </button>
+                      </h2>
+                      <div id="collapse17" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="">#</th>
+                                <th class="">Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a.</td>
+                                <td>For last 1 year</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>b.</td>
+                                <td>For last 2 year</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>c.</td>
+                                <td>For last 3 year</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
-                      
-                      <!-- 1.12 Existing Manufacturing Facilities -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading112">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse112">
-                            1.12. Details of Current Manufacturing Facilities in India and Abroad
-                          </button>
-                        </h2>
-                        <div id="collapse112" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <table class="table table-bordered w-75">
-                              <thead>
-                                <tr>
-                                  <th>Location</th>
-                                  <th>Products</th>
-                                  <th>No. of Employees</th>
-                                  <th>Total Area</th>
-                                </tr>
-                              </thead>
+                    </div>
+
+                    <!-- 1.8 Credit History -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading18">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse18">
+                          1.8. Credit History
+                        </button>
+                      </h2>
+                      <div id="collapse18" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="">#</th>
+                                <th class="">Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a.</td>
+                                <td>Credit History 1</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>b.</td>
+                                <td>Credit History 2</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>c.</td>
+                                <td>Credit History 3</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+
+
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.9 Letter of Authorization & 1.10 Business Profile -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading19">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse19">
+                          1.9. Letter of Authorization & 1.10. Business Profile
+                        </button>
+                      </h2>
+                      <div id="collapse19" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="">#</th>
+                                <th class="">Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a.</td>
+                                <td>Letter of Authorization by Board of Directors or Managing Director</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818936288.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=08f5fa9a0fe02b2157278317f734e2d488ec9f4bc8a418592039baadb5eaf801"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>b.</td>
+                                <td>Business Profile</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818985965.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=439044c041f560ea21cffd9f548d8e45813608ebe24f7d33edd1c3e1baef8f79"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.11 Operational Experience -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading111">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse111">
+                          1.11. Operational Experience
+                        </button>
+                      </h2>
+                      <div id="collapse111" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <p>a. Opretional Experience : No</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.12 Existing Manufacturing Facilities -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading112">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse112">
+                          1.12. Details of Current Manufacturing Facilities in India and Abroad
+                        </button>
+                      </h2>
+                      <div id="collapse112" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table table-borderless">
+                            <thead>
+                              <tr>
+                                <td><strong>Location</strong></td>
+                                <td><strong>Products</strong></td>
+                                <td><strong>No. of Employees</strong></td>
+                                <td><strong>Total Area</strong></td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>New Delhi</td>
+                                <td>Chips</td>
+                                <td>1000</td>
+                                <td>14000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 1.13 Integrity Undertaking -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading113">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse113">
+                          1.13. Integrity Undertaking (Format A)
+                        </button>
+                      </h2>
+                      <div id="collapse113" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th class="">#</th>
+                                <th class="">Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a.</td>
+                                <td>Integrity Undertaking (Format A)</td>
+                                <td>
+                                  <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818985965.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=439044c041f560ea21cffd9f548d8e45813608ebe24f7d33edd1c3e1baef8f79"
+                                    target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <div class="container my-3">
+
+                  <div class="accordion" id="accordionExample21">
+                    <div class="application-card-header">
+                      <h5 class="section-title">2. Project Company (Company incorporated in India for the purpose of the
+                        Scheme) </h5>
+                    </div>
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading21">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse21" aria-expanded="true" aria-controls="collapse21">
+                          Documents
+                        </button>
+                      </h2>
+                      <div id="collapse21" class="accordion-collapse collapse show" aria-labelledby="heading21">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>2.1.</td>
+                                <td>Certificate of Incorporation</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                              <tr>
+                                <td>2.2.</td>
+                                <td>Memorandum and Articles of Association</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                              <tr>
+                                <td>2.3.</td>
+                                <td>Permanent Account Number (PAN) Card</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                              <tr>
+                                <td>2.4.</td>
+                                <td>Goods & Services Tax Registration (GSTN) Certificate</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading22">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                          2.5. Registered Address, Corporate Address, Phone, Email, Website </button>
+                      </h2>
+                      <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="align-middle table table-borderless">
                               <tbody>
                                 <tr>
-                                  <td>New Delhi</td>
-                                  <td>Chips</td>
-                                  <td>1000</td>
-                                  <td>14000</td>
+                                  <td><strong>a. Registered Office Address :
+                                    </strong></td>
+                                  <td>Test</td>
+                                  <td><strong>b. Corporate Office Address : </strong> </td>
+                                  <td>abc@gmail.com</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>c. Country : </strong></td>
+                                  <td>Test</td>
+                                  <td><strong>d. Phone : </strong> </td>
+                                  <td>9876543210</td>
+                                </tr>
+                                <tr>
+                                  <td><strong>e. Email : </strong></td>
+                                  <td>abc@gmail.com</td>
+                                  <td><strong>f. Website
+                                      : </strong> </td>
+                                  <td>https://www.google.com</td>
                                 </tr>
                               </tbody>
                             </table>
                           </div>
                         </div>
                       </div>
-                      
-                      <!-- 1.13 Integrity Undertaking -->
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading113">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse113">
-                            1.13. Integrity Undertaking (Format A)
-                          </button>
-                        </h2>
-                        <div id="collapse113" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <table class="table">
+                    </div>
+
+                    <!-- Repeat for items 3 to 8 -->
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading23">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                          2.6 Capital Structure
+                        </button>
+                      </h2>
+                      <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="heading23">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <label class="form-label">Capital Structure</label>
+                            <textarea class="form-control" id="corporateAddress" rows="3" maxlength="255"
+                              disabled>test</textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading24">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                          2.7 Major Shareholding Pattern </button>
+                      </h2>
+                      <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="table table-borderless">
+                              <tbody>
                                 <thead>
-                                    <tr>
-                                        <th class="">#</th>
-                                        <th class="">Title</th>
-                                        <th width="15%">Document</th>
-                                    </tr>
+                                  <tr>
+                                    <td><strong>a.Total Numbers of Shares</strong></td>
+                                    <td><strong>b. Share Holder Name</strong></td>
+                                    <td><strong>c. Total Shares Held</strong></td>
+                                    <td><strong>d. Percentage of shares</strong></td>
+                                  </tr>
                                 </thead>
-                                <tbody>
-                                                                                            <tr>
-                                            <td>a.</td>
-                                            <td>Integrity Undertaking (Format A)</td>
-                                            <td>
-                                                <a href="https://ism-staging-static.s3.ap-south-1.amazonaws.com/Documents/web/entity/application/42/1719818985965.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAXQFB3BFTCDWL63VV%2F20250427%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20250427T081139Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=3600&amp;X-Amz-Signature=439044c041f560ea21cffd9f548d8e45813608ebe24f7d33edd1c3e1baef8f79" target="_blank" class="themeCrm-btn-light"> <span class="fa fa-file-pdf me-2"></span>View </a>
-                                            </td>
-                                        </tr>
-                                                                                    </tbody>
+                                <tr>
+                                  <td>100</td>
+                                  <td>Prajwal</td>
+                                  <td>100</td>
+                                  <td>0.1%</td>
+                                </tr>
+                              </tbody>
                             </table>
                           </div>
                         </div>
                       </div>
-                      <!-- Continue with 1.6 to 1.13 in same structure -->
-                      <!-- Let me know if you'd like me to generate the remaining accordion blocks for 1.6–1.13 -->
                     </div>
+
+                    <!-- Accordion Item 5 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading25">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                          2.8 Profile and contact details of Board of Directors </button>
+                      </h2>
+                      <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="heading25">
+                        <div class="accordion-body">
+                          <table class="table table-borderless">
+                            <thead>
+                              <tr>
+                                <td><strong>Name</strong></td>
+                                <td><strong>Country</strong></td>
+                                <td><strong>Contact Number</strong></td>
+                                <td><strong>Email</strong></td>
+                                <td><strong>Designation</strong></td>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Suchanshe</td>
+                                <td>India</td>
+                                <td>+919582841144</td>
+                                <td>suchanshe.b@google.com</td>
+                                <td>CEO</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
                     </div>
-                  </div>           
-                </div>         
+
+                    <!-- Accordion Item 6 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading26">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                          2.9 Joint Venture (JV) Agreement/ Other Business Agreements, if applicable </button>
+                      </h2>
+                      <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Joint Venture (JV) Agreement/ Other Business Agreements, if applicable</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 7 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading27">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                          2.10 Audited Financial Statements </button>
+                      </h2>
+                      <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="heading27">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>For last 1 year</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>For last 2 year</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>For last 3 year</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Accordion Item 8 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading28">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                          2.11 Credit History </button>
+                      </h2>
+                      <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <label class="form-label">Do you have credit history? : <span>value</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Accordion Item 9 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading28">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                          2.12 Letter of Authorization by Board of Directors or Managing Director & 2.13 Business
+                          Profile </button>
+                      </h2>
+                      <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>2.13. Business Profile</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container my-3">
+                  <div class="accordion" id="accordionExample21">
+                    <div class="application-card-header">
+                      <h5 class="section-title"> 3. Project/ Detailed Project Report (DPR)
+                      </h5>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading26">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                          3.1 Project/ Detailed Project Report (DPR)</button>
+                      </h2>
+                      <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26">
+                        <div class="accordion-body">
+                          <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th width="15%">Document</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>a</td>
+                                <td>Project/ Detailed Project Report (DPR)</td>
+                                <td><a href="#" target="_blank" class="themeCrm-btn-light"> <span
+                                      class="fa fa-file-pdf me-1"></span>View </a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading28">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse28" aria-expanded="true" aria-controls="collapse28">
+                          3.4. Proposed Location </button>
+                      </h2>
+                      <div id="collapse28" class="accordion-collapse collapse show" aria-labelledby="heading28"
+                        style="">
+                        <div class="accordion-body">
+                          <div class="mb-3">
+                            <label class="form-label">Do you have credit history? : <span>value</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading28">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapse28" aria-expanded="true" aria-controls="collapse28">
+                          3.5.1. Total project cost including working capital requirements and year-wise proposed
+                          phasing of investment </button>
+                      </h2>
+                      <div id="collapse28" class="accordion-collapse collapse show" aria-labelledby="heading28"
+                        style="">
+                        <div class="accordion-body">
+                          <div class="table-responsive">
+                            <table class="align-middle table table-borderless">
+                              <tbody>
+                                <tr>
+                                  <td><strong>a. Country : </strong></td>
+                                  <td>India</td>
+                                  <td><strong>b. State : </strong> </td>
+                                  <td>UP</td>
+                                  <td><strong>c. City : </strong> </td>
+                                  <td>Agra</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Application review & submit tabs end here  -->
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+  
+  </section>
+ <!-- Page main body right side content ends here -->
+   
+</div>
+<!-- Page Body wrapper ends Here -->
 
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-
-
-
-  <script>
-    $(document).ready(function () {
-      $('#activityTable').DataTable({
-        "paging": true,
-        "ordering": true,
-        "info": true
-      });
-    });
-  </script>
-  </body>
 </html>

@@ -277,10 +277,14 @@ button {
   letter-spacing: 0.28px;
   margin: 0;
 }
-
-.evaluation-container {
+.page-body-container{
   border-radius: 8px;
   border: 1px solid #192F60;
+  background: #FFF;
+  padding: 1rem;
+}
+.page-body-container {
+  border-radius: 8px;
   background: #FFF;
   padding: 1rem;
 }
@@ -295,7 +299,7 @@ button {
 }
 /* Status Css Start Here ---- Add status with referred class "class="status pending"" */
 .status {
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 85px;
   font-weight: 500;
   font-size: 0.75rem;
