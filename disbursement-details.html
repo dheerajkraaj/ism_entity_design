@@ -4,395 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>ISM Website</title>
     <link rel="icon" href="/images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!--  Poppins Font Family cdn -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    <!-- Bootstrap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Main Css Files -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Css File for Header -->
+    <link rel="stylesheet" href="/css/header.css">
+    
+    <!-- Css File for Sidebar  -->
     <link rel="stylesheet" href="/css/sidebar.css">
+    
+    <!-- Css File for Application Page -->
+    <link rel="stylesheet" href="/css/application.css">
+    
+    <!-- Css File for tables -->
+    <link rel="stylesheet" href="/css/table.css">
+    
+    <!-- JS File for Sidebar -->
+    <script type="text/javascript" src="/js/sidebar.js" defer></script>
+    
+    <!-- Jquery CDN links -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- CSS & JS CDN Links for Datatables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="/js/sidebar.js" defer></script>
-    <style>
-        .page-container {
-            background: #F3F6FD;    
-            padding: 1rem;
-        }
-
-        .application-card {
-            align-items: center;
-            background-color: #F3F6FD;
-            border-radius: 0.5rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .application-card_icon {
-            font-size: 3rem;
-            margin-right: 1rem;
-        }
-
-        .application-card_title {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #192f60;
-            letter-spacing: 0.4px;
-        }
-
-        .application-card_count {
-            color: #FFF;
-            text-align: center;
-            font-family: Poppins;
-            font-size: 1.25rem;
-            font-style: normal;
-            font-weight: 600;
-            letter-spacing: 0.56px;
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
-            margin-right: 1rem;
-        }
-
-        table.dataTable thead {
-            background-color: #0e2a47;
-            color: white;
-        }
-
-        .status {
-            padding: 0.5rem 1rem;
-            border-radius: 85px;
-            font-weight: 500;
-            font-size: 0.75rem;
-        }
-
-        .pending {
-            background-color: #F0F4CD;
-            ;
-            color: #8D9735;
-            border: 1px solid #8D9735;
-        }
-
-        .not-approved {
-            border: 1px solid #BD0D10;
-
-            background: #FCDCDD;
-            color: #BD0D10;
-        }
-
-        .under-review {
-            border: 1px solid #6C7EB8;
-
-            background: #E1E8FF;
-            color: #6C7EB8;
-            ;
-        }
-
-        .details-btn {
-            outline: none;
-            border-radius: 4px;
-            background: #192F60;
-            padding: 0.25rem 0.75rem;
-            color: #fff;
-            font-size: 14px;
-            border: none;
-        }
-
-        table.dataTable tbody th,
-        table.dataTable tbody td {
-            padding: 8px 10px;
-            font-size: 14px;
-            color: #1c1c1c;
-            letter-spacing: 0.28px;
-        }
-
-        table.dataTable.display tbody tr.odd {
-            background-color: #fff;
-        }
-
-        table.dataTable.display tbody tr.even {
-            background-color: #F3F6FD;
-        }
-
-        table.dataTable.display tbody tr.odd>.sorting_1,
-        table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-            background-color: transparent;
-        }
-
-        table.dataTable.display tbody tr.even>.sorting_1,
-        table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-            background-color: transparent;
-        }
-
-        table.dataTable.display tbody tr.odd>.sorting_1,
-        table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
-            background-color: transparent;
-        }
-
-        table.dataTable thead th,
-        table.dataTable thead td {
-            padding: 10px 18px;
-            border-bottom: 1px solid #111;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        table.dataTable.no-footer {
-            border-bottom: none;
-        }
-
-        .dataTables_wrapper .dataTables_length,
-        .dataTables_filter {
-            color: rgba(25, 47, 96, 0.70) !important;
-            font-size: 14px;
-        }
-
-        .dataTables_wrapper .dataTables_filter input {
-            border: 1px solid #aaa;
-            border-radius: 25px;
-            padding: 5px;
-            background-color: #fff;
-            margin-left: 3px;
-            border: 2px solid rgba(25, 47, 96, 0.10);
-        }
-
-        .dataTables_wrapper .dataTables_length select {
-            border: 1px solid #aaa;
-
-            padding: 0.5rem 1rem;
-            background-color: #fff;
-            margin-left: 3px;
-            border: 2px solid rgba(25, 47, 96, 0.10);
-        }
-
-        .dataTables_wrapper .dataTables_info,
-        .dataTables_paginate {
-            color: rgba(25, 47, 96, 0.70) !important;
-            font-size: 14px;
-        }
-
-        .dataTables_wrapper .dataTables_paginate .paginate_button {
-            background-color: #192f60;
-            color: #fff;
-        }
-
-        .application-tabs li a {
-            padding: 0.5rem;
-        }
-
-        .application-tabs-icon {
-            height: 30px;
-        }
-
-        .application-tabs-counter {
-            font-weight: 600;
-            font-size: 2rem;
-        }
-
-        .application-tabs-title {
-            font-size: 0.75rem;
-            letter-spacing: 0.28px;
-            font-weight: 500;
-            margin: 0;
-        }
-
-        .application-steps-items {
-            align-items: center;
-            justify-content: space-between;
-            display: flex;
-        }
-
-        .application-tabs .nav-tabs .nav-link {
-            border-radius: 0px;
-            border: 1px solid #192f60;
-            margin-right: 5px;
-        }
-
-        .application-tabs>.nav-tabs .nav-link.active {
-            border: 1px solid #192F60;
-            background: #192F60;
-            color: #fff;
-        }
-
-        .application-tabs>.nav-tabs .nav-link {
-            border: 1px solid #192F60;
-            background: #fff;
-            color: #192F60;
-        }
-
-        .application-tabs>.nav-tabs .nav-link.disabled {
-            border: 1px solid rgba(25, 47, 96, 0.30);
-            background: #F3F6FD;
-            opacity: .9;
-            filter: alpha(opacity=50);
-            cursor: not-allowed;
-            color: rgba(120, 57, 184, 0.50) !important;
-        }
-
-        .w-12 {
-            max-width: 10rem;
-            min-width: 9rem;
-        }
-
-
-        .table thead tr th {
-            border: none;
-            background: #192F60;
-            font-size: 14px;
-            color: #fff;
-        }
-
-        .table tbody tr td {
-            border: none;
-            font-size: 14px;
-            color: #192F60;
-        }
-
-        .table tbody tr:nth-child(even) td {
-            border: 1px solid #BAC1D0;
-            background: #F3F6FD;
-            border: none;
-        }
-
-        .btn-download {
-            border: none;
-            border-radius: 4px;
-            background: #0083DB;
-            padding: 5px 10px;
-            border-radius: 8px;
-            color: white;
-        }
-
-        .page-body-container {
-            border-radius: 8px;
-            border: 1px solid #192F60;
-            background: #FFF;
-            padding: 1rem;
-        }
-
-        .disbursement-details-header>.list-group-item {
-            border: 1px solid #192f60 !important;
-            border-radius: 0px !important;
-            margin-right: 5px;
-        }
-
-        .disbursement-child-tabs {
-            border: 1px solid #BAC1D0;
-            background: #FFF;
-            /* border-radius: 8px; */
-        }
-
-        .disbursement-child-tabs .nav-tabs .nav-link {
-            border: 1px solid rgba(25, 47, 96, 0.30);
-            color: rgba(25, 47, 96, 0.70);
-            background: #F3F6FD;
-            font-size: 14px;
-            font-weight: 500;
-            letter-spacing: 0.28px;
-            margin-right: 0;
-            text-align: center;
-        }
-
-        .disbursement-child-tabs .nav-tabs .nav-link.active {
-
-            border-top: 1px solid rgba(25, 47, 96, 0.30);
-            border-right: 1px solid rgba(25, 47, 96, 0.30);
-            border-left: 1px solid rgba(25, 47, 96, 0.30);
-            color: #192f60;
-            background: #FFF;
-            border-bottom: 1px solid #fff;
-
-        }
-
-        .disbursement-subChild-tabs {
-            /* border: 1px solid #BAC1D0;
-background: #FFF; */
-            /* border-radius: 8px; */
-            border: none;
-        }
-
-        .disbursement-subChild-tabs .nav-tabs .nav-link {
-            color: #192F60;
-            background: #fff;
-            border: 2px solid #192F60;
-            border-radius: 2rem;
-            padding: 0.5rem 1.5rem;
-            margin-right: 0.5rem;
-        }
-
-        .disbursement-subChild-tabs .nav-tabs .nav-link.active {
-            color: #fff;
-            background: #192f60;
-            border: 1px solid #fff;
-            border: 2px solid #192F60;
-            border-radius: 2rem;
-            padding: 0.5rem 1.5rem;
-        }
-
-        .report_req1 {
-            padding: 0.5rem;
-        }
-    </style>
+    
+    <!-- Select2 Jquery Plugins CDN links  -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    
 </head>
 
 <body>
-    <!--=============== HEADER ===============-->
-    <main class="ism-v3-header__topBar">
-        <div class="container">
-            <div class="row">
-                <div class="d-flex justify-content-between">
-                    <div class="d-flex">
-                        <div class="date-time">23 October, 2024 | </div>
-                        <div class="date-time"> &nbsp;04 : 12 : 09 PM</div>
-                    </div>
-                    <div class="special-feature">
-                        <ul class="navbar-nav navList d-flex flex-row">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"> Skip to main content | </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"> Screen Reader Access | </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"> A A A+ A- A | </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"> English</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+<!--=============== Main Entity Portal HEADER ===============-->
+<!-- Page Topbar start Here (Header 1)-->
+<main class="ism-v3-header__topBar">
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="ism-header__main_box d-flex py-3">
-                    <div class="text-start"><a aria-label="Miety logo" class="meity" href="https://www.meity.gov.in/"
-                            target="_blank"><img alt="Miety logo" class="img-fluid"
-                                src="https://uatism.semiconindia.org/Assets/images/header/meity_header_logo.png"> </a>
-                    </div>
-                    <div class="text-center"><a aria-label="Miety logo" class="ism"
-                            href="https://uatism.semiconindia.org/"><img alt="Digital india logo" class="img-fluid"
-                                src="https://uatism.semiconindia.org/Assets/images/header/ism_header_logo.png"></a>
-                    </div>
-                    <div class="text-end"><a aria-label="Miety logo" class="dic" href="https://dic.gov.in/"
-                            target="_blank"><img alt="Digital india logo" class="img-fluid"
-                                src="https://uatism.semiconindia.org/Assets/images/header/digi_india_header_logo.png"></a>
-                    </div>
-                </div>
-            </div>
+      <div class="row">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex">
+            <div class="date-time">23 October, 2024 | </div>
+            <div class="date-time"> &nbsp;04 : 12 : 09 PM</div>
+          </div>
+          <div class="special-feature">
+            <ul class="navbar-nav navList d-flex flex-row">
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Skip to main content | </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> Screen Reader Access | </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> A A A+ A- A | </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> English</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
+  </main>
+     <!-- Page Topbar ends Here -->
+
+ <!-- Page Logo Header Bar Start Here (Header 2)-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="ism-header__main_box d-flex py-3">
+          <div class="text-start"><a aria-label="Miety logo" class="" href="https://www.meity.gov.in/"
+              target="_blank"><img alt="Miety logo" class="img-fluid"
+                src="https://uatism.semiconindia.org/Assets/images/header/meity_header_logo.png"> </a>
+          </div>
+          <div class="text-center"><a aria-label="Miety logo" class="" href="https://uatism.semiconindia.org/"><img
+                alt="Digital india logo" class="img-fluid"
+                src="https://uatism.semiconindia.org/Assets/images/header/ism_header_logo.png"></a>
+          </div>
+          <div class="text-end"><a aria-label="Miety logo" class="" href="https://dic.gov.in/" target="_blank"><img
+                alt="Digital india logo" class="img-fluid"
+                src="https://uatism.semiconindia.org/Assets/images/header/digi_india_header_logo.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page Logo Header Bar Ends Here (Header 2)-->
+
+<!-- Page title & breadcrumb menu bar start here (Header 3) -->
     <nav class="navbar navbar-expand-lg main-header">
         <div class="container">
             <!-- Logo -->
@@ -432,6 +150,10 @@ background: #FFF; */
             </div>
         </div>
     </nav>
+        <!-- Page title & breadcrumb menu bar ends here (Header 3) -->
+
+
+<!-- Page Body wrapper Starts Here -->
     <div class="page-wrapper">
         <nav id="sidebar">
             <ul>
@@ -483,9 +205,12 @@ background: #FFF; */
               </li>
             </ul>
           </nav>
+           <!-- page body left sidebar Ends here -->
+
+    <!-- Page main body right side content starts here -->
         <section class="page-container ">
-            <div class="container-fluid">
-                <div class="row my-3">
+            <div class="">
+                <div class="row mt-1 mb-3">
                     <div class="col">
                         <h2 id="pageTitle">Application No. - <span>1234567890</span></h2>
                         <p id="description">Company Name - Scheme Name</p>
@@ -2042,8 +1767,11 @@ background: #FFF; */
                 </div>
             </div>
         </section>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Page main body right side content ends here -->
+   
+  </div>
+  <!-- Page Body wrapper ends Here -->
+    
 </body>
 
 </html>
